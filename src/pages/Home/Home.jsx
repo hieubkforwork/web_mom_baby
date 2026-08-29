@@ -22,7 +22,16 @@ const Home = () => {
   return (
     <div className="page home-page">
       <section className="banner">
-        <img src="/mevabe2.png" alt="Banner mẹ và bé" className="banner-img" />
+        <picture>
+          <source media="(max-width: 480px)" srcset="/mevabe2.png" />
+          <source media="(max-width: 1024px)" srcset="/mevabe4.png" />
+          <source media="(max-width: 1440px)" srcset="/mevabe3.png" />
+          <img
+            src="/mevabe3.png"
+            className="banner-img"
+            alt="Banner mẹ và bé"
+          />
+        </picture>
         <div className="banner-overlay">
           <Link to="/service" className="cta-button">
             {t("home.discoverServices")}

@@ -77,7 +77,7 @@ const translations = {
     home: {
       heroTitle: 'Chào Mừng Đến Website',
       heroDesc: 'Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp',
-      discoverServices: 'Khám phá dịch vụ ➜',
+      discoverServices: 'Khám phá Dịch vụ ➜',
       features: {
         maternity: {
           title: 'Chăm sóc thai kỳ',

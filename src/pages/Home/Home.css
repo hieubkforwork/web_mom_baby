@@ -13,20 +13,18 @@
   width: 100%;
   display: block;
   object-fit: cover;
-  object-position: center top; /* giữ phần trên (chữ + mẹ bé) không bị cắt khi thu nhỏ */
-  height: 1024px;      /* THU NHỎ banner tại đây — chỉnh số này tùy ý (vd 400-550px) */
-  min-height: 300px;  /* tránh quá bẹt trên mobile */
+  object-position: center top;
 }
 
 .banner-overlay {
   position: absolute;
-  top: 65%;            /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
-  left: 15%;
+  top: 78%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+  left: 20.5%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
   padding: 0 20px;
-  z-index: 5;          /* Đảm bảo CTA button luôn nằm trên curve */
+  z-index: 5; /* Đảm bảo CTA button luôn nằm trên curve */
 }
 
 .banner-curve {
@@ -46,10 +44,13 @@
   padding: 12px 32px;
   text-decoration: none;
   border-radius: 8px;
-  font-family: var(--font-body);                    
+  font-family: var(--font-body);
   font-size: 1.2rem;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s,
+    box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -63,11 +64,64 @@
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 480px) {
   .banner {
     --curve-depth: 50px; /* Giảm độ bo cong trên màn hình nhỏ */
   }
 
+  .banner-overlay {
+    top: 75%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    left: 50%;
+  }
+
+  .cta-button {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .banner-img {
+    height: 500px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .banner-img {
+    height: 480px;
+  }
+  
+  .banner-overlay {
+    top: 75%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    left: 20.5%;
+  }
+  
+  .cta-button {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .banner-img {
+    height: 600px;
+  }
+  .banner-overlay {
+    top: 73%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    left: 20.5%;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .banner-img {
+    height: 700px;
+  }
+}
+
+/* @media (max-width: 768px) {
+ 
   .banner-img {
     height: 360px;
   }
@@ -76,11 +130,8 @@
     top: 62%;
   }
 
-  .cta-button {
-    padding: 10px 24px;
-    font-size: 1.2rem;
-  }
-}
+  
+} */
 
 /* =========================================
    FEATURE CARDS
@@ -109,7 +160,9 @@
   /* Signature element: Soft, warm, beige-tinted shadow instead of generic gray */
   box-shadow: 0 10px 30px rgba(160, 140, 120, 0.08);
   border: 1px solid rgba(226, 207, 194, 0.3); /* very subtle secondary border */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: default;
 }
 
@@ -129,7 +182,7 @@
   margin-right: 16px;
   color: var(--clr-white);
   /* Signature detail: subtle inner shadow */
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .feature-icon-wrapper.bg-sage {
@@ -187,7 +240,6 @@
 .about-section {
   position: relative;
   padding: 80px 24px;
- 
 }
 
 .about-container {
@@ -204,7 +256,7 @@
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #5A7A5C;
+  color: #5a7a5c;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 10px 0;
@@ -242,7 +294,7 @@
 }
 
 .about-text p strong {
-  color: #5A7A5C;
+  color: #5a7a5c;
   font-weight: 700;
 }
 
@@ -253,7 +305,7 @@
   margin-top: 10px;
   padding: 12px 28px;
   background-color: var(--clr-white);
-  color: #5A7A5C;
+  color: #5a7a5c;
   font-family: var(--font-body);
   font-size: 1.2rem;
   font-weight: 600;
@@ -265,7 +317,7 @@
 
 .about-cta:hover {
   background-color: rgba(168, 191, 168, 0.15); /* Light sage tint */
-  border-color: #5A7A5C;
+  border-color: #5a7a5c;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(160, 140, 120, 0.1);
 }
