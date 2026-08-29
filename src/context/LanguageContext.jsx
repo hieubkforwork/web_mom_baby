@@ -38,6 +38,13 @@ const translations = {
           desc: 'Answers and support 24/7',
         },
       },
+      aboutSection: {
+        title: "ABOUT US",
+        brandName: "Mom & Baby Care",
+        desc1: " is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
+        desc2: "With a team of experienced experts, a standard relaxing space, and specially designed treatments, we are committed to bringing perfect recovery for mothers and a solid start for beloved babies.",
+        cta: "LEARN MORE"
+      },
     },
     about: {
       heroTitle: 'About Us',
@@ -88,6 +95,13 @@ const translations = {
           title: 'Tư vấn & hỗ trợ',
           desc: 'Giải đáp và hỗ trợ 24/7',
         },
+      },
+      aboutSection: {
+        title: "VỀ CHÚNG TÔI",
+        brandName: "Mom & Baby Care",
+        desc1: " tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình Việt. Chúng tôi thấu hiểu những vất vả và niềm hạnh phúc vô bờ bến trong hành trình làm mẹ, từ đó mang đến các dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
+        desc2: "Với đội ngũ chuyên gia giàu kinh nghiệm, không gian thư giãn tiêu chuẩn và các liệu trình được thiết kế riêng biệt, chúng tôi cam kết mang lại sự phục hồi hoàn hảo cho mẹ và sự khởi đầu vững chắc cho bé yêu.",
+        cta: "XEM THÊM"
       },
     },
     about: {
