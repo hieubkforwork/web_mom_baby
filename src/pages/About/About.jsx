@@ -1,15 +1,17 @@
+import { useLanguage } from '../../context/LanguageContext';
 import './About.css';
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="page about-page">
       <section className="about-hero">
-        <h1>About Us</h1>
-        <p>Learn more about who we are and what we do</p>
+        <h1>{t('about.heroTitle')}</h1>
+        <p>{t('about.heroDesc')}</p>
       </section>
     </div>
   );
 };
 
 export default About;
-
