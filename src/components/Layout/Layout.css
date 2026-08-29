@@ -8,3 +8,7 @@
   flex: 1;
 }
 
+/* General page padding for fixed header */
+.page {
+  padding-top: 100px;
+}

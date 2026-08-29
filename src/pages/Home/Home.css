@@ -1,15 +1,83 @@
-.home-page .hero {
+.home-page {
+  padding-top: 0;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  --curve-depth: 120px; /* Biến số chỉnh độ sâu của phần bo cong */
+}
+
+.banner-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top; /* giữ phần trên (chữ + mẹ bé) không bị cắt khi thu nhỏ */
+  height: 1024px;      /* THU NHỎ banner tại đây — chỉnh số này tùy ý (vd 400-550px) */
+  min-height: 300px;  /* tránh quá bẹt trên mobile */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 65%;            /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+  left: 15%;
+  transform: translateX(-50%);
   text-align: center;
-  padding: 4rem 2rem;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 5;          /* Đảm bảo CTA button luôn nằm trên curve */
 }
 
-.home-page .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.banner-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: block;
+  z-index: 1;
 }
 
-.home-page .hero p {
-  font-size: 1.2rem;
-  color: #666;
+.cta-button {
+  display: inline-block;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 12px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.cta-button:hover {
+  background-color: var(--clr-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(168, 191, 168, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    --curve-depth: 50px; /* Giảm độ bo cong trên màn hình nhỏ */
+  }
+
+  .banner-img {
+    height: 360px;
+  }
+
+  .banner-overlay {
+    top: 62%;
+  }
+
+  .cta-button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
