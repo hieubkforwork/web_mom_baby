@@ -20,6 +20,24 @@ const translations = {
       heroTitle: 'Welcome to Our Website',
       heroDesc: 'Your trusted partner for professional services',
       discoverServices: 'Discover Services ➜',
+      features: {
+        maternity: {
+          title: 'Maternity Care',
+          desc: 'Monitoring and accompanying expectant mothers',
+        },
+        newborn: {
+          title: 'Newborn Care',
+          desc: 'Comprehensive care for your beloved baby',
+        },
+        vaccine: {
+          title: 'Safe Vaccination',
+          desc: 'On schedule, safe, and dedicated',
+        },
+        support: {
+          title: 'Consulting & Support',
+          desc: 'Answers and support 24/7',
+        },
+      },
     },
     about: {
       heroTitle: 'About Us',
@@ -53,6 +71,24 @@ const translations = {
       heroTitle: 'Chào Mừng Đến Website',
       heroDesc: 'Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp',
       discoverServices: 'Khám phá dịch vụ ➜',
+      features: {
+        maternity: {
+          title: 'Chăm sóc thai kỳ',
+          desc: 'Theo dõi và đồng hành cùng mẹ bầu',
+        },
+        newborn: {
+          title: 'Chăm sóc sơ sinh',
+          desc: 'Chăm sóc bé yêu toàn diện',
+        },
+        vaccine: {
+          title: 'Tiêm chủng an toàn',
+          desc: 'Đúng lịch, an toàn, tận tâm',
+        },
+        support: {
+          title: 'Tư vấn & hỗ trợ',
+          desc: 'Giải đáp và hỗ trợ 24/7',
+        },
+      },
     },
     about: {
       heroTitle: 'Về Chúng Tôi',
