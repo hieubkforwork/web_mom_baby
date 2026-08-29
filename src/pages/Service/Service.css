@@ -1,0 +1,15 @@
+.service-page .service-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.service-page .service-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-page .service-hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
