@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useLanguage } from '../../context/LanguageContext';
-import './Header.css';
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { GrLanguage } from "react-icons/gr";
+import { useLanguage } from "../../context/LanguageContext";
+import "./Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,49 +17,61 @@ const Header = () => {
       <div className="header-bar">
         {/* Logo area — placeholder for future logo */}
         <Link to="/" className="logo-box" onClick={closeMenu}>
-          <span className="logo-text">{t('header.logo')}</span>
+          <span className="logo-text">{t("header.logo")}</span>
         </Link>
 
         {/* Center navigation */}
-        <nav className={`nav ${menuOpen ? 'nav--open' : ''}`}>
+        <nav className={`nav ${menuOpen ? "nav--open" : ""}`}>
           <div className="nav-inner">
             <NavLink
               to="/"
               end
-              className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link--active" : ""}`
+              }
               onClick={closeMenu}
             >
-              {t('nav.home')}
+              {t("nav.home")}
             </NavLink>
             <NavLink
               to="/about"
-              className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link--active" : ""}`
+              }
               onClick={closeMenu}
             >
-              {t('nav.about')}
+              {t("nav.about")}
             </NavLink>
             <NavLink
               to="/service"
-              className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link--active" : ""}`
+              }
               onClick={closeMenu}
             >
-              {t('nav.service')}
+              {t("nav.service")}
             </NavLink>
             <NavLink
               to="/booking"
-              className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link--active" : ""}`
+              }
               onClick={closeMenu}
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </NavLink>
 
             {/* Mobile-only: Book Now + Lang toggle inside nav */}
             <div className="nav-mobile-actions">
-              <Link to="/booking" className="btn-cta-mobile" onClick={closeMenu}>
-                {t('header.bookNow')}
+              <Link
+                to="/booking"
+                className="btn-cta-mobile"
+                onClick={closeMenu}
+              >
+                {t("header.bookNow")}
               </Link>
               <button className="btn-lang-mobile" onClick={toggleLang}>
-                {lang === 'en' ? '🇻🇳 Tiếng Việt' : '🇬🇧 English'}
+                {lang === "en" ? "🇻🇳 Tiếng Việt" : "🇬🇧 English"}
               </button>
             </div>
           </div>
@@ -66,13 +79,48 @@ const Header = () => {
 
         {/* Right actions */}
         <div className="header-actions">
-          {/* Language toggle — minimal dropdown style */}
-          <button className="btn-lang" onClick={toggleLang} title={lang === 'en' ? 'Chuyển sang Tiếng Việt' : 'Switch to English'}>
-            <span className="btn-lang-code">{lang.toUpperCase()}</span>
-            <svg className="btn-lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
+          {/* Language dropdown — hover to reveal */}
+          <div className="lang-dropdown">
+            <button className="lang-dropdown-trigger" aria-label="Language">
+              <GrLanguage size={18} />
+            </button>
+            <div className="lang-dropdown-menu">
+              <button
+                className={`lang-dropdown-item ${lang === "vi" ? "lang-dropdown-item--active" : ""}`}
+                onClick={() => {
+                  toggleLang();
+                }}
+                disabled={lang === "vi"}
+              >
+                <span className="lang-dropdown-flag">
+                  <img
+                    src="https://flagcdn.com/w40/vn.png"
+                    alt="Vietnam"
+                    width={20}
+                    height={14}
+                  />
+                </span>
+                Tiếng Việt
+              </button>
+              <button
+                className={`lang-dropdown-item ${lang === "en" ? "lang-dropdown-item--active" : ""}`}
+                onClick={() => {
+                  toggleLang();
+                }}
+                disabled={lang === "en"}
+              >
+                <span className="lang-dropdown-flag">
+                  <img
+                    src="https://flagcdn.com/w40/gb.png"
+                    alt="UK"
+                    width={20}
+                    height={14}
+                  />
+                </span>
+                English
+              </button>
+            </div>
+          </div>
 
           {/* Search button */}
           <button
@@ -80,7 +128,16 @@ const Header = () => {
             aria-label="Search"
             onClick={() => setSearchOpen(!searchOpen)}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
@@ -88,15 +145,21 @@ const Header = () => {
 
           {/* CTA button */}
           <Link to="/booking" className="btn-cta" onClick={closeMenu}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '6px' }}>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style={{ marginRight: "6px" }}
+            >
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
             </svg>
-            {t('header.bookNow')}
+            {t("header.bookNow")}
           </Link>
 
           {/* Mobile hamburger */}
           <button
-            className={`hamburger ${menuOpen ? 'hamburger--active' : ''}`}
+            className={`hamburger ${menuOpen ? "hamburger--active" : ""}`}
             aria-label="Toggle menu"
             onClick={toggleMenu}
           >
@@ -113,11 +176,15 @@ const Header = () => {
           <div className="search-bar-inner">
             <input
               type="text"
-              placeholder={t('header.search')}
+              placeholder={t("header.search")}
               className="search-input"
               autoFocus
             />
-            <button className="search-close" onClick={() => setSearchOpen(false)} aria-label="Close search">
+            <button
+              className="search-close"
+              onClick={() => setSearchOpen(false)}
+              aria-label="Close search"
+            >
               ✕
             </button>
           </div>
