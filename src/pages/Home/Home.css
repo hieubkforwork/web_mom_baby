@@ -34,10 +34,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--curve-depth);
-  color: var(--clr-white); /* Đồng bộ với màu nền phần bên dưới (trắng) */
-  z-index: 2;              /* Cao hơn ảnh gốc, thấp hơn content/card đè lên */
-  pointer-events: none;    /* Tránh chặn thao tác click */
+  height: 100px;
+  display: block;
+  z-index: 1;
 }
 
 .cta-button {
