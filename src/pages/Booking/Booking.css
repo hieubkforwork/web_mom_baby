@@ -1,0 +1,15 @@
+.booking-page .booking-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.booking-page .booking-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.booking-page .booking-hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
