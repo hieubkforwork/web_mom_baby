@@ -19,6 +19,7 @@ const translations = {
     home: {
       heroTitle: 'Welcome to Our Website',
       heroDesc: 'Your trusted partner for professional services',
+      discoverServices: 'Discover Services ➜',
     },
     about: {
       heroTitle: 'About Us',
@@ -51,6 +52,7 @@ const translations = {
     home: {
       heroTitle: 'Chào Mừng Đến Website',
       heroDesc: 'Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp',
+      discoverServices: 'Khám phá dịch vụ ➜',
     },
     about: {
       heroTitle: 'Về Chúng Tôi',

@@ -71,7 +71,7 @@ const Header = () => {
                 {t("header.bookNow")}
               </Link>
               <button className="btn-lang-mobile" onClick={toggleLang}>
-                {lang === "en" ? "🇻🇳 Tiếng Việt" : "🇬🇧 English"}
+                {lang === "en" ? "Tiếng Việt" : "English"}
               </button>
             </div>
           </div>
