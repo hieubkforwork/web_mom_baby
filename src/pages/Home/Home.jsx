@@ -9,6 +9,7 @@ import {
 import { useLanguage } from "../../context/LanguageContext";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import "./Home.css";
 
 const featuresData = [
@@ -19,62 +20,54 @@ const featuresData = [
 ];
 
 // ── Services Data ──────────────────────────────────────────────────────────
+// Nhận hàm t() để tự động đổi theo ngôn ngữ hiện tại.
 // Replace the `image` field with a real URL when assets are ready.
 // The component structure does NOT need to change.
-const servicesData = [
+const getServicesData = (t) => [
+  {
+    id: "postpartum",
+    title: t("home.servicesSection.postpartum.title"),
+    image: "homepage-mombaby-img-service.png",
+    alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
+    items: t("home.servicesSection.postpartum.items"),
+  },
   {
     id: "baby",
-    title: "DỊCH VỤ CHO BÉ",
-    image: "/homepage-baby-img-service.png",
+    title: t("home.servicesSection.baby.title"),
+    image: "homepage-baby-img-service.png",
     alt: "Chăm sóc chuyên nghiệp cho bé sơ sinh",
-    items: [
-      "Chăm sóc bé tại nhà",
-      "Tắm bé sơ sinh",
-      "Massage cho bé",
-      "Vệ sinh rốn",
-      "Chăm sóc bé",
-    ],
+    items: t("home.servicesSection.baby.items"),
   },
   {
     id: "pregnant",
-    title: "DỊCH VỤ CHO MẸ BẦU",
-    image: "/homepage-mom-pregnant-service.png",
+    title: t("home.servicesSection.pregnant.title"),
+    image: "homepage-mom-pregnant-service.png",
     alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
-    items: [
-      "Massage bầu",
-      "Chăm sóc thai kỳ",
-      "Ngâm chân thư giãn",
-      "Chăm sóc da",
-      "Tư vấn chăm sóc mẹ bầu",
-    ],
+    items: t("home.servicesSection.pregnant.items"),
   },
   {
-    id: "postpartum",
-    title: "DỊCH VỤ CHO MẸ SAU SINH",
-    image: "homepage-mombaby-img-service.png",
-    alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
-    items: [
-      "Massage sau sinh",
-      "Chăm sóc mẹ sau sinh",
-      "Chăm sóc vết mổ",
-      "Tắm bé",
-      "Hỗ trợ phục hồi",
-    ],
+    id: "complex",
+    title: t("home.servicesSection.complex.title"),
+    image: "homepage-dr-service.png",
+    alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
+    items: t("home.servicesSection.complex.items"),
   },
+  
 ];
 
 const Home = () => {
   const { t } = useLanguage();
+  const servicesData = getServicesData(t);
 
   return (
     <div className="page home-page">
       <section className="banner">
         <picture>
-          <source media="(max-width: 480px)" srcset="/mevabe2.png" />
-          <source media="(max-width: 1024px)" srcset="/mevabe4.png" />
-          <source media="(max-width: 1440px)" srcset="/mevabe3.png" />
+          <source media="(max-width: 480px)" srcset="/mevabe.png" />
+          <source media="(max-width: 1024px)" srcset="/mevabe.png" />
+          <source media="(max-width: 1440px)" srcset="/mevabe.png" />
           <img
-            src="/mevabe3.png"
+            src="/mevabe.png"
             className="banner-img"
             alt="Banner mẹ và bé"
           />
@@ -129,7 +122,7 @@ const Home = () => {
       {/* ── Services Section ── */}
       <section className="services-section" aria-labelledby="services-heading">
         <div className="services-container">
-          <SectionHeading title="DỊCH VỤ CỦA CHÚNG TÔI" />
+          <SectionHeading title={t("home.servicesSection.heading")} />
           <div className="services-grid">
             {servicesData.map((service) => (
               <ServiceCard
@@ -238,7 +231,7 @@ const Home = () => {
             </div>
             <div className="about-image-wrapper">
               <img
-                src="/about-team.jpg"
+                src="/aboutus-img.png"
                 alt="About Us Team"
                 className="about-image"
               />
@@ -246,6 +239,19 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Why Choose Us Section ── */}
+      <WhyChooseUs />
+
+      {/* ── Bottom Banner Image ── */}
+      <div className="home-bottom-banner">
+        <img
+          src="/aboutus-bg.png"
+          alt="MOMCARE24H — Chăm sóc mẹ và bé"
+          className="home-bottom-banner__img"
+          loading="lazy"
+        />
+      </div>
     </div>
   );
 };
