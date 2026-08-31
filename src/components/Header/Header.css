@@ -60,8 +60,6 @@
   min-width: 120px;
   padding: 0 24px;
   margin-left: 6px;
-  border: 2px solid var(--clr-text);
-  border-radius: calc(var(--header-radius) - 6px);
   text-decoration: none;
   transition: border-color 0.3s, background-color 0.3s;
 }

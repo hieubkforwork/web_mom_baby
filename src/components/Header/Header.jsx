@@ -17,7 +17,12 @@ const Header = () => {
       <div className="header-bar">
         {/* Logo area — placeholder for future logo */}
         <Link to="/" className="logo-box" onClick={closeMenu}>
-          <span className="logo-text">{t("header.logo")}</span>
+          <img
+                    src="/LOGO1.png"
+                    alt="Logo"
+                    width={60}
+                    height={60}
+                  />
         </Link>
 
         {/* Center navigation */}

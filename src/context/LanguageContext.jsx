@@ -11,7 +11,7 @@ const translations = {
     header: {
       bookNow: "Book Now",
       search: "Search...",
-      logo: "Logo",
+    
     },
     footer: {
       rights: "All rights reserved.",
@@ -19,7 +19,7 @@ const translations = {
     home: {
       heroTitle: "Welcome to Our Website",
       heroDesc: "Your trusted partner for professional services",
-      discoverServices: "Discover Services ➜",
+      discoverServices: "Discover Services",
       features: {
         maternity: {
           title: "Postpartum Care",
@@ -40,7 +40,7 @@ const translations = {
       },
       aboutSection: {
         title: "ABOUT US",
-        brandName: "Mom & Baby Care",
+        brandName: "Maia care",
         desc1:
           " is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
         desc2:
@@ -68,7 +68,7 @@ const translations = {
           ],
         },
         pregnant: {
-          title: "Mother & Baby Care Packages",
+          title: "Mother & Baby Care\nPackages",
           items: [
             "“Healthy Mom – Happy Baby” Package",
             "“Mom’s Recovery – Baby’s Health” Package",
@@ -91,27 +91,27 @@ const translations = {
         safety: {
           title: "SAFETY",
           description:
-            "Momcare24h always puts the safety of mother and baby first. We apply medically-standard care procedures and use products that are safe, gentle, and rigorously tested.",
+            "Our care procedures are designed specifically for postpartum mothers and newborns, with a focus on hygiene, health monitoring, and appropriate response to any unusual signs.",
         },
         dedication: {
-          title: "DEDICATED & CARING",
+          title: "EXPERTISE",
           description:
-            "Our caregivers are dedicated, professionally trained, experienced, and always listen with empathy. We accompany mothers through every stage.",
+            "Our team is professionally trained to ensure that care services are delivered according to proper procedures and tailored to each individual case.",
         },
         professional: {
-          title: "PROFESSIONAL",
+          title: "PERSONALIZED CARE",
           description:
-            "Scientific care procedures and diverse services — from postpartum care and newborn care to baby bathing, massage, and many other services.",
+            "Our 1:1 care model allows Maia Care to understand the needs of each mother and baby and provide suitable services and care plans.",
         },
         convenient: {
-          title: "CONVENIENT",
+          title: "CONVENIENCE",
           description:
-            "Flexible 24/7 service, quick scheduling, and on-site support. Momcare24h helps mothers save time and effort in their caregiving journey.",
+            "Our services are primarily provided at home, allowing mothers and babies to receive care in a familiar environment while reducing travel time and effort.",
         },
         trust: {
-          title: "TRUSTED",
+          title: "COMPREHENSIVE",
           description:
-            "Thousands of mothers have trusted and chosen Momcare24h. We continually improve quality to become the most reliable companion for mother and baby.",
+            "We combine mother care, baby care, care packages, and nutrition consultation to provide continuous support for the whole family.",
         },
       },
     },
@@ -138,7 +138,6 @@ const translations = {
     header: {
       bookNow: "Đặt Lịch",
       search: "Tìm kiếm...",
-      logo: "Logo",
     },
     footer: {
       rights: "Bảo lưu mọi quyền.",
@@ -146,7 +145,7 @@ const translations = {
     home: {
       heroTitle: "Chào Mừng Đến Website",
       heroDesc: "Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp",
-      discoverServices: "Khám phá Dịch vụ ➜",
+      discoverServices: "Khám phá Dịch vụ",
       features: {
         maternity: {
           title: "Chăm sóc mẹ sau sinh",
@@ -167,7 +166,7 @@ const translations = {
       },
       aboutSection: {
         title: "VỀ CHÚNG TÔI",
-        brandName: "Mom & Baby Care",
+        brandName: "Maia care",
         desc1:
           " tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình Việt. Chúng tôi thấu hiểu những vất vả và niềm hạnh phúc vô bờ bến trong hành trình làm mẹ, từ đó mang đến các dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
         desc2:
@@ -196,7 +195,7 @@ const translations = {
           ],
         },
         postpartum: {
-          title: "Dịch vụ chăm sóc mẹ sau sinh",
+          title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
             "Massage bụng y khoa",
             "Massage lưng thư giãn",
@@ -205,7 +204,7 @@ const translations = {
           ],
         },
         complex: {
-          title: "Gói tặng kèm “tư vấn dinh dưỡng”",
+          title: "Gói tặng kèm “tư vấn\ndinh dưỡng”",
           items: [
             "Tư vấn dinh dưỡng cho mẹ sau sinh",
             "Gói thực đơn dinh dưỡng cho mẹ sau sinh",
@@ -219,27 +218,27 @@ const translations = {
         safety: {
           title: "AN TOÀN",
           description:
-            "Momcare24h luôn đặt sự an toàn của mẹ và bé lên hàng đầu. Chúng tôi áp dụng quy trình chăm sóc chuẩn y khoa, sử dụng sản phẩm an toàn, lành tính và được kiểm định kỹ lưỡng.",
+            " Quy trình chăm sóc được xây dựng phù hợp với mẹ sau sinh và trẻ sơ sinh, chú trọng vệ sinh, theo dõi tình trạng và xử lý khi có dấu hiệu bất thường.",
         },
         dedication: {
-          title: "AN TÂM - NHIỆT TÌNH",
+          title: "CHUYÊN MÔN",
           description:
-            "Đội ngũ chăm sóc viên tận tâm, được đào tạo bài bản, giàu kinh nghiệm và luôn lắng nghe, thấu hiểu. Chúng tôi đồng hành cùng mẹ trong từng giai đoạn.",
+            " Đội ngũ được định hướng có chuyên môn và được đào tạo, giúp các dịch vụ chăm sóc được thực hiện đúng quy trình và phù hợp với từng trường hợp.",
         },
         professional: {
-          title: "CHUYÊN NGHIỆP",
+          title: "CÁ NHÂN HÓA",
           description:
-            "Quy trình chăm sóc khoa học, dịch vụ đa dạng từ chăm sóc mẹ sau sinh, chăm bé sơ sinh đến tắm bé, massage và nhiều dịch vụ khác.",
+            "Mô hình chăm sóc 1:1 giúp Maia Care hiểu nhu cầu của từng mẹ và bé, từ đó lựa chọn dịch vụ và liệu trình phù hợp hơn.",
         },
         convenient: {
           title: "TIỆN LỢI",
           description:
-            "Dịch vụ linh hoạt 24/7, đặt lịch nhanh chóng, hỗ trợ tận nơi. Momcare24h giúp mẹ tiết kiệm thời gian và công sức trong hành trình chăm sóc mẹ và bé.",
+            "Dịch vụ chủ yếu được cung cấp tại nhà, giúp mẹ và bé được chăm sóc ngay trong không gian quen thuộc, đồng thời giảm thời gian và công sức di chuyển.",
         },
         trust: {
-          title: "TIN CẬY",
+          title: "TOÀN DIỆN",
           description:
-            "Hàng ngàn mẹ đã tin tưởng và lựa chọn Momcare24h. Chúng tôi không ngừng nâng cao chất lượng để trở thành người bạn đồng hành tin cậy của mẹ và bé.",
+            "Kết hợp chăm sóc mẹ, chăm sóc bé, các combo theo liệu trình và tư vấn dinh dưỡng, mang đến hành trình chăm sóc xuyên suốt cho cả gia đình.",
         },
       },
     },
