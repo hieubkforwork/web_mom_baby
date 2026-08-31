@@ -48,7 +48,7 @@ const getServicesData = (t) => [
   {
     id: "complex",
     title: t("home.servicesSection.complex.title"),
-    image: "homepage-mom-pregnant-service.png",
+    image: "homepage-dr-service.png",
     alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
     items: t("home.servicesSection.complex.items"),
   },
@@ -63,11 +63,11 @@ const Home = () => {
     <div className="page home-page">
       <section className="banner">
         <picture>
-          <source media="(max-width: 480px)" srcset="/mevabe2.png" />
-          <source media="(max-width: 1024px)" srcset="/mevabe4.png" />
-          <source media="(max-width: 1440px)" srcset="/mevabe3.png" />
+          <source media="(max-width: 480px)" srcset="/mevabe.png" />
+          <source media="(max-width: 1024px)" srcset="/mevabe.png" />
+          <source media="(max-width: 1440px)" srcset="/mevabe.png" />
           <img
-            src="/mevabe3.png"
+            src="/mevabe.png"
             className="banner-img"
             alt="Banner mẹ và bé"
           />
@@ -231,7 +231,7 @@ const Home = () => {
             </div>
             <div className="about-image-wrapper">
               <img
-                src="/about-team.jpg"
+                src="/aboutus-img.png"
                 alt="About Us Team"
                 className="about-image"
               />
@@ -242,6 +242,16 @@ const Home = () => {
 
       {/* ── Why Choose Us Section ── */}
       <WhyChooseUs />
+
+      {/* ── Bottom Banner Image ── */}
+      <div className="home-bottom-banner">
+        <img
+          src="/aboutus-bg.png"
+          alt="MOMCARE24H — Chăm sóc mẹ và bé"
+          className="home-bottom-banner__img"
+          loading="lazy"
+        />
+      </div>
     </div>
   );
 };
