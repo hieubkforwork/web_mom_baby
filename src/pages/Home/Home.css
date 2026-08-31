@@ -239,7 +239,7 @@
    ========================================= */
 .about-section {
   position: relative;
-  padding: 80px 24px;
+  padding: 80px 24px 0px 24px;
 }
 
 .about-container {
@@ -374,5 +374,45 @@
   }
   .about-divider-svg {
     max-width: 100%;
+  }
+}
+
+/* =========================================
+   SERVICES SECTION
+   ========================================= */
+.services-section {
+  background-color: var(--clr-background);
+    padding: 80px 24px 0px 24px;
+
+}
+
+.services-container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .services-section {
+    padding: 60px 16px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

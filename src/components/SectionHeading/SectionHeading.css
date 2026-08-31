@@ -1,0 +1,44 @@
+﻿/* =========================================
+   SECTION HEADING — Reusable title + divider
+   Mirrors About section heading style.
+   Sync font-size / letter-spacing with About
+   section when real component is provided.
+   ========================================= */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading__title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5a7a5c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.section-heading__divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section-heading__svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-heading__title {
+    font-size: 1.6rem;
+  }
+  .section-heading__svg {
+    max-width: 100%;
+  }
+}
