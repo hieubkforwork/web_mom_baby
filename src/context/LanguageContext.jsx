@@ -113,16 +113,16 @@ const translations = {
       discoverServices: 'Khám phá Dịch vụ ➜',
       features: {
         maternity: {
-          title: 'Chăm sóc thai kỳ',
-          desc: 'Theo dõi và đồng hành cùng mẹ bầu',
+          title: 'Chăm sóc mẹ sau sinh',
+          desc: 'Hỗ trợ mẹ phục hồi sau sinh  ',
         },
         newborn: {
           title: 'Chăm sóc sơ sinh',
           desc: 'Chăm sóc bé yêu toàn diện',
         },
         vaccine: {
-          title: 'Tiêm chủng an toàn',
-          desc: 'Đúng lịch, an toàn, tận tâm',
+          title: 'Tư vấn dinh dưỡng',
+          desc: 'Dinh dưỡng phù hợp cho mẹ và bé',
         },
         support: {
           title: 'Tư vấn & hỗ trợ',
