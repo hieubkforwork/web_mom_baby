@@ -1,0 +1,186 @@
+﻿/* =========================================
+   SERVICE CARD
+   ========================================= */
+
+.service-card {
+  position: relative;
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Equal heights via grid (parent is grid) */
+  display: flex;
+  flex-direction: column;
+
+  /* Lift transition */
+  transition:
+    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Keyboard focus ring */
+  outline: none;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 32px rgba(160, 140, 120, 0.14);
+}
+
+/* ── Image wrapper (fixed 4:5 ratio) ── */
+.service-card__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio:7 / 6;
+  overflow: hidden;
+}
+
+.service-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover .service-card__image,
+.service-card:focus-visible .service-card__image,
+.service-card--tapped .service-card__image {
+  transform: scale(1.07);
+}
+
+/* ── Default footer (title bar below image) ── */
+.service-card__footer {
+  padding: 20px 8px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;   /* ← thêm dòng này */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                /* ← thêm khoảng cách title–divider */
+}
+
+.service-card__divider {
+  width: 200px;              /* điều chỉnh theo kích thước ảnh thật */
+  height: auto;
+  display: block;
+}
+
+.service-card__title {
+  font-family: var(--font-body);
+  font-size: 1rem;          /* 18-19px at default root */
+  font-weight: 700;
+  color: var(--clr-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ── Overlay ── */
+.service-card__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(168, 191, 168, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Initial state — invisible */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Show overlay on hover, focus-visible, or tap */
+.service-card:hover .service-card__overlay,
+.service-card:focus-visible .service-card__overlay,
+.service-card--tapped .service-card__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.service-card__overlay-inner {
+  padding: 32px 28px;
+  width: 100%;
+  text-align: center;
+
+  /* Slide-up animation for content */
+  transform: translateY(10px);
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s,
+    opacity 0.4s ease-in-out 0.05s;
+}
+
+.service-card:hover .service-card__overlay-inner,
+.service-card:focus-visible .service-card__overlay-inner,
+.service-card--tapped .service-card__overlay-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.service-card__overlay-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+/* ── Sub-service list ── */
+.service-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-card__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--clr-white);
+  line-height: 1.4;
+}
+
+.service-card__list-item:last-child {
+  border-bottom: none;
+}
+
+.service-card__arrow {
+  flex-shrink: 1;
+  font-size: 1.5rem;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+/* ── Accessibility: visible focus ring ── */
+.service-card:focus-visible {
+  outline: 2.5px solid var(--clr-primary-dark);
+  outline-offset: 3px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__image,
+  .service-card__overlay,
+  .service-card__overlay-inner {
+    transition: none;
+  }
+}

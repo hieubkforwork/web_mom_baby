@@ -7,6 +7,8 @@ import {
   LuLeaf,
 } from "react-icons/lu";
 import { useLanguage } from "../../context/LanguageContext";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import "./Home.css";
 
 const featuresData = [
@@ -14,6 +16,51 @@ const featuresData = [
   { id: "newborn", icon: LuBaby, color: "beige" },
   { id: "vaccine", icon: LuSyringe, color: "sage" },
   { id: "support", icon: LuMessageCircleHeart, color: "beige" },
+];
+
+// ── Services Data ──────────────────────────────────────────────────────────
+// Replace the `image` field with a real URL when assets are ready.
+// The component structure does NOT need to change.
+const servicesData = [
+  {
+    id: "baby",
+    title: "DỊCH VỤ CHO BÉ",
+    image: "/homepage-baby-img-service.png",
+    alt: "Chăm sóc chuyên nghiệp cho bé sơ sinh",
+    items: [
+      "Chăm sóc bé tại nhà",
+      "Tắm bé sơ sinh",
+      "Massage cho bé",
+      "Vệ sinh rốn",
+      "Chăm sóc bé",
+    ],
+  },
+  {
+    id: "pregnant",
+    title: "DỊCH VỤ CHO MẸ BẦU",
+    image: "/homepage-mom-pregnant-service.png",
+    alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
+    items: [
+      "Massage bầu",
+      "Chăm sóc thai kỳ",
+      "Ngâm chân thư giãn",
+      "Chăm sóc da",
+      "Tư vấn chăm sóc mẹ bầu",
+    ],
+  },
+  {
+    id: "postpartum",
+    title: "DỊCH VỤ CHO MẸ SAU SINH",
+    image: "homepage-mombaby-img-service.png",
+    alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
+    items: [
+      "Massage sau sinh",
+      "Chăm sóc mẹ sau sinh",
+      "Chăm sóc vết mổ",
+      "Tắm bé",
+      "Hỗ trợ phục hồi",
+    ],
+  },
 ];
 
 const Home = () => {
@@ -76,6 +123,25 @@ const Home = () => {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* ── Services Section ── */}
+      <section className="services-section" aria-labelledby="services-heading">
+        <div className="services-container">
+          <SectionHeading title="DỊCH VỤ CỦA CHÚNG TÔI" />
+          <div className="services-grid">
+            {servicesData.map((service) => (
+              <ServiceCard
+                key={service.id}
+                id={service.id}
+                title={service.title}
+                image={service.image}
+                alt={service.alt}
+                items={service.items}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
