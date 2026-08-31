@@ -9,6 +9,7 @@ import {
 import { useLanguage } from "../../context/LanguageContext";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import "./Home.css";
 
 const featuresData = [
@@ -24,6 +25,13 @@ const featuresData = [
 // The component structure does NOT need to change.
 const getServicesData = (t) => [
   {
+    id: "postpartum",
+    title: t("home.servicesSection.postpartum.title"),
+    image: "homepage-mombaby-img-service.png",
+    alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
+    items: t("home.servicesSection.postpartum.items"),
+  },
+  {
     id: "baby",
     title: t("home.servicesSection.baby.title"),
     image: "homepage-baby-img-service.png",
@@ -38,12 +46,13 @@ const getServicesData = (t) => [
     items: t("home.servicesSection.pregnant.items"),
   },
   {
-    id: "postpartum",
-    title: t("home.servicesSection.postpartum.title"),
-    image: "homepage-mombaby-img-service.png",
-    alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
-    items: t("home.servicesSection.postpartum.items"),
+    id: "complex",
+    title: t("home.servicesSection.complex.title"),
+    image: "homepage-mom-pregnant-service.png",
+    alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
+    items: t("home.servicesSection.complex.items"),
   },
+  
 ];
 
 const Home = () => {
@@ -230,6 +239,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Why Choose Us Section ── */}
+      <WhyChooseUs />
     </div>
   );
 };

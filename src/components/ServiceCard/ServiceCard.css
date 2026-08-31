@@ -53,9 +53,9 @@
 
 /* ── Default footer (title bar below image) ── */
 .service-card__footer {
-  padding: 20px 8px;
   text-align: center;
   flex: 1;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;   /* ← thêm dòng này */
   align-items: center;
@@ -75,6 +75,7 @@
   font-weight: 700;
   color: var(--clr-text-dark);
   text-transform: uppercase;
+  white-space: pre-line;      /* allow line breaks in title */
   letter-spacing: 0.05em;
   margin: 0;
   line-height: 1.3;
@@ -104,7 +105,7 @@
 }
 
 .service-card__overlay-inner {
-  padding: 32px 28px;
+  padding: 12px 8px;
   width: 100%;
   text-align: center;
 
@@ -125,7 +126,7 @@
 
 .service-card__overlay-title {
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--clr-white);
   text-transform: uppercase;
@@ -146,7 +147,7 @@
 
 .service-card__list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;      /* đổi từ center → để mũi tên bám theo dòng đầu, không center theo cả khối 2 dòng */
   justify-content: flex-start;
   gap: 8px;
   padding: 8px 8px;
@@ -158,8 +159,9 @@
   line-height: 1.4;
 }
 
-.service-card__list-item:last-child {
-  border-bottom: none;
+.service-card__list-item span:last-child {
+  text-align: left;             /* chặn text-align:center kế thừa từ cha */
+  flex: 1;                       /* để width ổn định, không co khít theo nội dung */
 }
 
 .service-card__arrow {

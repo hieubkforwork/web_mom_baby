@@ -1,186 +1,259 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const translations = {
   en: {
     nav: {
-      home: 'Homepage',
-      about: 'About Us',
-      service: 'Services',
-      contact: 'Contact',
+      home: "Homepage",
+      about: "About Us",
+      service: "Services",
+      contact: "Contact",
     },
     header: {
-      bookNow: 'Book Now',
-      search: 'Search...',
-      logo: 'Logo',
+      bookNow: "Book Now",
+      search: "Search...",
+      logo: "Logo",
     },
     footer: {
-      rights: 'All rights reserved.',
+      rights: "All rights reserved.",
     },
     home: {
-      heroTitle: 'Welcome to Our Website',
-      heroDesc: 'Your trusted partner for professional services',
-      discoverServices: 'Discover Services ➜',
+      heroTitle: "Welcome to Our Website",
+      heroDesc: "Your trusted partner for professional services",
+      discoverServices: "Discover Services ➜",
       features: {
         maternity: {
-          title: 'Maternity Care',
-          desc: 'Monitoring and accompanying expectant mothers',
+          title: "Postpartum Care",
+          desc: "Support for postpartum recovery",
         },
         newborn: {
-          title: 'Newborn Care',
-          desc: 'Comprehensive care for your beloved baby',
+          title: "Newborn Care",
+          desc: "Comprehensive care for your beloved baby",
         },
         vaccine: {
-          title: 'Safe Vaccination',
-          desc: 'On schedule, safe, and dedicated',
+          title: "Nutrition Consultation",
+          desc: "Nutrition guidance for mothers and babies",
         },
         support: {
-          title: 'Consulting & Support',
-          desc: 'Answers and support 24/7',
+          title: "Consulting & Support",
+          desc: "Answers and support 24/7",
         },
       },
       aboutSection: {
         title: "ABOUT US",
         brandName: "Mom & Baby Care",
-        desc1: " is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
-        desc2: "With a team of experienced experts, a standard relaxing space, and specially designed treatments, we are committed to bringing perfect recovery for mothers and a solid start for beloved babies.",
-        cta: "LEARN MORE"
+        desc1:
+          " is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
+        desc2:
+          "With a team of experienced experts, a standard relaxing space, and specially designed treatments, we are committed to bringing perfect recovery for mothers and a solid start for beloved babies.",
+        cta: "LEARN MORE",
       },
       servicesSection: {
         heading: "OUR SERVICES",
-        baby: {
-          title: "BABY SERVICES",
+        postpartum: {
+          title: "Postpartum Mother Care Services",
           items: [
-            "At-home baby care",
-            "Newborn bathing",
+            "Medical Abdominal Massage",
+            "Relaxing Back Massage",
+            "Breast Massage for Milk Duct Relief",
+            "Postpartum Stitch and C-Section Incision Care",
+          ],
+        },
+        baby: {
+          title: "Baby Care\nServices",
+          items: [
+            "Health Check-up and Consultation",
+            "Hydrotherapy Bath",
             "Baby massage",
-            "Umbilical cord care",
-            "Baby care",
+            "Hourly In-Home Baby Care",
           ],
         },
         pregnant: {
-          title: "MATERNITY SERVICES",
+          title: "Mother & Baby Care Packages",
           items: [
-            "Pregnancy massage",
-            "Prenatal care",
-            "Relaxing foot soak",
-            "Skin care",
-            "Maternity care consulting",
+            "“Healthy Mom – Happy Baby” Package",
+            "“Mom’s Recovery – Baby’s Health” Package",
+            "“Complete Mom & Baby Care” Package",
+            "“Postpartum Care Companion” Package",
           ],
         },
-        postpartum: {
-          title: "POSTPARTUM SERVICES",
+        complex: {
+          title: "Complimentary “Nutrition Consultation” Packages",
           items: [
-            "Postpartum massage",
-            "Postpartum mother care",
-            "C-section wound care",
-            "Baby bathing",
-            "Recovery support",
+            "Postpartum Nutrition Consultation for Mothers",
+            "Postpartum Nutrition Meal Plan",
+            "Nutrition Consultation and Weaning Meal Plan for Babies",
+            "“Healthy Mom – Happy Eater” Nutrition Package",
           ],
+        },
+      },
+      whyChooseUs: {
+        heading: "WHY CHOOSE MOMCARE24H?",
+        safety: {
+          title: "SAFETY",
+          description:
+            "Momcare24h always puts the safety of mother and baby first. We apply medically-standard care procedures and use products that are safe, gentle, and rigorously tested.",
+        },
+        dedication: {
+          title: "DEDICATED & CARING",
+          description:
+            "Our caregivers are dedicated, professionally trained, experienced, and always listen with empathy. We accompany mothers through every stage.",
+        },
+        professional: {
+          title: "PROFESSIONAL",
+          description:
+            "Scientific care procedures and diverse services — from postpartum care and newborn care to baby bathing, massage, and many other services.",
+        },
+        convenient: {
+          title: "CONVENIENT",
+          description:
+            "Flexible 24/7 service, quick scheduling, and on-site support. Momcare24h helps mothers save time and effort in their caregiving journey.",
+        },
+        trust: {
+          title: "TRUSTED",
+          description:
+            "Thousands of mothers have trusted and chosen Momcare24h. We continually improve quality to become the most reliable companion for mother and baby.",
         },
       },
     },
     about: {
-      heroTitle: 'About Us',
-      heroDesc: 'Learn more about who we are and what we do',
+      heroTitle: "About Us",
+      heroDesc: "Learn more about who we are and what we do",
     },
     service: {
-      heroTitle: 'Our Services',
-      heroDesc: 'Discover the services we offer',
+      heroTitle: "Our Services",
+      heroDesc: "Discover the services we offer",
     },
     booking: {
-      heroTitle: 'Booking',
-      heroDesc: 'Book an appointment with us',
+      heroTitle: "Booking",
+      heroDesc: "Book an appointment with us",
     },
   },
   vi: {
     nav: {
-      home: 'Trang Chủ',
-      about: 'Về Chúng Tôi',
-      service: 'Dịch Vụ',
-      contact: 'Liên Hệ',
+      home: "Trang Chủ",
+      about: "Về Chúng Tôi",
+      service: "Dịch Vụ",
+      contact: "Liên Hệ",
     },
     header: {
-      bookNow: 'Đặt Lịch',
-      search: 'Tìm kiếm...',
-      logo: 'Logo',
+      bookNow: "Đặt Lịch",
+      search: "Tìm kiếm...",
+      logo: "Logo",
     },
     footer: {
-      rights: 'Bảo lưu mọi quyền.',
+      rights: "Bảo lưu mọi quyền.",
     },
     home: {
-      heroTitle: 'Chào Mừng Đến Website',
-      heroDesc: 'Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp',
-      discoverServices: 'Khám phá Dịch vụ ➜',
+      heroTitle: "Chào Mừng Đến Website",
+      heroDesc: "Đối tác đáng tin cậy cho các dịch vụ chuyên nghiệp",
+      discoverServices: "Khám phá Dịch vụ ➜",
       features: {
         maternity: {
-          title: 'Chăm sóc mẹ sau sinh',
-          desc: 'Hỗ trợ mẹ phục hồi sau sinh  ',
+          title: "Chăm sóc mẹ sau sinh",
+          desc: "Hỗ trợ mẹ phục hồi sau sinh  ",
         },
         newborn: {
-          title: 'Chăm sóc sơ sinh',
-          desc: 'Chăm sóc bé yêu toàn diện',
+          title: "Chăm sóc sơ sinh",
+          desc: "Chăm sóc bé yêu toàn diện",
         },
         vaccine: {
-          title: 'Tư vấn dinh dưỡng',
-          desc: 'Dinh dưỡng phù hợp cho mẹ và bé',
+          title: "Tư vấn dinh dưỡng",
+          desc: "Dinh dưỡng phù hợp cho mẹ và bé",
         },
         support: {
-          title: 'Tư vấn & hỗ trợ',
-          desc: 'Giải đáp và hỗ trợ 24/7',
+          title: "Tư vấn & hỗ trợ",
+          desc: "Giải đáp và hỗ trợ 24/7",
         },
       },
       aboutSection: {
         title: "VỀ CHÚNG TÔI",
         brandName: "Mom & Baby Care",
-        desc1: " tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình Việt. Chúng tôi thấu hiểu những vất vả và niềm hạnh phúc vô bờ bến trong hành trình làm mẹ, từ đó mang đến các dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
-        desc2: "Với đội ngũ chuyên gia giàu kinh nghiệm, không gian thư giãn tiêu chuẩn và các liệu trình được thiết kế riêng biệt, chúng tôi cam kết mang lại sự phục hồi hoàn hảo cho mẹ và sự khởi đầu vững chắc cho bé yêu.",
-        cta: "XEM THÊM"
+        desc1:
+          " tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình Việt. Chúng tôi thấu hiểu những vất vả và niềm hạnh phúc vô bờ bến trong hành trình làm mẹ, từ đó mang đến các dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
+        desc2:
+          "Với đội ngũ chuyên gia giàu kinh nghiệm, không gian thư giãn tiêu chuẩn và các liệu trình được thiết kế riêng biệt, chúng tôi cam kết mang lại sự phục hồi hoàn hảo cho mẹ và sự khởi đầu vững chắc cho bé yêu.",
+        cta: "XEM THÊM",
       },
       servicesSection: {
         heading: "DỊCH VỤ CỦA CHÚNG TÔI",
         baby: {
-          title: "DỊCH VỤ CHO BÉ",
+          title: "Dịch vụ chăm sóc\nem bé",
           items: [
-            "Chăm sóc bé tại nhà",
-            "Tắm bé sơ sinh",
+            "Kiểm tra và tư vấn sức khỏe",
+            "Tắm thủy liệu",
             "Massage cho bé",
-            "Vệ sinh rốn",
-            "Chăm sóc bé",
+            "Chăm sóc bé tại nhà theo giờ",
           ],
         },
         pregnant: {
-          title: "DỊCH VỤ CHO MẸ BẦU",
+          title: "Combo chăm sóc\nmẹ và bé",
           items: [
-            "Massage bầu",
-            "Chăm sóc thai kỳ",
-            "Ngâm chân thư giãn",
+            "Combo “Mẹ khỏe - Bé yêu”",
+            "Combo “Mẹ phục hồi - Bé khỏe”",
+            "Combo “Mẹ và bé toàn diện”",
             "Chăm sóc da",
-            "Tư vấn chăm sóc mẹ bầu",
+            "Combo “Đồng hành sau sinh”",
           ],
         },
         postpartum: {
-          title: "DỊCH VỤ CHO MẸ SAU SINH",
+          title: "Dịch vụ chăm sóc mẹ sau sinh",
           items: [
-            "Massage sau sinh",
-            "Chăm sóc mẹ sau sinh",
-            "Chăm sóc vết mổ",
-            "Tắm bé",
-            "Hỗ trợ phục hồi",
+            "Massage bụng y khoa",
+            "Massage lưng thư giãn",
+            "Massage hỗ trợ thông tắc tia sữa",
+            "Chăm sóc vết khâu, vết mổ sau sinh",
           ],
+        },
+        complex: {
+          title: "Gói tặng kèm “tư vấn dinh dưỡng”",
+          items: [
+            "Tư vấn dinh dưỡng cho mẹ sau sinh",
+            "Gói thực đơn dinh dưỡng cho mẹ sau sinh",
+            "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé",
+            "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”",
+          ],
+        },
+      },
+      whyChooseUs: {
+        heading: "VÌ SAO NÊN CHỌN CHÚNG TÔI?",
+        safety: {
+          title: "AN TOÀN",
+          description:
+            "Momcare24h luôn đặt sự an toàn của mẹ và bé lên hàng đầu. Chúng tôi áp dụng quy trình chăm sóc chuẩn y khoa, sử dụng sản phẩm an toàn, lành tính và được kiểm định kỹ lưỡng.",
+        },
+        dedication: {
+          title: "AN TÂM - NHIỆT TÌNH",
+          description:
+            "Đội ngũ chăm sóc viên tận tâm, được đào tạo bài bản, giàu kinh nghiệm và luôn lắng nghe, thấu hiểu. Chúng tôi đồng hành cùng mẹ trong từng giai đoạn.",
+        },
+        professional: {
+          title: "CHUYÊN NGHIỆP",
+          description:
+            "Quy trình chăm sóc khoa học, dịch vụ đa dạng từ chăm sóc mẹ sau sinh, chăm bé sơ sinh đến tắm bé, massage và nhiều dịch vụ khác.",
+        },
+        convenient: {
+          title: "TIỆN LỢI",
+          description:
+            "Dịch vụ linh hoạt 24/7, đặt lịch nhanh chóng, hỗ trợ tận nơi. Momcare24h giúp mẹ tiết kiệm thời gian và công sức trong hành trình chăm sóc mẹ và bé.",
+        },
+        trust: {
+          title: "TIN CẬY",
+          description:
+            "Hàng ngàn mẹ đã tin tưởng và lựa chọn Momcare24h. Chúng tôi không ngừng nâng cao chất lượng để trở thành người bạn đồng hành tin cậy của mẹ và bé.",
         },
       },
     },
     about: {
-      heroTitle: 'Về Chúng Tôi',
-      heroDesc: 'Tìm hiểu thêm về chúng tôi và những gì chúng tôi làm',
+      heroTitle: "Về Chúng Tôi",
+      heroDesc: "Tìm hiểu thêm về chúng tôi và những gì chúng tôi làm",
     },
     service: {
-      heroTitle: 'Dịch Vụ',
-      heroDesc: 'Khám phá các dịch vụ chúng tôi cung cấp',
+      heroTitle: "Dịch Vụ",
+      heroDesc: "Khám phá các dịch vụ chúng tôi cung cấp",
     },
     booking: {
-      heroTitle: 'Đặt Lịch',
-      heroDesc: 'Đặt lịch hẹn với chúng tôi',
+      heroTitle: "Đặt Lịch",
+      heroDesc: "Đặt lịch hẹn với chúng tôi",
     },
   },
 };
@@ -188,14 +261,14 @@ const translations = {
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState('vi');
+  const [lang, setLang] = useState("vi");
 
   const toggleLang = () => {
-    setLang((prev) => (prev === 'en' ? 'vi' : 'en'));
+    setLang((prev) => (prev === "en" ? "vi" : "en"));
   };
 
   const t = (key) => {
-    const keys = key.split('.');
+    const keys = key.split(".");
     let value = translations[lang];
     for (const k of keys) {
       value = value?.[k];
@@ -213,8 +286,7 @@ export const LanguageProvider = ({ children }) => {
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 };
-
