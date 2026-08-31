@@ -19,52 +19,36 @@ const featuresData = [
 ];
 
 // ── Services Data ──────────────────────────────────────────────────────────
+// Nhận hàm t() để tự động đổi theo ngôn ngữ hiện tại.
 // Replace the `image` field with a real URL when assets are ready.
 // The component structure does NOT need to change.
-const servicesData = [
+const getServicesData = (t) => [
   {
     id: "baby",
-    title: "DỊCH VỤ CHO BÉ",
-    image: "/homepage-baby-img-service.png",
+    title: t("home.servicesSection.baby.title"),
+    image: "homepage-baby-img-service.png",
     alt: "Chăm sóc chuyên nghiệp cho bé sơ sinh",
-    items: [
-      "Chăm sóc bé tại nhà",
-      "Tắm bé sơ sinh",
-      "Massage cho bé",
-      "Vệ sinh rốn",
-      "Chăm sóc bé",
-    ],
+    items: t("home.servicesSection.baby.items"),
   },
   {
     id: "pregnant",
-    title: "DỊCH VỤ CHO MẸ BẦU",
-    image: "/homepage-mom-pregnant-service.png",
+    title: t("home.servicesSection.pregnant.title"),
+    image: "homepage-mom-pregnant-service.png",
     alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
-    items: [
-      "Massage bầu",
-      "Chăm sóc thai kỳ",
-      "Ngâm chân thư giãn",
-      "Chăm sóc da",
-      "Tư vấn chăm sóc mẹ bầu",
-    ],
+    items: t("home.servicesSection.pregnant.items"),
   },
   {
     id: "postpartum",
-    title: "DỊCH VỤ CHO MẸ SAU SINH",
+    title: t("home.servicesSection.postpartum.title"),
     image: "homepage-mombaby-img-service.png",
     alt: "Mẹ sau sinh được chăm sóc và phục hồi chuyên nghiệp",
-    items: [
-      "Massage sau sinh",
-      "Chăm sóc mẹ sau sinh",
-      "Chăm sóc vết mổ",
-      "Tắm bé",
-      "Hỗ trợ phục hồi",
-    ],
+    items: t("home.servicesSection.postpartum.items"),
   },
 ];
 
 const Home = () => {
   const { t } = useLanguage();
+  const servicesData = getServicesData(t);
 
   return (
     <div className="page home-page">
@@ -129,7 +113,7 @@ const Home = () => {
       {/* ── Services Section ── */}
       <section className="services-section" aria-labelledby="services-heading">
         <div className="services-container">
-          <SectionHeading title="DỊCH VỤ CỦA CHÚNG TÔI" />
+          <SectionHeading title={t("home.servicesSection.heading")} />
           <div className="services-grid">
             {servicesData.map((service) => (
               <ServiceCard

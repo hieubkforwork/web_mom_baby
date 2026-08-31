@@ -45,6 +45,39 @@ const translations = {
         desc2: "With a team of experienced experts, a standard relaxing space, and specially designed treatments, we are committed to bringing perfect recovery for mothers and a solid start for beloved babies.",
         cta: "LEARN MORE"
       },
+      servicesSection: {
+        heading: "OUR SERVICES",
+        baby: {
+          title: "BABY SERVICES",
+          items: [
+            "At-home baby care",
+            "Newborn bathing",
+            "Baby massage",
+            "Umbilical cord care",
+            "Baby care",
+          ],
+        },
+        pregnant: {
+          title: "MATERNITY SERVICES",
+          items: [
+            "Pregnancy massage",
+            "Prenatal care",
+            "Relaxing foot soak",
+            "Skin care",
+            "Maternity care consulting",
+          ],
+        },
+        postpartum: {
+          title: "POSTPARTUM SERVICES",
+          items: [
+            "Postpartum massage",
+            "Postpartum mother care",
+            "C-section wound care",
+            "Baby bathing",
+            "Recovery support",
+          ],
+        },
+      },
     },
     about: {
       heroTitle: 'About Us',
@@ -80,16 +113,16 @@ const translations = {
       discoverServices: 'Khám phá Dịch vụ ➜',
       features: {
         maternity: {
-          title: 'Chăm sóc thai kỳ',
-          desc: 'Theo dõi và đồng hành cùng mẹ bầu',
+          title: 'Chăm sóc mẹ sau sinh',
+          desc: 'Hỗ trợ mẹ phục hồi sau sinh  ',
         },
         newborn: {
           title: 'Chăm sóc sơ sinh',
           desc: 'Chăm sóc bé yêu toàn diện',
         },
         vaccine: {
-          title: 'Tiêm chủng an toàn',
-          desc: 'Đúng lịch, an toàn, tận tâm',
+          title: 'Tư vấn dinh dưỡng',
+          desc: 'Dinh dưỡng phù hợp cho mẹ và bé',
         },
         support: {
           title: 'Tư vấn & hỗ trợ',
@@ -102,6 +135,39 @@ const translations = {
         desc1: " tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình Việt. Chúng tôi thấu hiểu những vất vả và niềm hạnh phúc vô bờ bến trong hành trình làm mẹ, từ đó mang đến các dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
         desc2: "Với đội ngũ chuyên gia giàu kinh nghiệm, không gian thư giãn tiêu chuẩn và các liệu trình được thiết kế riêng biệt, chúng tôi cam kết mang lại sự phục hồi hoàn hảo cho mẹ và sự khởi đầu vững chắc cho bé yêu.",
         cta: "XEM THÊM"
+      },
+      servicesSection: {
+        heading: "DỊCH VỤ CỦA CHÚNG TÔI",
+        baby: {
+          title: "DỊCH VỤ CHO BÉ",
+          items: [
+            "Chăm sóc bé tại nhà",
+            "Tắm bé sơ sinh",
+            "Massage cho bé",
+            "Vệ sinh rốn",
+            "Chăm sóc bé",
+          ],
+        },
+        pregnant: {
+          title: "DỊCH VỤ CHO MẸ BẦU",
+          items: [
+            "Massage bầu",
+            "Chăm sóc thai kỳ",
+            "Ngâm chân thư giãn",
+            "Chăm sóc da",
+            "Tư vấn chăm sóc mẹ bầu",
+          ],
+        },
+        postpartum: {
+          title: "DỊCH VỤ CHO MẸ SAU SINH",
+          items: [
+            "Massage sau sinh",
+            "Chăm sóc mẹ sau sinh",
+            "Chăm sóc vết mổ",
+            "Tắm bé",
+            "Hỗ trợ phục hồi",
+          ],
+        },
       },
     },
     about: {
