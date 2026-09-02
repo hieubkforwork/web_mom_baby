@@ -11,7 +11,6 @@ const translations = {
     header: {
       bookNow: "Book Now",
       search: "Search...",
-    
     },
     footer: {
       rights: "All rights reserved.",
@@ -124,19 +123,49 @@ const translations = {
       heroDesc: "Discover the services we offer",
     },
     contact: {
-      heroTitle: "Contact Us",
-      heroDesc: "Get in touch with us",
+      title: "CONTACT MAIA CARE",
+      subtitle:
+        "Maia Care is always ready to listen, advise, and accompany mothers on the postpartum health care journey.",
+      cards: {
+        phone: {
+          title: "PHONE",
+          value: "0855 000 123",
+          note: "(8:00 AM – 8:00 PM daily)",
+        },
+        address: {
+          title: "ADDRESS",
+          value:
+            "123 Nguyen Van Linh Street, Tan Phong Ward, District 7, Ho Chi Minh City",
+        },
+        zalo: {
+          title: "ZALO",
+          value: "0855 000 123",
+          note: "(Tap to chat via Zalo)",
+        },
+        facebook: {
+          title: "FANPAGE",
+          value: "Maia Care",
+          note: "Postpartum mother & baby care",
+        },
+        email: { title: "EMAIL", value: "hello@maiacare.vn" },
+        hours: {
+          title: "WORKING HOURS",
+          value: "Monday – Sunday",
+          note: "8:00 AM – 8:00 PM",
+        },
+      },
+      location: {
+        heading: "MAIA CARE LOCATION",
+        directionsBtn: "GET DIRECTIONS",
+      },
     },
-    booking: {
+      booking: {
       heroTitle: "Service Booking",
-      heroDesc: "Please fill in the information and select a suitable time. We will confirm your appointment as soon as possible.",
+      heroDesc:
+        "Please fill in the information and select a suitable time. We will confirm your appointment as soon as possible.",
       selectServiceLabel: "Select Service",
       selectServicePlaceholder: "Select service",
-      services: [
-        "Baby Services",
-        "Maternity Services",
-        "Postpartum Services"
-      ],
+      services: ["Baby Services", "Maternity Services", "Postpartum Services"],
       customerInfoTitle: "1. Customer Information",
       fullNameLabel: "Full Name",
       fullNamePlaceholder: "Enter your full name",
@@ -149,15 +178,21 @@ const translations = {
       dayLabel: "Select Day",
       dayPlaceholder: "Select day",
       days: [
-        "Monday", "Tuesday", "Wednesday", "Thursday",
-        "Friday", "Saturday", "Sunday"
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
       ],
       timeLabel: "Select Time",
       timePlaceholder: "Select time",
       workingHours: "Working hours: 08:00 - 20:00 (All days of the week)",
       submitButton: "Confirm Booking",
-      privacyText: "Your information is kept strictly confidential"
+      privacyText: "Your information is kept strictly confidential",
     },
+
   },
   vi: {
     nav: {
@@ -282,18 +317,52 @@ const translations = {
       heroDesc: "Khám phá các dịch vụ chúng tôi cung cấp",
     },
     contact: {
-      heroTitle: "Contact Us",
-      heroDesc: "Get in touch with us",
+      title: "LIÊN HỆ VỚI MAIA CARE",
+      subtitle:
+        "Maia Care luôn sẵn sàng lắng nghe, tư vấn và đồng hành cùng mẹ trong hành trình chăm sóc sức khỏe sau sinh.",
+      cards: {
+        phone: {
+          title: "ĐIỆN THOẠI",
+          value: "0855 000 123",
+          note: "(8:00 – 20:00 mỗi ngày)",
+        },
+        address: {
+          title: "ĐỊA CHỈ",
+          value:
+            "123 Đường Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+        },
+        zalo: {
+          title: "ZALO",
+          value: "0855 000 123",
+          note: "(Nhấn để chat qua Zalo)",
+        },
+        facebook: {
+          title: "FANPAGE",
+          value: "Maia Care",
+          note: "Chăm sóc mẹ và bé sau sinh",
+        },
+        email: { title: "EMAIL", value: "hello@maiacare.vn" },
+        hours: {
+          title: "GIỜ LÀM VIỆC",
+          value: "Thứ 2 – Chủ nhật",
+          note: "8:00 – 20:00",
+        },
+      },
+      location: {
+        heading: "VỊ TRÍ CỦA MAIA CARE",
+        directionsBtn: "CHỈ ĐƯỜNG",
+      },
     },
     booking: {
-      heroTitle: "Booking dịch vụ",
-      heroDesc: "Vui lòng điền đầy đủ thông tin và chọn thời gian phù hợp. Chúng tôi sẽ xác nhận lịch hẹn với bạn trong thời gian sớm nhất.",
+      heroTitle: "Đặt Lịch Dịch Vụ",
+      heroDesc:
+        "Vui lòng điền thông tin và chọn thời gian phù hợp. Chúng tôi sẽ xác nhận lịch hẹn của bạn trong thời gian sớm nhất.",
       selectServiceLabel: "Chọn tên dịch vụ",
       selectServicePlaceholder: "Chọn dịch vụ",
       services: [
         "Dịch vụ cho bé",
         "Dịch vụ cho mẹ bầu",
-        "Dịch vụ cho mẹ sau sinh"
+        "Dịch vụ cho mẹ sau sinh",
       ],
       customerInfoTitle: "1. Thông tin khách hàng",
       fullNameLabel: "Họ và tên",
@@ -307,14 +376,20 @@ const translations = {
       dayLabel: "Chọn thứ",
       dayPlaceholder: "Chọn thứ",
       days: [
-        "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm",
-        "Thứ Sáu", "Thứ Bảy", "Chủ Nhật"
+        "Thứ Hai",
+        "Thứ Ba",
+        "Thứ Tư",
+        "Thứ Năm",
+        "Thứ Sáu",
+        "Thứ Bảy",
+        "Chủ Nhật",
       ],
       timeLabel: "Chọn giờ",
       timePlaceholder: "Chọn thời gian",
-      workingHours: "Thời gian làm việc: 08:00 - 20:00 (Tất cả các ngày trong tuần)",
+      workingHours:
+        "Thời gian làm việc: 08:00 - 20:00 (Tất cả các ngày trong tuần)",
       submitButton: "Xác nhận đặt lịch",
-      privacyText: "Thông tin của bạn được bảo mật tuyệt đối"
+      privacyText: "Thông tin của bạn được bảo mật tuyệt đối",
     },
   },
 };

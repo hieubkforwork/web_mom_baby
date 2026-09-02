@@ -1,15 +1,366 @@
-.contact-page .contact-hero {
+/* =========================================
+   CONTACT PAGE — Maia Care
+   All selectors prefixed ct- to avoid
+   collisions with other page styles.
+   ========================================= */
+
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--clr-background, #F7F1E8);
+  padding: 40px 24px 80px;
+  margin-top: 100px;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════
+   BACKGROUND IMAGE (fixed)
+   ═══════════════════════════════════════════ */
+.ct-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('/contact-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+}
+
+/* ═══════════════════════════════════════════
+   HERO / PAGE TITLE
+   ═══════════════════════════════════════════ */
+.ct-hero {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 4rem 2rem;
+  max-width: 700px;
+  margin: 0 auto 48px;
 }
 
-.contact-page .contact-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.ct-hero__deco {
+  margin-bottom: 12px;
 }
 
-.contact-page .contact-hero p {
-  font-size: 1.2rem;
-  color: #666;
+.ct-hero__title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--clr-text-dark, #7a6b5a);
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
 }
 
+.ct-hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.ct-hero__line {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--clr-secondary, #E2CFC2);
+}
+
+.ct-hero__subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--clr-text, #A08C78);
+  margin: 0;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ═══════════════════════════════════════════
+   CONTACT CARDS
+   ═══════════════════════════════════════════ */
+.ct-cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.ct-card {
+  background-color: var(--clr-white, #ffffff);
+  border: 1px solid rgba(196, 181, 165, 0.25);
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(160, 140, 120, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ct-card--link {
+  cursor: pointer;
+}
+
+.ct-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(160, 140, 120, 0.12);
+}
+
+/* Icon circles */
+.ct-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  color: var(--clr-white, #fff);
+  margin-bottom: 16px;
+  transition: transform 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.ct-card:hover .ct-card__icon {
+  transform: scale(1.05);
+}
+
+.ct-icon--sage {
+  background: linear-gradient(135deg, var(--clr-primary, #A8BFA8), var(--clr-primary-dark, #8EAA8E));
+}
+
+.ct-icon--beige {
+  background: linear-gradient(135deg, var(--clr-secondary, #E2CFC2), var(--clr-border, #c4b5a5));
+}
+
+.ct-card__title {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--clr-text-dark, #7a6b5a);
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.ct-card__value {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--clr-text-dark, #7a6b5a);
+  margin: 0 0 4px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.ct-card__note {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  color: var(--clr-text, #A08C78);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════
+   LOCATION SECTION
+   ═══════════════════════════════════════════ */
+.ct-location {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ct-location__heading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--clr-text-dark, #7a6b5a);
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
+}
+
+.ct-location__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+/* Map container */
+.ct-map {
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(196, 181, 165, 0.35);
+  box-shadow: 0 8px 30px rgba(122, 107, 90, 0.08);
+}
+
+.ct-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Map info bar */
+.ct-map-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--clr-white, #ffffff);
+  border-radius: 0 0 18px 18px;
+  padding: 18px 24px;
+  margin-top: -2px;
+  border: 1px solid rgba(196, 181, 165, 0.2);
+  border-top: none;
+}
+
+.ct-map-bar__address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.9rem;
+  color: var(--clr-text-dark, #7a6b5a);
+  line-height: 1.5;
+}
+
+.ct-map-bar__icon {
+  color: var(--clr-primary-dark, #8EAA8E);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ct-map-bar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 12px 24px;
+  background-color: var(--clr-primary-dark, #8EAA8E);
+  color: var(--clr-white, #fff);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.ct-map-bar__btn:hover {
+  background-color: var(--clr-primary, #A8BFA8);
+  transform: translateY(-1px);
+}
+
+.ct-map-bar__btn:focus-visible {
+  outline: 2.5px solid var(--clr-primary-dark, #8EAA8E);
+  outline-offset: 3px;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+
+/* Large tablet / small desktop */
+@media (max-width: 1199px) {
+  .ct-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ct-map {
+    height: 360px;
+  }
+}
+
+/* Tablet / large mobile */
+@media (max-width: 767px) {
+  .contact-page {
+    padding: 28px 16px 60px;
+  }
+
+  .ct-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .ct-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .ct-card {
+    padding: 22px 16px;
+  }
+
+  .ct-location__heading {
+    font-size: 1.5rem;
+  }
+
+  .ct-map {
+    height: 300px;
+    border-radius: 14px;
+  }
+
+  .ct-map-bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    border-radius: 0 0 14px 14px;
+    padding: 16px 18px;
+  }
+
+  .ct-map-bar__address {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ct-map-bar__btn {
+    width: 100%;
+  }
+
+  /* Hide background on mobile */
+  .ct-bg {
+    display: none;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 479px) {
+  .ct-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-hero__title {
+    font-size: 1.5rem;
+  }
+
+  .ct-map {
+    height: 280px;
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .ct-card,
+  .ct-card__icon,
+  .ct-map-bar__btn {
+    transition: none;
+  }
+}
