@@ -1,15 +1,684 @@
-.about-page .about-hero {
+/* =========================================
+   ABOUT US PAGE — Maia Care / MOMCARE24H
+   All selectors scoped to .about-page or
+   prefixed ap- to avoid Home.css collisions.
+   ========================================= */
+
+/* ── Shared tokens ── */
+.about-page {
+  --ap-container: 1200px;
+  --ap-section-pad: 80px 24px;
+  --ap-text-dark: var(--clr-text-dark, #3E403B);
+  --ap-text-muted: var(--clr-text, #77776F);
+  --ap-sage: var(--clr-primary, #A8BFA8);
+  --ap-sage-dark: var(--clr-primary-dark, #8EAA8E);
+  --ap-cream: var(--clr-background, #F8F5EF);
+  --ap-white: var(--clr-white, #FFFFFF);
+  --ap-beige: var(--clr-secondary, #D9C4A8);
+  background-color: #FFFFFF;
+}
+
+/* ── Reusable icon circle (mirrors .feature-icon-wrapper) ── */
+.ap-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  color: var(--ap-white);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+.ap-icon-circle.bg-sage  { background-color: var(--ap-sage); }
+.ap-icon-circle.bg-beige { background-color: var(--ap-beige); }
+.ap-icon-circle--sm { width: 48px; height: 48px; min-width: 48px; }
+.ap-icon-circle--lg { width: 80px; height: 80px; min-width: 80px; }
+
+/* ── Accent line (thin sage bar before headings) ── */
+.ap-accent-line {
+  width: 40px;
+  height: 3px;
+  background-color: var(--ap-sage);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+/* ── Tag pill ── */
+.ap-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: rgba(168, 191, 168, 0.12);
+  color: var(--ap-sage-dark);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid rgba(168, 191, 168, 0.25);
+}
+
+/* ── Check icon ── */
+.ap-check-icon {
+  color: var(--ap-sage-dark);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════
+   1. HERO
+   ═══════════════════════════════════════════ */
+.ap-hero {
+  padding: 100px 24px 80px;
+  background-color: var(--ap-white);
+}
+
+.ap-hero__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.ap-hero__text {
+  flex: 1;
+  margin-top: -80px; /* Slight upward shift for visual balance */
+}
+
+.ap-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ap-sage-dark);
+  margin-bottom: 20px;
+}
+
+.ap-hero__heading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  line-height: 1.35;
+  margin: 0 0 20px;
+  max-width: 520px;
+}
+
+.ap-hero__desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ap-text-muted);
+  max-width: 480px;
+  margin: 0;
+}
+
+.ap-hero__image-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ap-hero__blob {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 8%;
+  left: 8%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(168, 191, 168, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50% 40% 60% 50%;
+  z-index: 0;
+}
+
+.ap-hero__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: cover;
+  /* Polaroid signature — matches Home .about-image */
+  border-radius: 40px 12px 40px 12px;
+  border: 10px solid var(--ap-white);
+  box-shadow: 0 20px 40px rgba(160, 140, 120, 0.15);
+  transform: rotate(1deg);
+  transition: transform 0.4s ease;
+}
+
+.ap-hero__image:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+/* ═══════════════════════════════════════════
+   2. VỀ MAIA CARE
+   ═══════════════════════════════════════════ */
+.ap-about {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-cream);
+}
+
+.ap-about__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-about__content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.ap-about__image-wrap {
+  flex: 1;
+}
+
+.ap-about__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(160, 140, 120, 0.12);
+}
+
+.ap-about__text {
+  flex: 1;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.ap-about__heading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  line-height: 1.35;
+  margin: 0 0 18px;
+}
+
+.ap-about__text p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ap-text-muted);
+  margin: 0 0 22px;
+  max-width: 560px;
+}
+
+.ap-about__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ═══════════════════════════════════════════
+   3. TẦM NHÌN & SỨ MỆNH
+   ═══════════════════════════════════════════ */
+.ap-vision {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-white);
+}
+
+.ap-vision__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-vision__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.ap-vision__block {
+  background-color: var(--ap-cream);
+  border-radius: 16px;
+  padding: 48px 36px;
   text-align: center;
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about-page .about-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.ap-vision__block .ap-icon-circle {
+  margin-bottom: 20px;
 }
 
-.about-page .about-hero p {
-  font-size: 1.2rem;
-  color: #666;
+.ap-vision__title {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px;
 }
 
+.ap-vision__desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ap-text-muted);
+  max-width: 360px;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   4. GIÁ TRỊ CỐT LÕI
+   ═══════════════════════════════════════════ */
+.ap-values {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-cream);
+}
+
+.ap-values__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-values__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.ap-values__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px 24px;
+}
+
+.ap-values__num {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ap-sage-dark);
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.ap-values__item .ap-icon-circle {
+  margin-bottom: 16px;
+}
+
+.ap-values__title {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 10px;
+}
+
+.ap-values__desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ap-text-muted);
+  max-width: 200px;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════
+   5. CHÍNH SÁCH & CAM KẾT
+   ═══════════════════════════════════════════ */
+.ap-policy {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-white);
+}
+
+.ap-policy__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-policy__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.ap-policy__icon-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.ap-policy__text-side {
+  flex: 1;
+}
+
+.ap-policy__heading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  line-height: 1.35;
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 3px solid var(--ap-sage);
+}
+
+.ap-policy__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ap-policy__list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  color: var(--ap-text-dark);
+  line-height: 1.5;
+}
+
+.ap-policy__check {
+  color: var(--ap-sage-dark);
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   6. ĐỘI NGŨ CHUYÊN MÔN
+   ═══════════════════════════════════════════ */
+.ap-team {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-cream);
+}
+
+.ap-team__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-team__intro {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ap-text-muted);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.ap-team__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ap-team__img-wrap {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.ap-team__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ap-team__img:hover {
+  transform: scale(1.03);
+}
+
+/* ═══════════════════════════════════════════
+   7. CHĂM SÓC 1:1
+   ═══════════════════════════════════════════ */
+.ap-personalized {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-white);
+}
+
+.ap-personalized__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-personalized__content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.ap-personalized__image-wrap {
+  flex: 1;
+}
+
+.ap-personalized__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(160, 140, 120, 0.12);
+}
+
+.ap-personalized__text {
+  flex: 1;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.ap-personalized__heading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ap-text-dark);
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+
+.ap-personalized__text p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ap-text-muted);
+  margin: 0 0 24px;
+  max-width: 480px;
+}
+
+.ap-personalized__checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ap-personalized__check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--ap-text-dark);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════
+   8. QUOTE
+   ═══════════════════════════════════════════ */
+.ap-quote {
+  padding: 0px 24px 24px 24px;
+  background-color: var(--ap-cream);
+}
+
+.ap-quote__container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ap-quote__text {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--ap-text-dark);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+  border: none;
+  padding: 0;
+}
+
+.ap-quote__leaf {
+  margin-top: 24px;
+  color: var(--ap-sage);
+  opacity: 0.7;
+}
+
+/* ═══════════════════════════════════════════
+   9. CTA
+   ═══════════════════════════════════════════ */
+.ap-cta {
+  padding: var(--ap-section-pad);
+  background-color: var(--ap-white);
+  text-align: center;
+}
+
+.ap-cta__container {
+  max-width: var(--ap-container);
+  margin: 0 auto;
+}
+
+.ap-cta__desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ap-text-muted);
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.ap-cta__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Primary & secondary buttons reuse Home.css .cta-button and .about-cta */
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .ap-hero__container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .ap-hero__heading { max-width: 100%; }
+  .ap-hero__desc { max-width: 100%; margin: 0 auto; }
+  .ap-hero__image { max-width: 380px; }
+
+  .ap-about__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .ap-about__text p { max-width: 100%; }
+
+  .ap-vision__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ap-values__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ap-policy__content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  .ap-policy__heading {
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 3px solid var(--ap-sage);
+    padding-bottom: 12px;
+  }
+  .ap-policy__list { align-items: center; }
+
+  .ap-team__gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ap-team__img { height: 220px; }
+
+  .ap-personalized__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .ap-personalized__text p { max-width: 100%; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .ap-hero {
+    padding: 80px 16px 60px;
+  }
+  .ap-hero__heading {
+    font-size: 1.8rem;
+  }
+
+  .ap-about,
+  .ap-vision,
+  .ap-values,
+  .ap-policy,
+  .ap-team,
+  .ap-personalized,
+  .ap-cta {
+    padding: 60px 16px;
+  }
+
+  .ap-quote {
+    padding: 60px 16px;
+  }
+  .ap-quote__text {
+    font-size: 1.3rem;
+  }
+
+  .ap-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .ap-about__heading,
+  .ap-personalized__heading,
+  .ap-policy__heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .ap-values__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ap-hero__image,
+  .ap-team__img {
+    transition: none;
+  }
+}

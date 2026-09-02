@@ -28,7 +28,7 @@ const FEATURES = [
   { id: "trust",        Icon: LuHeart,          badge: null },
 ];
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ title, titleKey }) => {
   const { t } = useLanguage();
   const itemsRef = useRef([]);
 
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
   return (
     <section className="wcu-section" aria-labelledby="wcu-heading">
       <div className="wcu-container">
-        <SectionHeading title={t("home.whyChooseUs.heading")} />
+        <SectionHeading title={title ?? t(titleKey ?? "home.whyChooseUs.heading")} />
 
         <div className="wcu-grid">
           {FEATURES.map(({ id, Icon, badge: Badge }, idx) => (
