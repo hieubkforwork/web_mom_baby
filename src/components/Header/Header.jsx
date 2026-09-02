@@ -57,7 +57,7 @@ const Header = () => {
               {t("nav.service")}
             </NavLink>
             <NavLink
-              to="/booking"
+              to="/contact"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link--active" : ""}`
               }

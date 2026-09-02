@@ -52,7 +52,6 @@ const getServicesData = (t) => [
     alt: "Mẹ bầu được chăm sóc và massage chuyên nghiệp",
     items: t("home.servicesSection.complex.items"),
   },
-  
 ];
 
 const Home = () => {
@@ -62,16 +61,13 @@ const Home = () => {
   return (
     <div className="page home-page">
       <section className="banner">
-        <picture>
-          <source media="(max-width: 480px)" srcset="/mevabe.png" />
-          <source media="(max-width: 1024px)" srcset="/mevabe.png" />
-          <source media="(max-width: 1440px)" srcset="/mevabe.png" />
-          <img
-            src="/mevabe.png"
-            className="banner-img"
-            alt="Banner mẹ và bé"
-          />
-        </picture>
+        <div
+          className="banner-img"
+          style={{ backgroundImage: "url('/mevabe.png')" }}
+          role="img"
+          aria-label="Banner mẹ và bé"
+        />
+
         <div className="banner-overlay">
           <Link to="/service" className="cta-button">
             {t("home.discoverServices")}
@@ -89,8 +85,8 @@ const Home = () => {
           {/* BE - vẽ trước, curve gốc (giữ nguyên hình dạng banner) */}
           <path d="M0,0 Q720,190 1440,0 L1440,120 L0,120 Z" fill="#F5EFE6" />
 
-          {/* WHITE - vẽ sau, đè lên, lệch xuống 25px ở 2 mép, 
-      thu hẹp dần và trùng khớp be tại điểm giữa (x=720) */}
+          {/* WHITE - vẽ sau, đè lên, lệch xuống 25px ở 2 mép,
+        thu hẹp dần và trùng khớp be tại điểm giữa (x=720) */}
           <path d="M0,35 Q720,155 1440,35 L1440,120 L0,120 Z" fill="white" />
         </svg>
       </section>

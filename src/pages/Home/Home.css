@@ -11,9 +11,11 @@
 
 .banner-img {
   width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center top;
+  height: 700px; /* fallback mặc định, khớp Large Desktop, tránh collapse height trước khi media query áp dụng */
+  background-image: url('/mevabe.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .banner-overlay {
@@ -70,8 +72,12 @@
     --curve-depth: 50px; /* Giảm độ bo cong trên màn hình nhỏ */
   }
 
+  .banner-img {
+    height: 500px;
+  }
+
   .banner-overlay {
-    top: 85.7%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    top: 85.7%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -80,10 +86,6 @@
     padding: 12px 12px;
     font-size: 0.85rem;
   }
-
-  .banner-img {
-    height: 500px;
-  }
 }
 
 /* Tablet */
@@ -91,13 +93,13 @@
   .banner-img {
     height: 480px;
   }
-  
+
   .banner-overlay {
-    top: 85.7%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    top: 85.7%;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .cta-button {
     padding: 8px 8px;
     font-size: 0.75rem;
@@ -109,11 +111,13 @@
   .banner-img {
     height: 600px;
   }
+
   .banner-overlay {
-    top: 85.7%; /* đặt theo top thay vì bottom, ngay dưới dòng chữ mô tả trong ảnh */
+    top: 85.7%;
     left: 50%;
     transform: translateX(-50%);
   }
+
   .cta-button {
     padding: 12px 12px;
     font-size: 0.85rem;

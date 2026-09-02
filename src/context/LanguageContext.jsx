@@ -123,9 +123,40 @@ const translations = {
       heroTitle: "Our Services",
       heroDesc: "Discover the services we offer",
     },
+    contact: {
+      heroTitle: "Contact Us",
+      heroDesc: "Get in touch with us",
+    },
     booking: {
-      heroTitle: "Booking",
-      heroDesc: "Book an appointment with us",
+      heroTitle: "Service Booking",
+      heroDesc: "Please fill in the information and select a suitable time. We will confirm your appointment as soon as possible.",
+      selectServiceLabel: "Select Service",
+      selectServicePlaceholder: "Select service",
+      services: [
+        "Baby Services",
+        "Maternity Services",
+        "Postpartum Services"
+      ],
+      customerInfoTitle: "1. Customer Information",
+      fullNameLabel: "Full Name",
+      fullNamePlaceholder: "Enter your full name",
+      phoneLabel: "Phone Number",
+      phonePlaceholder: "Enter your phone number",
+      noteLabel: "Notes (if any)",
+      notePlaceholder: "Enter your notes...",
+      timeSelectionTitle: "2. Select Time",
+      dateLabel: "Select Date",
+      dayLabel: "Select Day",
+      dayPlaceholder: "Select day",
+      days: [
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"
+      ],
+      timeLabel: "Select Time",
+      timePlaceholder: "Select time",
+      workingHours: "Working hours: 08:00 - 20:00 (All days of the week)",
+      submitButton: "Confirm Booking",
+      privacyText: "Your information is kept strictly confidential"
     },
   },
   vi: {
@@ -250,9 +281,40 @@ const translations = {
       heroTitle: "Dịch Vụ",
       heroDesc: "Khám phá các dịch vụ chúng tôi cung cấp",
     },
+    contact: {
+      heroTitle: "Contact Us",
+      heroDesc: "Get in touch with us",
+    },
     booking: {
-      heroTitle: "Đặt Lịch",
-      heroDesc: "Đặt lịch hẹn với chúng tôi",
+      heroTitle: "Booking dịch vụ",
+      heroDesc: "Vui lòng điền đầy đủ thông tin và chọn thời gian phù hợp. Chúng tôi sẽ xác nhận lịch hẹn với bạn trong thời gian sớm nhất.",
+      selectServiceLabel: "Chọn tên dịch vụ",
+      selectServicePlaceholder: "Chọn dịch vụ",
+      services: [
+        "Dịch vụ cho bé",
+        "Dịch vụ cho mẹ bầu",
+        "Dịch vụ cho mẹ sau sinh"
+      ],
+      customerInfoTitle: "1. Thông tin khách hàng",
+      fullNameLabel: "Họ và tên",
+      fullNamePlaceholder: "Nhập họ và tên",
+      phoneLabel: "Số điện thoại",
+      phonePlaceholder: "Nhập số điện thoại",
+      noteLabel: "Ghi chú (nếu có)",
+      notePlaceholder: "Nhập ghi chú của bạn...",
+      timeSelectionTitle: "2. Chọn thời gian",
+      dateLabel: "Chọn ngày",
+      dayLabel: "Chọn thứ",
+      dayPlaceholder: "Chọn thứ",
+      days: [
+        "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm",
+        "Thứ Sáu", "Thứ Bảy", "Chủ Nhật"
+      ],
+      timeLabel: "Chọn giờ",
+      timePlaceholder: "Chọn thời gian",
+      workingHours: "Thời gian làm việc: 08:00 - 20:00 (Tất cả các ngày trong tuần)",
+      submitButton: "Xác nhận đặt lịch",
+      privacyText: "Thông tin của bạn được bảo mật tuyệt đối"
     },
   },
 };
