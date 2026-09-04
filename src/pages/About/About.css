@@ -16,6 +16,7 @@
   --ap-white: var(--clr-white, #FFFFFF);
   --ap-beige: var(--clr-secondary, #D9C4A8);
   background-color: #FFFFFF;
+  padding-top: 0 !important;
 }
 
 /* ── Reusable icon circle (mirrors .feature-icon-wrapper) ── */
@@ -69,7 +70,7 @@
    1. HERO
    ═══════════════════════════════════════════ */
 .ap-hero {
-  padding: 100px 24px 80px;
+  padding: 40px 24px 80px;
   background-color: var(--ap-white);
 }
 
@@ -161,8 +162,9 @@
    2. VỀ MAIA CARE
    ═══════════════════════════════════════════ */
 .ap-about {
-  padding: var(--ap-section-pad);
-  background-color: var(--ap-cream);
+    padding: 40px 24px 80px; /* 120px top to clear the 84px header + some breathing room */
+    margin-top:100px;
+    background-color: var(--ap-cream);
 }
 
 .ap-about__container {
@@ -216,6 +218,54 @@
   gap: 8px;
 }
 
+
+
+/* =========================================
+   VISION HEADING
+   ========================================= */
+
+.ap-vision__heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ap-vision__heading-title {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+
+  color: #5f5a54;
+}
+
+.ap-vision__heading-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 420px;
+
+  margin: 16px auto 0;
+
+  gap: 14px;
+}
+
+.ap-vision__heading-line {
+  flex: 1;
+
+  height: 1px;
+
+  background-color: #d8d2ca;
+}
+
+.ap-vision__heading-icon {
+  display: block;
+  flex-shrink: 0;
+}
 /* ═══════════════════════════════════════════
    3. TẦM NHÌN & SỨ MỆNH
    ═══════════════════════════════════════════ */
@@ -338,58 +388,104 @@
 .ap-policy__container {
   max-width: var(--ap-container);
   margin: 0 auto;
+  text-align: center;
 }
 
-.ap-policy__content {
+.ap-policy__subheading {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--ap-text-dark);
+  line-height: 1.4;
+  margin: 0 0 60px;
+  font-style: italic;
+}
+
+.ap-policy__layout {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.ap-policy__icon-side {
+.ap-policy__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-policy__col--left {
+  padding-right: 50px;
+}
+
+.ap-policy__col--right {
+  padding-left: 50px;
+}
+
+.ap-policy__divider-v {
+  width: 1px;
+  background-color: rgba(196, 181, 165, 0.3);
+  margin: 10px 0;
+}
+
+.ap-policy__item-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-policy__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  text-align: left;
+}
+
+.ap-policy__num {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--ap-sage);
+  line-height: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ap-policy__num::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  height: 24px;
+  width: 1px;
+  background-color: rgba(196, 181, 165, 0.4);
+}
+
+.ap-policy__text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  color: var(--ap-text-dark);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.ap-policy__divider-h {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 8px;
+  height: 1px;
+  background-color: rgba(196, 181, 165, 0.3);
+  margin: 16px 0;
+  position: relative;
 }
 
-.ap-policy__text-side {
-  flex: 1;
-}
-
-.ap-policy__heading {
-  font-family: var(--font-display, 'Playfair Display', serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--ap-text-dark);
-  line-height: 1.35;
-  margin: 0 0 24px;
-  padding-left: 16px;
-  border-left: 3px solid var(--ap-sage);
-}
-
-.ap-policy__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.ap-policy__list-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.95rem;
-  color: var(--ap-text-dark);
-  line-height: 1.5;
-}
-
-.ap-policy__check {
-  color: var(--ap-sage-dark);
-  flex-shrink: 0;
+.ap-policy__dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--ap-sage);
+  border-radius: 50%;
+  opacity: 0.6;
 }
 
 /* ═══════════════════════════════════════════
@@ -397,7 +493,7 @@
    ═══════════════════════════════════════════ */
 .ap-team {
   padding: var(--ap-section-pad);
-  background-color: var(--ap-cream);
+  background-color: var(--ap-white);
 }
 
 .ap-team__container {
@@ -514,7 +610,7 @@
    ═══════════════════════════════════════════ */
 .ap-quote {
   padding: 0px 24px 24px 24px;
-  background-color: var(--ap-cream);
+  background-color: var(--ap-white);
 }
 
 .ap-quote__container {
@@ -546,7 +642,7 @@
    ═══════════════════════════════════════════ */
 .ap-cta {
   padding: var(--ap-section-pad);
-  background-color: var(--ap-white);
+  background-color: var(--ap-cream);
   text-align: center;
 }
 
@@ -604,19 +700,21 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .ap-policy__content {
+  .ap-policy__layout {
     flex-direction: column;
-    gap: 30px;
+    max-width: 400px;
     align-items: center;
-    text-align: center;
   }
-  .ap-policy__heading {
-    border-left: none;
-    padding-left: 0;
-    border-bottom: 3px solid var(--ap-sage);
-    padding-bottom: 12px;
+
+  .ap-policy__divider-v {
+    display: none;
   }
-  .ap-policy__list { align-items: center; }
+
+  .ap-policy__col--left,
+  .ap-policy__col--right {
+    padding: 0;
+    width: 100%;
+  }
 
   .ap-team__gallery {
     grid-template-columns: 1fr;
@@ -663,8 +761,7 @@
   }
 
   .ap-about__heading,
-  .ap-personalized__heading,
-  .ap-policy__heading {
+  .ap-personalized__heading {
     font-size: 1.3rem;
   }
 }
@@ -681,4 +778,31 @@
   .ap-team__img {
     transition: none;
   }
+}
+
+/* ═══════════════════════════════════════════
+   BACKGROUND IMAGE (fixed)
+   ═══════════════════════════════════════════ */
+.ap-about {
+  position: relative;
+  overflow: hidden;
+}
+
+.ab-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url('/aboutus-bg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.15;
+}
+
+.ap-about__container {
+  position: relative;
+  z-index: 1;
 }

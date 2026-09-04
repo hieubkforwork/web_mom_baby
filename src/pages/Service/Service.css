@@ -1,15 +1,248 @@
-.service-page .service-hero {
+/* =========================================
+   SERVICE PAGE — Maia Care / MOMCARE24H
+   ========================================= */
+
+.service-page {
+  background-color: var(--clr-background, #F7F1E8);
+  min-height: 100vh;
+  margin-top: 100px;
+  padding: 40px 24px 80px;
+}
+
+.sp-about {
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url('/service-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.15;
+}
+
+.sp-about__container {
+  position: relative;
+  z-index: 1;
+}
+.sp-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── HEADER ── */
+.sp-header {
   text-align: center;
-  padding: 4rem 2rem;
+  margin-bottom: 64px;
 }
 
-.service-page .service-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.sp-badge {
+  display: inline-block;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-primary-dark, #8eaa8e);
+  margin-bottom: 16px;
+  background-color: rgba(168, 191, 168, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
 }
 
-.service-page .service-hero p {
-  font-size: 1.2rem;
-  color: #666;
+.sp-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--clr-text, #A08C78);
+  max-width: 680px;
+  margin: 16px auto 0;
 }
 
+/* ── CARDS GRID ── */
+.sp-group {
+  margin-bottom: 80px;
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ── CARD ── */
+.sp-card {
+  background-color: var(--clr-white, #ffffff);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 100%;
+}
+
+.sp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(122, 107, 90, 0.08);
+}
+
+.sp-card__img-wrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.sp-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.sp-card:hover .sp-card__img {
+  transform: scale(1.04);
+}
+
+.sp-card__content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sp-card__title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #5c6b4f; /* Accent olive dark */
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.sp-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sp-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sp-card__price-prefix {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  color: var(--clr-text-dark, #7a6b5a);
+  font-weight: 500;
+}
+
+.sp-card__price-amount {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5c6b4f; /* Accent olive dark */
+}
+
+.sp-card__price-suffix {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  color: var(--clr-text-dark, #7a6b5a);
+}
+
+.sp-card__arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(168, 191, 168, 0.2);
+  color: #5c6b4f;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sp-card__arrow-btn:hover {
+  background-color: #5c6b4f;
+  color: var(--clr-white, #ffffff);
+  transform: translateX(4px);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sp-card {
+  animation: fadeUp 0.6s ease-out backwards;
+}
+
+.sp-card:nth-child(1) { animation-delay: 0.1s; }
+.sp-card:nth-child(2) { animation-delay: 0.2s; }
+.sp-card:nth-child(3) { animation-delay: 0.3s; }
+.sp-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .sp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sp-card__img-wrap {
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-page {
+    padding: 80px 16px;
+  }
+  
+  .sp-header {
+    margin-bottom: 40px;
+  }
+  
+  .sp-subtitle {
+    font-size: 1rem;
+  }
+  
+  .sp-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .sp-card__img-wrap {
+    height: 220px;
+  }
+  
+  .sp-card__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-card,
+  .sp-card__img,
+  .sp-card__arrow-btn {
+    transition: none;
+    animation: none;
+  }
+}

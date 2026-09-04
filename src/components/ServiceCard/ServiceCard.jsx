@@ -1,42 +1,19 @@
-﻿import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ServiceCard.css";
 
 /**
- * ServiceCard — A single service card with hover/tap overlay.
+ * ServiceCard — A single service card with hover overlay.
  *
- * Props (all from the services data object):
- *   id     {string}    — Unique key
- *   title  {string}    — Card title (uppercase)
- *   image  {string}    — Image src (placeholder or real URL)
- *   alt    {string}    — Image alt text
- *   items  {string[]}  — List of sub-services shown in overlay
+ * Props:
+ *   id       {string}   — Group key in services data, e.g., "postpartum", "baby", "pregnant", "complex"
+ *   title    {string}   — Card title (uppercase)
+ *   image    {string}   — Image src
+ *   alt      {string}   — Image alt text
+ *   items    {array}    — List of sub-services shown in overlay
  */
-const ServiceCard = ({ title, image, alt, items }) => {
-  // Mobile: toggle overlay on tap
-  const [tapped, setTapped] = useState(false);
-
-  const handleTap = () => {
-    setTapped((prev) => !prev);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      setTapped((prev) => !prev);
-    }
-    if (e.key === "Escape") {
-      setTapped(false);
-    }
-  };
-
+const ServiceCard = ({ id, title, image, alt, items }) => {
   return (
-    <article
-      className={`service-card${tapped ? " service-card--tapped" : ""}`}
-      tabIndex={0}
-      aria-label={`${title} — nhấn để xem chi tiết dịch vụ`}
-      onKeyDown={handleKeyDown}
-      onClick={handleTap}
-    >
+    <div className="service-card">
       {/* ── Image ── */}
       <div className="service-card__image-wrap">
         <img
@@ -47,8 +24,7 @@ const ServiceCard = ({ title, image, alt, items }) => {
         />
       </div>
 
-      {/* ── Default title (visible when not hovered/tapped) ── */}
-      {/* ── Default title (visible when not hovered/tapped) ── */}
+      {/* ── Default title (visible when not hovered) ── */}
       <div className="service-card__footer">
         <h3 className="service-card__title">{title}</h3>
         <img
@@ -59,23 +35,29 @@ const ServiceCard = ({ title, image, alt, items }) => {
         />
       </div>
 
-      {/* ── Hover / tap overlay ── */}
-      <div className="service-card__overlay" aria-hidden={!tapped}>
+      {/* ── Hover overlay (desktop) ── */}
+      <div className="service-card__overlay">
         <div className="service-card__overlay-inner">
           <h3 className="service-card__overlay-title">{title}</h3>
           <ul className="service-card__list" role="list">
             {items.map((item, idx) => (
-              <li key={idx} className="service-card__list-item">
-                <span className="service-card__arrow" aria-hidden="true">
-                  →
-                </span>
-                <span>{item}</span>
+              <li key={idx}>
+                <Link 
+                  to={`/service/${id}/${idx}`} 
+                  className="service-card__list-item"
+                  title={`Xem chi tiết: ${typeof item === "object" ? item.name : item}`}
+                >
+                  <span className="service-card__arrow" aria-hidden="true">
+                    →
+                  </span>
+                  <span>{typeof item === "object" ? item.name : item}</span>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 

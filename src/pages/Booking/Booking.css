@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    BOOKING PAGE — Maia Care
    All selectors prefixed bk- to avoid
    collisions with other page styles.
@@ -319,11 +319,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   color: var(--clr-text, #A08C78);
-  margin-top: 18px;
+  margin: 16px 0 0;
+  opacity: 0.8;
+}
+
+/* ═══════════════════════════════════════════
+   STATUS MESSAGES
+   ═══════════════════════════════════════════ */
+.bk-status {
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 10px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.bk-status--success {
+  background-color: rgba(168, 191, 168, 0.15);
+  color: var(--clr-primary-dark, #8EAA8E);
+  border: 1px solid rgba(168, 191, 168, 0.3);
+}
+
+.bk-status--error {
+  background-color: rgba(200, 122, 122, 0.1);
+  color: #c87a7a;
+  border: 1px solid rgba(200, 122, 122, 0.2);
+}
+
+.bk-submit--loading {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 /* ═══════════════════════════════════════════
@@ -392,4 +423,102 @@
   .bk-select {
     transition: none;
   }
+}
+
+/* ── Selected Service Info ── */
+.bk-no-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  background-color: rgba(168, 191, 168, 0.05);
+  border: 1px dashed rgba(168, 191, 168, 0.4);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.bk-no-service p {
+  margin: 16px 0 24px;
+  color: var(--clr-text, #A08C78);
+  font-size: 1rem;
+}
+.bk-no-service__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--clr-primary, #A8BFA8);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.25s;
+  text-decoration: none;
+}
+.bk-no-service__btn:hover {
+  background-color: var(--clr-primary-dark, #8eaa8e);
+}
+.bk-selected-service {
+  margin-bottom: 12px;
+}
+.bk-selected-service__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.bk-selected-service__title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-primary-dark, #8eaa8e);
+  margin: 0;
+}
+.bk-selected-service__change {
+  background: none;
+  border: none;
+  color: #c89b8c;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.bk-selected-service__change:hover {
+  color: #b8877a;
+}
+.bk-selected-service__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  background-color: #fdfbf8;
+  border: 1.5px solid rgba(196, 181, 165, 0.4);
+  border-radius: 12px;
+}
+.bk-selected-service__name {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--clr-text-dark, #7a6b5a);
+  line-height: 1.2;
+}
+.bk-selected-service__price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c89b8c;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+.bk-selected-service__unit {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-text, #A08C78);
+}
+.bk-columns--disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
