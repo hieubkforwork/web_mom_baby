@@ -51,37 +51,37 @@ const translations = {
         postpartum: {
           title: "Postpartum Mother Care Services",
           items: [
-            "Medical Abdominal Massage",
-            "Relaxing Back Massage",
-            "Breast Massage for Milk Duct Relief",
-            "Postpartum Stitch and C-Section Incision Care",
+            { name: "Medical Abdominal Massage", price: "320,000" },
+            { name: "Relaxing Back Massage", price: "320,000" },
+            { name: "Breast Massage for Milk Duct Relief", price: "320,000" },
+            { name: "Postpartum Stitch and C-Section Incision Care", price: "320,000" },
           ],
         },
         baby: {
           title: "Baby Care\nServices",
           items: [
-            "Health Check-up and Consultation",
-            "Hydrotherapy Bath",
-            "Baby massage",
-            "Hourly In-Home Baby Care",
+            { name: "Health Check-up and Consultation", price: "390,000" },
+            { name: "Hydrotherapy Bath", price: "390,000" },
+            { name: "Baby massage", price: "390,000" },
+            { name: "Hourly In-Home Baby Care", price: "390,000" },
           ],
         },
         pregnant: {
           title: "Mother & Baby Care\nPackages",
           items: [
-            "“Healthy Mom – Happy Baby” Package",
-            "“Mom’s Recovery – Baby’s Health” Package",
-            "“Complete Mom & Baby Care” Package",
-            "“Postpartum Care Companion” Package",
+            { name: "“Healthy Mom – Happy Baby” Package", price: "650,000" },
+            { name: "“Mom’s Recovery – Baby’s Health” Package", price: "650,000" },
+            { name: "“Complete Mom & Baby Care” Package", price: "650,000" },
+            { name: "“Postpartum Care Companion” Package", price: "650,000" },
           ],
         },
         complex: {
           title: "Complimentary “Nutrition Consultation” Packages",
           items: [
-            "Postpartum Nutrition Consultation for Mothers",
-            "Postpartum Nutrition Meal Plan",
-            "Nutrition Consultation and Weaning Meal Plan for Babies",
-            "“Healthy Mom – Happy Eater” Nutrition Package",
+            { name: "Postpartum Nutrition Consultation for Mothers", price: "200,000" },
+            { name: "Postpartum Nutrition Meal Plan", price: "200,000" },
+            { name: "Nutrition Consultation and Weaning Meal Plan for Babies", price: "200,000" },
+            { name: "“Healthy Mom – Happy Eater” Nutrition Package", price: "200,000" },
           ],
         },
       },
@@ -115,12 +115,66 @@ const translations = {
       },
     },
     about: {
-      heroTitle: "About Us",
-      heroDesc: "Learn more about who we are and what we do",
+      title: "ABOUT MAIA CARE",
+      heroHeading: "Complete Care, Solid Start",
+      heroDesc: "Maia Care is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
+      highlights: ["Medical Standard", "Professional", "Dedicated"],
+      visionMissionTitle: "VISION & MISSION",
+      visionTitle: "Vision",
+      visionDesc: "To become the leading maternal and infant healthcare system, providing peace of mind and health for families.",
+      missionTitle: "Mission",
+      missionDesc: "Providing comprehensive, safe, and personalized care tailored to the unique needs of every mother and baby.",
+      coreValuesTitle: "CORE VALUES",
+      policyTitle: "POLICIES & COMMITMENTS",
+      policySubheading: "Peace of mind in every care experience",
+      policies: [
+        "Safety for mother and baby",
+        "Clear care procedures",
+        "Professionally trained staff",
+        "Respecting the unique needs of each family",
+        "Transparency in services",
+        "Always listening and adjusting"
+      ],
+      teamTitle: "PROFESSIONAL TEAM",
+      teamIntro: "Our team of specialists is thoroughly trained, deeply knowledgeable about maternal and infant care, and always works with the highest dedication.",
+      quote: "Your peace of mind and health are our greatest happiness.",
+      ctaTitle: "READY TO EXPERIENCE?",
+      ctaDesc: "Let Maia Care accompany you on the wonderful journey of motherhood.",
+      btnConsult: "Get Consultation",
+      btnViewService: "View Services"
     },
     service: {
-      heroTitle: "Our Services",
-      heroDesc: "Discover the services we offer",
+      badge: "SERVICES",
+      title: "Mother & Baby Care Services",
+      subtitle: "Tailored services designed to provide comprehensive, safe, and appropriate care for mothers and babies at every stage.",
+      pricePrefix: "Price: ",
+      priceSuffix: "/session",
+      items: [
+        {
+          id: 1,
+          title: "Postpartum Mother Care",
+          price: "320,000",
+          img: "https://placehold.co/400x350/F7F1E8/8eaa8e?text=Mother+Care",
+        },
+        {
+          id: 2,
+          title: "Baby Care Service",
+          price: "390,000",
+          img: "https://placehold.co/400x350/E2CFC2/7a6b5a?text=Baby+Care",
+        },
+        {
+          id: 3,
+          title: "Mother & Baby Care Combo",
+          price: "650,000",
+          img: "https://placehold.co/400x350/A8BFA8/ffffff?text=Combo+Care",
+        },
+        {
+          id: 4,
+          title: "Complimentary Nutrition Consultation",
+          price: "200,000",
+          img: "https://placehold.co/400x350/c4b5a5/ffffff?text=Nutrition",
+        },
+      ]
     },
     contact: {
       title: "CONTACT MAIA CARE",
@@ -129,17 +183,17 @@ const translations = {
       cards: {
         phone: {
           title: "PHONE",
-          value: "0855 000 123",
+          value: "0854334136",
           note: "(8:00 AM – 8:00 PM daily)",
         },
         address: {
           title: "ADDRESS",
           value:
-            "123 Nguyen Van Linh Street, Tan Phong Ward, District 7, Ho Chi Minh City",
+            "574 Nguyễn Đình Chiểu Street, Bàn Cờ Ward, Ho Chi Minh City",
         },
         zalo: {
           title: "ZALO",
-          value: "0855 000 123",
+          value: "0854334136",
           note: "(Tap to chat via Zalo)",
         },
         facebook: {
@@ -160,7 +214,7 @@ const translations = {
       },
     },
       booking: {
-      heroTitle: "Service Booking",
+      heroTitle: "SERVICE BOOKING",
       heroDesc:
         "Please fill in the information and select a suitable time. We will confirm your appointment as soon as possible.",
       selectServiceLabel: "Select Service",
@@ -190,7 +244,27 @@ const translations = {
       timePlaceholder: "Select time",
       workingHours: "Working hours: 08:00 - 20:00 (All days of the week)",
       submitButton: "Confirm Booking",
+      statusLoading: "Sending...",
+      statusSuccess: "Booking successful! MAIA CARE will contact you to confirm the appointment.",
+      statusError: "Failed to send booking information. Please try again later.",
+      statusRequired: "Please fill in all required fields (*).",
       privacyText: "Your information is kept strictly confidential",
+    },
+    serviceDetail: {
+      notFoundTitle: "Service Not Found",
+      notFoundDesc: "The service you are looking for does not exist or has been discontinued.",
+      backToService: "Back to Services",
+      time: "Duration:",
+      location: "Location:",
+      package: "Package:",
+      schedule: "Schedule:",
+      bookNow: "Book Now",
+      tabDesc: "Description",
+      tabProcess: "Process",
+      tabFaq: "FAQ",
+      aboutService: "About this service",
+      benefits: "Key Benefits",
+      viewAll: "View all services"
     },
 
   },
@@ -244,38 +318,38 @@ const translations = {
         baby: {
           title: "Dịch vụ chăm sóc\nem bé",
           items: [
-            "Kiểm tra và tư vấn sức khỏe",
-            "Tắm thủy liệu",
-            "Massage cho bé",
-            "Chăm sóc bé tại nhà theo giờ",
+            { name: "Kiểm tra và tư vấn sức khỏe", price: "390,000đ" },
+            { name: "Tắm thủy liệu", price: "390,000đ" },
+            { name: "Massage cho bé", price: "390,000đ" },
+            { name: "Chăm sóc bé tại nhà theo giờ", price: "390,000đ" },
           ],
         },
         pregnant: {
           title: "Combo chăm sóc\nmẹ và bé",
           items: [
-            "Combo “Mẹ khỏe - Bé yêu”",
-            "Combo “Mẹ phục hồi - Bé khỏe”",
-            "Combo “Mẹ và bé toàn diện”",
-            "Chăm sóc da",
-            "Combo “Đồng hành sau sinh”",
+            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "650,000đ" },
+            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "650,000đ" },
+            { name: "Combo “Mẹ và bé toàn diện”", price: "650,000đ" },
+            { name: "Chăm sóc da", price: "650,000đ" },
+            { name: "Combo “Đồng hành sau sinh”", price: "650,000đ" },
           ],
         },
         postpartum: {
           title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
-            "Massage bụng y khoa",
-            "Massage lưng thư giãn",
-            "Massage hỗ trợ thông tắc tia sữa",
-            "Chăm sóc vết khâu, vết mổ sau sinh",
+            { name: "Massage bụng y khoa", price: "320,000đ" },
+            { name: "Massage lưng thư giãn", price: "320,000đ" },
+            { name: "Massage hỗ trợ thông tắc tia sữa", price: "320,000đ" },
+            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "320,000đ" },
           ],
         },
         complex: {
           title: "Gói tặng kèm “tư vấn\ndinh dưỡng”",
           items: [
-            "Tư vấn dinh dưỡng cho mẹ sau sinh",
-            "Gói thực đơn dinh dưỡng cho mẹ sau sinh",
-            "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé",
-            "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”",
+            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "200,000đ" },
+            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "200,000đ" },
+            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "200,000đ" },
+            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "200,000đ" },
           ],
         },
       },
@@ -309,12 +383,66 @@ const translations = {
       },
     },
     about: {
-      heroTitle: "Về Chúng Tôi",
-      heroDesc: "Tìm hiểu thêm về chúng tôi và những gì chúng tôi làm",
+      title: "VỀ MAIA CARE",
+      heroHeading: "Chăm sóc trọn vẹn, Khởi đầu vững chắc",
+      heroDesc: "Maia Care tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình. Chúng tôi thấu hiểu những vất vả và cả niềm hạnh phúc vô bờ trong hành trình làm mẹ, từ đó mang đến những dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
+      highlights: ["Chuẩn Y Khoa", "Chuyên Nghiệp", "Tận Tâm"],
+      visionMissionTitle: "TẦM NHÌN & SỨ MỆNH",
+      visionTitle: "Tầm nhìn",
+      visionDesc: "Trở thành hệ thống chăm sóc sức khỏe mẹ và bé hàng đầu, mang lại sự an tâm và sức khỏe cho các gia đình.",
+      missionTitle: "Sứ mệnh",
+      missionDesc: "Mang đến sự chăm sóc toàn diện, an toàn và cá nhân hóa, phù hợp với nhu cầu riêng của từng mẹ và bé.",
+      coreValuesTitle: "GIÁ TRỊ CỐT LÕI",
+      policyTitle: "CHÍNH SÁCH & CAM KẾT",
+      policySubheading: "An tâm trong từng trải nghiệm chăm sóc",
+      policies: [
+        "An toàn cho mẹ và bé",
+        "Quy trình chăm sóc rõ ràng",
+        "Nhân viên được đào tạo",
+        "Tôn trọng nhu cầu riêng của từng gia đình",
+        "Minh bạch trong dịch vụ",
+        "Luôn lắng nghe và điều chỉnh"
+      ],
+      teamTitle: "ĐỘI NGŨ CHUYÊN MÔN",
+      teamIntro: "Đội ngũ chuyên viên được đào tạo bài bản, có kiến thức chuyên sâu về chăm sóc mẹ và bé, luôn làm việc bằng cả trái tim và sự tận tâm.",
+      quote: "Sự an tâm và sức khỏe của bạn là niềm hạnh phúc lớn nhất của chúng tôi.",
+      ctaTitle: "BẠN ĐÃ SẴN SÀNG TRẢI NGHIỆM?",
+      ctaDesc: "Hãy để Maia Care đồng hành cùng bạn trong hành trình làm mẹ tuyệt vời này.",
+      btnConsult: "Nhận tư vấn ngay",
+      btnViewService: "Xem chi tiết dịch vụ"
     },
     service: {
-      heroTitle: "Dịch Vụ",
-      heroDesc: "Khám phá các dịch vụ chúng tôi cung cấp",
+      badge: "DỊCH VỤ",
+      title: "Dịch vụ chăm sóc mẹ & bé",
+      subtitle: "Những dịch vụ được thiết kế riêng, giúp mẹ và bé được chăm sóc toàn diện, an toàn và phù hợp trong từng giai đoạn.",
+      pricePrefix: "Giá: ",
+      priceSuffix: "/buổi",
+      items: [
+        {
+          id: 1,
+          title: "Chăm sóc mẹ sau sinh",
+          price: "320,000đ",
+          img: "https://placehold.co/400x350/F7F1E8/8eaa8e?text=Chăm+sóc+mẹ",
+        },
+        {
+          id: 2,
+          title: "Dịch vụ chăm sóc em bé",
+          price: "390,000đ",
+          img: "https://placehold.co/400x350/E2CFC2/7a6b5a?text=Chăm+sóc+bé",
+        },
+        {
+          id: 3,
+          title: "Combo chăm sóc mẹ và bé",
+          price: "650,000đ",
+          img: "https://placehold.co/400x350/A8BFA8/ffffff?text=Combo",
+        },
+        {
+          id: 4,
+          title: "Gói tặng kèm tư vấn dinh dưỡng",
+          price: "200,000đ",
+          img: "https://placehold.co/400x350/c4b5a5/ffffff?text=Dinh+dưỡng",
+        },
+      ]
     },
     contact: {
       title: "LIÊN HỆ VỚI MAIA CARE",
@@ -323,17 +451,17 @@ const translations = {
       cards: {
         phone: {
           title: "ĐIỆN THOẠI",
-          value: "0855 000 123",
+          value: "0854334136",
           note: "(8:00 – 20:00 mỗi ngày)",
         },
         address: {
           title: "ĐỊA CHỈ",
           value:
-            "123 Đường Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
+            "574 Nguyễn Đình Chiểu, phường Bàn Cờ, TP.HCM",
         },
         zalo: {
           title: "ZALO",
-          value: "0855 000 123",
+          value: "0854334136",
           note: "(Nhấn để chat qua Zalo)",
         },
         facebook: {
@@ -354,7 +482,7 @@ const translations = {
       },
     },
     booking: {
-      heroTitle: "Đặt Lịch Dịch Vụ",
+      heroTitle: "ĐẶT LỊCH DỊCH VỤ",
       heroDesc:
         "Vui lòng điền thông tin và chọn thời gian phù hợp. Chúng tôi sẽ xác nhận lịch hẹn của bạn trong thời gian sớm nhất.",
       selectServiceLabel: "Chọn tên dịch vụ",
@@ -389,7 +517,27 @@ const translations = {
       workingHours:
         "Thời gian làm việc: 08:00 - 20:00 (Tất cả các ngày trong tuần)",
       submitButton: "Xác nhận đặt lịch",
+      statusLoading: "Đang gửi...",
+      statusSuccess: "Đặt lịch thành công! MAIA CARE sẽ liên hệ với bạn để xác nhận lịch.",
+      statusError: "Không thể gửi thông tin đặt lịch. Vui lòng thử lại sau.",
+      statusRequired: "Vui lòng điền đầy đủ các thông tin bắt buộc (*).",
       privacyText: "Thông tin của bạn được bảo mật tuyệt đối",
+    },
+    serviceDetail: {
+      notFoundTitle: "Không tìm thấy dịch vụ",
+      notFoundDesc: "Dịch vụ bạn đang tìm không tồn tại hoặc đã ngừng cung cấp.",
+      backToService: "Quay lại trang Dịch vụ",
+      time: "Thời gian:",
+      location: "Địa điểm:",
+      package: "Gói dịch vụ:",
+      schedule: "Lịch hẹn:",
+      bookNow: "Đặt lịch ngay",
+      tabDesc: "Mô tả dịch vụ",
+      tabProcess: "Quy trình thực hiện",
+      tabFaq: "Câu hỏi thường gặp",
+      aboutService: "Về dịch vụ",
+      benefits: "Lợi ích nổi bật",
+      viewAll: "Xem tất cả dịch vụ"
     },
   },
 };

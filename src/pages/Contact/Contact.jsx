@@ -5,15 +5,21 @@ import {
   LuMail,
   LuClock,
 } from "react-icons/lu";
+
+import {
+  SiZalo 
+} from "react-icons/si";
+
 import { FaFacebookF } from "react-icons/fa";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Contact.css";
-
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import SectionSubHeading from "../../components/SectionHeading/SectionSubHeading";
 /* ── Placeholder — replace with real Google Maps embed URL ── */
 const GOOGLE_MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.024!2d106.7!3d10.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQzJzQ4LjAiTiAxMDbCsDQyJzAwLjAiRQ!5e0!3m2!1svi!2s!4v1700000000000";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62712.45279108949!2d106.60634994506837!3d10.770790258371761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f222c044fc3%3A0xd1191e984624ed1b!2zNTc0IMSQxrDhu51uZyBOZ3V54buFbiDEkMOsbmggQ2hp4buDdSwgQsOgbiBD4budLCBI4buTIENow60gTWluaCA3MDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1788498060696!5m2!1svi!2s"
 const GOOGLE_MAPS_DIR_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=123+Nguyen+Van+Linh+District+7+HCMC";
+  "https://www.google.com/maps/dir/10.8429958,106.7116815/574+%C4%90%C6%B0%E1%BB%9Dng+Nguy%E1%BB%85n+%C4%90%C3%ACnh+Chi%E1%BB%83u,+B%C3%A0n+C%E1%BB%9D,+H%E1%BB%93+Ch%C3%AD+Minh+700000,+Vi%E1%BB%87t+Nam/@10.806905,106.6580951,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31752f222c044fc3:0xd1191e984624ed1b!2m2!1d106.682559!2d10.7707995?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D";
 
 /* ── Card config ── */
 const getCardData = (t) => [
@@ -34,7 +40,7 @@ const getCardData = (t) => [
     iconBg: "ct-icon--beige",
   },
   {
-    icon: LuMessageCircle,
+    icon: SiZalo,
     title: t("contact.cards.zalo.title"),
     value: t("contact.cards.zalo.value"),
     note: t("contact.cards.zalo.note"),
@@ -89,20 +95,11 @@ const Contact = () => {
             />
           </svg>
         </div>
-        <h1 className="ct-hero__title">{t("contact.title")}</h1>
-        <div className="ct-hero__divider" aria-hidden="true">
-          <span className="ct-hero__line" />
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M8,3 C6.5,0.5 3,1.5 3,4 C3,7.5 8,11 8,11 C8,11 13,7.5 13,4 C13,1.5 9.5,0.5 8,3 Z"
-              fill="#A8BFA8"
-              opacity="0.6"
-            />
-          </svg>
-          <span className="ct-hero__line" />
-        </div>
+        {/* Hero Title */}
+        <SectionHeading title={t("contact.title")} />
         <p className="ct-hero__subtitle">{t("contact.subtitle")}</p>
       </section>
+    
 
       {/* ── Info Cards ── */}
       <section className="ct-cards">
@@ -139,19 +136,7 @@ const Contact = () => {
 
       {/* ── Location ── */}
       <section className="ct-location">
-        <h2 className="ct-location__heading">{t("contact.location.heading")}</h2>
-        <div className="ct-location__divider" aria-hidden="true">
-          <span className="ct-hero__line" />
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M8,3 C6.5,0.5 3,1.5 3,4 C3,7.5 8,11 8,11 C8,11 13,7.5 13,4 C13,1.5 9.5,0.5 8,3 Z"
-              fill="#A8BFA8"
-              opacity="0.6"
-            />
-          </svg>
-          <span className="ct-hero__line" />
-        </div>
-
+        <SectionSubHeading title={t("contact.location.heading")} />
         <div className="ct-map">
           <iframe
             title="Maia Care Location"
