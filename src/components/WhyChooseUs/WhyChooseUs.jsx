@@ -21,11 +21,11 @@ import "./WhyChooseUs.css";
  */
 
 const FEATURES = [
-  { id: "safety",       Icon: LuShieldCheck,    badge: null },
-  { id: "dedication",   Icon: LuHeartHandshake, badge: null },
-  { id: "professional", Icon: LuUsers,          badge: LuHeart },
-  { id: "convenient",   Icon: LuClock,          badge: null },
-  { id: "trust",        Icon: LuHeart,          badge: null },
+  { id: "safety", Icon: LuShieldCheck, badge: null },
+  { id: "dedication", Icon: LuHeartHandshake, badge: null },
+  { id: "professional", Icon: LuUsers, badge: LuHeart },
+  { id: "convenient", Icon: LuClock, badge: null },
+  { id: "trust", Icon: LuHeart, badge: null },
 ];
 
 const WhyChooseUs = ({ title, titleKey }) => {
@@ -34,7 +34,7 @@ const WhyChooseUs = ({ title, titleKey }) => {
 
   useEffect(() => {
     const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
     if (prefersReduced) {
       itemsRef.current.forEach((el) => {
@@ -52,7 +52,7 @@ const WhyChooseUs = ({ title, titleKey }) => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     itemsRef.current.forEach((el) => {
@@ -65,8 +65,11 @@ const WhyChooseUs = ({ title, titleKey }) => {
   return (
     <section className="wcu-section" aria-labelledby="wcu-heading">
       <div className="wcu-container">
-        <SectionHeading title={title ?? t(titleKey ?? "home.whyChooseUs.heading")} />
-
+        {title !== "" && (
+          <SectionHeading
+            title={title ?? t(titleKey ?? "home.whyChooseUs.heading")}
+          />
+        )}
         <div className="wcu-grid">
           {FEATURES.map(({ id, Icon, badge: Badge }, idx) => (
             <div
@@ -84,7 +87,6 @@ const WhyChooseUs = ({ title, titleKey }) => {
                     className="wcu-icon"
                     aria-hidden="true"
                   />
-                 
                 </div>
 
                 {/* Botanical leaf accent below circle */}
@@ -104,8 +106,10 @@ const WhyChooseUs = ({ title, titleKey }) => {
                     fill="none"
                   />
                   <line
-                    x1="12" y1="2"
-                    x2="12" y2="22"
+                    x1="12"
+                    y1="2"
+                    x2="12"
+                    y2="22"
                     stroke="var(--clr-primary)"
                     strokeWidth="1"
                     strokeLinecap="round"
@@ -114,9 +118,7 @@ const WhyChooseUs = ({ title, titleKey }) => {
               </div>
 
               {/* ── Title ── */}
-              <h3 className="wcu-title">
-                {t(`home.whyChooseUs.${id}.title`)}
-              </h3>
+              <h3 className="wcu-title">{t(`home.whyChooseUs.${id}.title`)}</h3>
 
               {/* ── Decorative rule ── */}
               <div className="wcu-rule" aria-hidden="true">
