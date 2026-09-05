@@ -93,7 +93,7 @@ const Service = () => {
                                 {item.price || ""}
                               </span>
                               <span className="sp-card__price-suffix">
-                                {t("service.priceSuffix")}
+                                {item.unit || t("service.priceSuffix")}
                               </span>
                             </div>
 
