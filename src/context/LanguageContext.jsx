@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const translations = {
   en: {
     nav: {
-      home: "Homepage",
+      home: "Home",
       about: "About Us",
       service: "Services",
       contact: "Contact",
@@ -16,91 +16,97 @@ const translations = {
       rights: "All rights reserved.",
     },
     home: {
-      heroTitle: "Welcome to Our Website",
-      heroDesc: "Your trusted partner for professional services",
+      heroTitle: "Complete Care, Solid Start",
+      heroDesc:
+        "Maia Care provides comprehensive, safe, and dedicated care services for mothers and babies.",
       discoverServices: "Discover Services",
       features: {
         maternity: {
-          title: "Postpartum Care",
-          desc: "Support for postpartum recovery",
+          title: "Postpartum Mother Care",
+          desc: "Professional support to help mothers recover comfortably after childbirth",
         },
         newborn: {
-          title: "Newborn Care",
-          desc: "Comprehensive care for your beloved baby",
+          title: "Baby Care Services",
+          desc: "Comprehensive and attentive care for your beloved baby",
         },
         vaccine: {
           title: "Nutrition Consultation",
-          desc: "Nutrition guidance for mothers and babies",
+          desc: "Personalized nutrition guidance for mothers and babies",
         },
         support: {
-          title: "Consulting & Support",
-          desc: "Answers and support 24/7",
+          title: "Consultation & Support",
+          desc: "Dedicated consultation and support throughout your care journey",
         },
       },
       aboutSection: {
         title: "ABOUT US",
-        brandName: "Maia care",
+        brandName: "Maia Care",
         desc1:
-          " is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
+          " is proud to be a trusted companion for thousands of Vietnamese families. We understand the challenges and boundless happiness of motherhood, and provide comprehensive, safe, and dedicated care services.",
         desc2:
-          "With a team of experienced experts, a standard relaxing space, and specially designed treatments, we are committed to bringing perfect recovery for mothers and a solid start for beloved babies.",
+          "With a professionally trained team, a comfortable care environment, and personalized care programs, we are committed to supporting mothers' recovery and giving babies a healthy, strong start.",
         cta: "LEARN MORE",
       },
       servicesSection: {
         heading: "OUR SERVICES",
-        postpartum: {
-          title: "Postpartum Mother Care Services",
-          items: [
-            { name: "Medical Abdominal Massage", price: "320,000" },
-            { name: "Relaxing Back Massage", price: "320,000" },
-            { name: "Breast Massage for Milk Duct Relief", price: "320,000" },
-            { name: "Postpartum Stitch and C-Section Incision Care", price: "320,000" },
-          ],
-        },
         baby: {
           title: "Baby Care\nServices",
           items: [
-            { name: "Health Check-up and Consultation", price: "390,000" },
-            { name: "Hydrotherapy Bath", price: "390,000" },
-            { name: "Baby massage", price: "390,000" },
-            { name: "Hourly In-Home Baby Care", price: "390,000" },
+            { name: "Health Check-up & Consultation", price: "300,000đ" },
+            { name: "Hydrotherapy Bath", price: "350,000đ" },
+            { name: "Baby Massage", price: "200,000đ" },
+            { name: "4-Hour In-Home Baby Care", price: "450,000đ" },
+            { name: "8-Hour In-Home Baby Care", price: "850,000đ" },
+            { name: "Basic Baby Care Package", price: "2,790,000đ", unit: "/5 sessions" },
+            { name: "Comprehensive Baby Care Package", price: "5,490,000đ", unit: "/10 sessions" },
           ],
         },
         pregnant: {
           title: "Mother & Baby Care\nPackages",
           items: [
-            { name: "“Healthy Mom – Happy Baby” Package", price: "650,000" },
-            { name: "“Mom’s Recovery – Baby’s Health” Package", price: "650,000" },
-            { name: "“Complete Mom & Baby Care” Package", price: "650,000" },
-            { name: "“Postpartum Care Companion” Package", price: "650,000" },
+            { name: "“Healthy Mom - Happy Baby” Package", price: "790,000đ" },
+            { name: "“Mom’s Recovery - Healthy Baby” Package", price: "990,000đ" },
+            { name: "“Complete Mother & Baby Care” Package", price: "1,190,000đ" },
+            { name: "“Postpartum Companion” Package", price: "1,390,000đ" },
+          ],
+        },
+        postpartum: {
+          title: "Postpartum Mother Care\nServices",
+          items: [
+            { name: "Medical Abdominal Massage", price: "350,000đ" },
+            { name: "Relaxing Back Massage", price: "300,000đ" },
+            { name: "Breast Massage for Milk Duct Relief", price: "550,000đ" },
+            { name: "Postpartum Stitch & Incision Care", price: "350,000đ" },
+            { name: "Basic Mother Care Package", price: "2,990,000đ", unit: "/5 sessions" },
+            { name: "Comprehensive Mother Care Package", price: "6,890,000đ", unit: "/10 sessions" },
           ],
         },
         complex: {
-          title: "Complimentary “Nutrition Consultation” Packages",
+          title: "Complimentary “Nutrition\nConsultation” Packages",
           items: [
-            { name: "Postpartum Nutrition Consultation for Mothers", price: "200,000" },
-            { name: "Postpartum Nutrition Meal Plan", price: "200,000" },
-            { name: "Nutrition Consultation and Weaning Meal Plan for Babies", price: "200,000" },
-            { name: "“Healthy Mom – Happy Eater” Nutrition Package", price: "200,000" },
+            { name: "Postpartum Nutrition Consultation for Mothers", price: "299,000đ" },
+            { name: "Postpartum Nutrition Meal Plan", price: "799,000đ" , unit: "/month"},
+            { name: "Baby Nutrition Consultation & Weaning Meal Plan", price: "599,000đ", unit: "/month" },
+            { name: "“Healthy Mom - Happy Eater” Nutrition Package", price: "1,099,000đ", unit: "/month" },
           ],
         },
       },
       whyChooseUs: {
-        heading: "WHY CHOOSE MOMCARE24H?",
+        heading: "WHY CHOOSE US?",
         safety: {
           title: "SAFETY",
           description:
-            "Our care procedures are designed specifically for postpartum mothers and newborns, with a focus on hygiene, health monitoring, and appropriate response to any unusual signs.",
+            "Our care procedures are designed for postpartum mothers and babies, with a focus on hygiene, health monitoring, and appropriate response to unusual signs.",
         },
         dedication: {
           title: "EXPERTISE",
           description:
-            "Our team is professionally trained to ensure that care services are delivered according to proper procedures and tailored to each individual case.",
+            "Our team is professionally trained to deliver care according to clear procedures and adapt services to the needs of each mother and baby.",
         },
         professional: {
           title: "PERSONALIZED CARE",
           description:
-            "Our 1:1 care model allows Maia Care to understand the needs of each mother and baby and provide suitable services and care plans.",
+            "Our 1:1 care model helps Maia Care understand the individual needs of each mother and baby and provide suitable services and care programs.",
         },
         convenient: {
           title: "CONVENIENCE",
@@ -110,76 +116,83 @@ const translations = {
         trust: {
           title: "COMPREHENSIVE",
           description:
-            "We combine mother care, baby care, care packages, and nutrition consultation to provide continuous support for the whole family.",
+            "We combine mother care, baby care, care packages, and nutrition consultation to provide continuous support throughout the family's care journey.",
         },
       },
     },
     about: {
       title: "ABOUT MAIA CARE",
       heroHeading: "Complete Care, Solid Start",
-      heroDesc: "Maia Care is proud to be a trusted companion for thousands of families. We understand the hardships and boundless happiness in the journey of motherhood, thereby providing the most comprehensive, safe, and dedicated healthcare services.",
+      heroDesc:
+        "Maia Care is proud to be a trusted companion for thousands of Vietnamese families. We understand the challenges and boundless happiness of motherhood, and provide comprehensive, safe, and dedicated care services.",
       highlights: ["Medical Standard", "Professional", "Dedicated"],
       visionMissionTitle: "VISION & MISSION",
       visionTitle: "Vision",
-      visionDesc: "To become the leading maternal and infant healthcare system, providing peace of mind and health for families.",
+      visionDesc:
+        "To become a leading maternal and infant healthcare system, bringing peace of mind and better health to families.",
       missionTitle: "Mission",
-      missionDesc: "Providing comprehensive, safe, and personalized care tailored to the unique needs of every mother and baby.",
+      missionDesc:
+        "To provide comprehensive, safe, and personalized care that meets the unique needs of every mother and baby.",
       coreValuesTitle: "CORE VALUES",
       policyTitle: "POLICIES & COMMITMENTS",
       policySubheading: "Peace of mind in every care experience",
       policies: [
-        "Safety for mother and baby",
+        "Safety for mothers and babies",
         "Clear care procedures",
         "Professionally trained staff",
-        "Respecting the unique needs of each family",
+        "Respect for each family's unique needs",
         "Transparency in services",
-        "Always listening and adjusting"
+        "Always listening and adapting",
       ],
       teamTitle: "PROFESSIONAL TEAM",
-      teamIntro: "Our team of specialists is thoroughly trained, deeply knowledgeable about maternal and infant care, and always works with the highest dedication.",
-      quote: "Your peace of mind and health are our greatest happiness.",
+      teamIntro:
+        "Our team is professionally trained and knowledgeable in maternal and baby care, always working with dedication and care.",
+      quote:
+        "Your peace of mind and health are our greatest happiness.",
       ctaTitle: "READY TO EXPERIENCE?",
-      ctaDesc: "Let Maia Care accompany you on the wonderful journey of motherhood.",
+      ctaDesc:
+        "Let Maia Care accompany you on this wonderful journey of motherhood.",
       btnConsult: "Get Consultation",
-      btnViewService: "View Services"
+      btnViewService: "View Services",
     },
     service: {
       badge: "SERVICES",
       title: "Mother & Baby Care Services",
-      subtitle: "Tailored services designed to provide comprehensive, safe, and appropriate care for mothers and babies at every stage.",
+      subtitle:
+        "Personalized services designed to provide comprehensive, safe, and appropriate care for mothers and babies at every stage.",
       pricePrefix: "Price: ",
       priceSuffix: "/session",
       items: [
         {
           id: 1,
           title: "Postpartum Mother Care",
-          price: "320,000",
+          price: "350,000đ",
           img: "https://placehold.co/400x350/F7F1E8/8eaa8e?text=Mother+Care",
         },
         {
           id: 2,
-          title: "Baby Care Service",
-          price: "390,000",
+          title: "Baby Care Services",
+          price: "300,000đ",
           img: "https://placehold.co/400x350/E2CFC2/7a6b5a?text=Baby+Care",
         },
         {
           id: 3,
-          title: "Mother & Baby Care Combo",
-          price: "650,000",
+          title: "Mother & Baby Care Packages",
+          price: "790,000đ",
           img: "https://placehold.co/400x350/A8BFA8/ffffff?text=Combo+Care",
         },
         {
           id: 4,
-          title: "Complimentary Nutrition Consultation",
-          price: "200,000",
+          title: "Nutrition Consultation Packages",
+          price: "299,000đ",
           img: "https://placehold.co/400x350/c4b5a5/ffffff?text=Nutrition",
         },
-      ]
+      ],
     },
     contact: {
       title: "CONTACT MAIA CARE",
       subtitle:
-        "Maia Care is always ready to listen, advise, and accompany mothers on the postpartum health care journey.",
+        "Maia Care is always ready to listen, advise, and accompany mothers throughout their postpartum care journey.",
       cards: {
         phone: {
           title: "PHONE",
@@ -213,13 +226,17 @@ const translations = {
         directionsBtn: "GET DIRECTIONS",
       },
     },
-      booking: {
+    booking: {
       heroTitle: "SERVICE BOOKING",
       heroDesc:
-        "Please fill in the information and select a suitable time. We will confirm your appointment as soon as possible.",
+        "Please fill in your information and select a suitable time. We will confirm your appointment as soon as possible.",
       selectServiceLabel: "Select Service",
-      selectServicePlaceholder: "Select service",
-      services: ["Baby Services", "Maternity Services", "Postpartum Services"],
+      selectServicePlaceholder: "Select a service",
+      services: [
+        "Baby Care Services",
+        "Pregnancy Services",
+        "Postpartum Mother Care Services",
+      ],
       customerInfoTitle: "1. Customer Information",
       fullNameLabel: "Full Name",
       fullNamePlaceholder: "Enter your full name",
@@ -230,7 +247,7 @@ const translations = {
       timeSelectionTitle: "2. Select Time",
       dateLabel: "Select Date",
       dayLabel: "Select Day",
-      dayPlaceholder: "Select day",
+      dayPlaceholder: "Select a day",
       days: [
         "Monday",
         "Tuesday",
@@ -241,32 +258,34 @@ const translations = {
         "Sunday",
       ],
       timeLabel: "Select Time",
-      timePlaceholder: "Select time",
-      workingHours: "Working hours: 08:00 - 20:00 (All days of the week)",
+      timePlaceholder: "Select a time",
+      workingHours: "Working hours: 08:00 - 20:00 (Every day of the week)",
       submitButton: "Confirm Booking",
       statusLoading: "Sending...",
-      statusSuccess: "Booking successful! MAIA CARE will contact you to confirm the appointment.",
-      statusError: "Failed to send booking information. Please try again later.",
+      statusSuccess:
+        "Booking successful! MAIA CARE will contact you to confirm your appointment.",
+      statusError:
+        "Unable to send booking information. Please try again later.",
       statusRequired: "Please fill in all required fields (*).",
       privacyText: "Your information is kept strictly confidential",
     },
     serviceDetail: {
       notFoundTitle: "Service Not Found",
-      notFoundDesc: "The service you are looking for does not exist or has been discontinued.",
+      notFoundDesc:
+        "The service you are looking for does not exist or is no longer available.",
       backToService: "Back to Services",
       time: "Duration:",
       location: "Location:",
-      package: "Package:",
-      schedule: "Schedule:",
+      package: "Service Package:",
+      schedule: "Appointment:",
       bookNow: "Book Now",
-      tabDesc: "Description",
-      tabProcess: "Process",
-      tabFaq: "FAQ",
-      aboutService: "About this service",
+      tabDesc: "Service Description",
+      tabProcess: "Service Process",
+      tabFaq: "Frequently Asked Questions",
+      aboutService: "About This Service",
       benefits: "Key Benefits",
-      viewAll: "View all services"
+      viewAll: "View All Services",
     },
-
   },
   vi: {
     nav: {
@@ -318,38 +337,44 @@ const translations = {
         baby: {
           title: "Dịch vụ chăm sóc\nem bé",
           items: [
-            { name: "Kiểm tra và tư vấn sức khỏe", price: "390,000đ" },
-            { name: "Tắm thủy liệu", price: "390,000đ" },
-            { name: "Massage cho bé", price: "390,000đ" },
-            { name: "Chăm sóc bé tại nhà theo giờ", price: "390,000đ" },
+            { name: "Kiểm tra và tư vấn sức khỏe", price: "300,000đ" },
+            { name: "Tắm thủy liệu", price: "350,000đ" },
+            { name: "Massage cho bé", price: "200,000đ" },
+            { name: "Chăm sóc bé tại nhà 4 giờ", price: "450,000đ" },
+            { name: "Chăm sóc bé tại nhà 8 giờ", price: "850,000đ" },
+            { name: "Gói chăm sóc bé cơ bản", price: "2,790,000đ", unit:"/5 buổi" },
+            { name: "Gói chăm sóc bé toàn diện", price: "5,490,000đ", unit:"/10 buổi" },
+
           ],
         },
         pregnant: {
           title: "Combo chăm sóc\nmẹ và bé",
           items: [
-            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "650,000đ" },
-            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "650,000đ" },
-            { name: "Combo “Mẹ và bé toàn diện”", price: "650,000đ" },
-            { name: "Chăm sóc da", price: "650,000đ" },
-            { name: "Combo “Đồng hành sau sinh”", price: "650,000đ" },
+            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "790,000đ" },
+            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "990,000đ" },
+            { name: "Combo “Mẹ và bé toàn diện”", price: "1,190,000đ" },
+            { name: "Combo “Đồng hành sau sinh”", price: "1,390,000đ" },
           ],
         },
         postpartum: {
           title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
-            { name: "Massage bụng y khoa", price: "320,000đ" },
-            { name: "Massage lưng thư giãn", price: "320,000đ" },
-            { name: "Massage hỗ trợ thông tắc tia sữa", price: "320,000đ" },
-            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "320,000đ" },
+            { name: "Massage bụng y khoa", price: "350,000đ" },
+            { name: "Massage lưng thư giãn", price: "300,000đ" },
+            { name: "Massage hỗ trợ thông tắc tia sữa", price: "550,000đ" },
+            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "350,000đ" },
+            { name: "Gói chăm sóc mẹ cơ bản", price: "2,990,000đ", unit:"/5 buổi" },
+            { name: "Gói chăm sóc mẹ toàn diện", price: "6,890,000đ", unit:"/10 buổi" },
+
           ],
         },
         complex: {
           title: "Gói tặng kèm “tư vấn\ndinh dưỡng”",
           items: [
-            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "200,000đ" },
-            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "200,000đ" },
-            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "200,000đ" },
-            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "200,000đ" },
+            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "299,000đ" },
+            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "799,000đ", unit: "/tháng"},
+            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "599,000đ", unit: "/tháng" },
+            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "1,099,000đ", unit: "/tháng" },
           ],
         },
       },
