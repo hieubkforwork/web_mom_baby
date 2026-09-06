@@ -70,11 +70,11 @@ const personalizedChecks = [
 
 const teamImages = [
   {
-    src: "aboutus-img.png",
+    src: "aboutus-img2.png",
     alt: "Nhân viên đang massage chăm sóc mẹ",
   },
   {
-    src: "aboutus-img2.png",
+    src: "aboutus-img.png",
     alt: "Đội ngũ Maia Care",
   },
   {
