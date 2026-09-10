@@ -69,9 +69,9 @@ const Home = () => {
         />
 
         <div className="banner-overlay">
-          <Link to="/service" className="cta-button">
-            {t("home.discoverServices")}
-          </Link>
+          <Link to="/about" className="about-cta">
+                {t("home.discoverServices")}
+              </Link>
         </div>
 
         {/* SVG overlay: viền be rộng 2 đầu, thu hẹp và giao nhau ở giữa */}

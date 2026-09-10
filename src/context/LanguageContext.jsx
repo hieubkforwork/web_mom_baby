@@ -270,22 +270,33 @@ const translations = {
       privacyText: "Your information is kept strictly confidential",
     },
     serviceDetail: {
-      notFoundTitle: "Service Not Found",
-      notFoundDesc:
-        "The service you are looking for does not exist or is no longer available.",
+      notFoundTitle: "Service not found",
+      notFoundDesc: "The service you are looking for does not exist or has been discontinued.",
       backToService: "Back to Services",
       time: "Duration:",
       location: "Location:",
-      package: "Service Package:",
-      schedule: "Appointment:",
+      package: "Package:",
+      schedule: "Schedule:",
       bookNow: "Book Now",
-      tabDesc: "Service Description",
-      tabProcess: "Service Process",
-      tabFaq: "Frequently Asked Questions",
-      aboutService: "About This Service",
+      tabDesc: "Description",
+      tabProcess: "Process",
+      tabFaq: "FAQ",
+      aboutService: "About this service",
       benefits: "Key Benefits",
-      viewAll: "View All Services",
+      viewAll: "View all services"
     },
+    comments: {
+      title: "Comments",
+      subtitle: "Share your experience with this service",
+      writeComment: "Write a comment...",
+      submit: "Submit",
+      reply: "Reply",
+      submitting: "Submitting...",
+      emptyState: "No comments yet. Be the first to share your experience!",
+      loadError: "Failed to load comments. Please try again.",
+      retry: "Retry",
+      noEntity: "Cannot load comment information."
+    }
   },
   vi: {
     nav: {
@@ -337,44 +348,44 @@ const translations = {
         baby: {
           title: "Dịch vụ chăm sóc\nem bé",
           items: [
-            { name: "Kiểm tra và tư vấn sức khỏe", price: "300,000đ" },
-            { name: "Tắm thủy liệu", price: "350,000đ" },
-            { name: "Massage cho bé", price: "200,000đ" },
-            { name: "Chăm sóc bé tại nhà 4 giờ", price: "450,000đ" },
-            { name: "Chăm sóc bé tại nhà 8 giờ", price: "850,000đ" },
-            { name: "Gói chăm sóc bé cơ bản", price: "2,790,000đ", unit:"/5 buổi" },
-            { name: "Gói chăm sóc bé toàn diện", price: "5,490,000đ", unit:"/10 buổi" },
+            { name: "Kiểm tra và tư vấn sức khỏe", price: "300,000đ", img: "/service-img-5.png" },
+            { name: "Tắm thủy liệu", price: "350,000đ", img: "/service-img-6.png" },
+            { name: "Massage cho bé", price: "200,000đ", img: "/service-img-7.png" },
+            { name: "Chăm sóc bé tại nhà 4 giờ", price: "450,000đ", img: "/service-img-8.png" },
+            { name: "Chăm sóc bé tại nhà 8 giờ", price: "850,000đ", img: "/service-img-8.png" },
+            { name: "Gói chăm sóc bé cơ bản", price: "2,790,000đ", unit:"/5 buổi", img: "/service-img-9.png" },
+            { name: "Gói chăm sóc bé toàn diện", price: "5,490,000đ", unit:"/10 buổi", img: "/service-img-9.png" },
 
           ],
         },
         pregnant: {
           title: "Combo chăm sóc\nmẹ và bé",
           items: [
-            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "790,000đ" },
-            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "990,000đ" },
-            { name: "Combo “Mẹ và bé toàn diện”", price: "1,190,000đ" },
-            { name: "Combo “Đồng hành sau sinh”", price: "1,390,000đ" },
+            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "790,000đ", img: "/service-img-10.png" },
+            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "990,000đ", img: "/service-img-11.png" },
+            { name: "Combo “Mẹ và bé toàn diện”", price: "1,190,000đ", img: "/service-img-12.png" },
+            { name: "Combo “Đồng hành sau sinh”", price: "1,390,000đ", img: "/service-img-13.png" },
           ],
         },
         postpartum: {
           title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
-            { name: "Massage bụng y khoa", price: "350,000đ" },
-            { name: "Massage lưng thư giãn", price: "300,000đ" },
-            { name: "Massage hỗ trợ thông tắc tia sữa", price: "550,000đ" },
-            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "350,000đ" },
-            { name: "Gói chăm sóc mẹ cơ bản", price: "2,990,000đ", unit:"/5 buổi" },
-            { name: "Gói chăm sóc mẹ toàn diện", price: "6,890,000đ", unit:"/10 buổi" },
+            { name: "Massage bụng y khoa", price: "350,000đ", img: "/service-img-1.png" },
+            { name: "Massage lưng thư giãn", price: "300,000đ", img: "/service-img-2.png" },
+            { name: "Massage hỗ trợ thông tắc tia sữa", price: "550,000đ", img: "/service-img-3.png" },
+            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "350,000đ", img: "/service-img-4.png" },
+            { name: "Gói chăm sóc mẹ cơ bản", price: "2,990,000đ", unit:"/5 buổi",img: "/service-img-1.png" },
+            { name: "Gói chăm sóc mẹ toàn diện", price: "6,890,000đ", unit:"/10 buổi",img: "/service-img-1.png" },
 
           ],
         },
         complex: {
           title: "Gói tặng kèm “tư vấn\ndinh dưỡng”",
           items: [
-            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "299,000đ" },
-            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "799,000đ", unit: "/tháng"},
-            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "599,000đ", unit: "/tháng" },
-            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "1,099,000đ", unit: "/tháng" },
+            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "299,000đ", img: "/service-img-14.png" },
+            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "799,000đ", unit: "/tháng", img: "/service-img-15.png" },
+            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "599,000đ", unit: "/tháng", img: "/service-img-16.png" },
+            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "1,099,000đ", unit: "/tháng", img: "/service-img-17.png" },
           ],
         },
       },
@@ -564,6 +575,18 @@ const translations = {
       benefits: "Lợi ích nổi bật",
       viewAll: "Xem tất cả dịch vụ"
     },
+    comments: {
+      title: "Bình luận",
+      subtitle: "Chia sẻ trải nghiệm của bạn về dịch vụ này",
+      writeComment: "Viết bình luận...",
+      submit: "Gửi bình luận",
+      reply: "Trả lời",
+      submitting: "Đang gửi...",
+      emptyState: "Chưa có bình luận nào. Hãy là người đầu tiên chia sẻ trải nghiệm!",
+      loadError: "Không thể tải bình luận. Vui lòng thử lại.",
+      retry: "Thử lại",
+      noEntity: "Không thể tải thông tin bình luận."
+    }
   },
 };
 

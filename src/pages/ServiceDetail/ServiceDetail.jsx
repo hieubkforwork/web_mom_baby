@@ -16,6 +16,7 @@ import {
   LuChevronDown,
   LuChevronUp,
 } from "react-icons/lu";
+import ServiceComments from "../../components/Comments/ServiceComments";
 import "./ServiceDetail.css";
 
 /* ── Icon map for feature highlights ── */
@@ -470,6 +471,11 @@ const ServiceDetail = () => {
             )}
           </div>
         </div>
+
+        <ServiceComments
+          foreignId={`${groupKey}-${itemIdx}`}
+          serviceName={getField("name")}
+        />
 
         {/* Back to service list */}
         <div className="sd-back">
