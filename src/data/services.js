@@ -30,8 +30,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "60 – 90 phút / buổi",
         durationEn: "60 – 90 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Linh hoạt theo nhu cầu",
         packageInfoEn: "Flexible according to needs",
         scheduling: "Đặt lịch trước",
@@ -41,9 +41,7 @@ export const serviceGroups = {
         shortDescriptionEn:
           "Medical abdominal massage helps postpartum mothers recover their stomachs faster, reduce belly fat, improve blood circulation, and support the uterus returning to its normal size.",
         images: [
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Massage+Bụng",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Chăm+sóc+Mẹ",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Phục+hồi+sau+sinh",
+          "/service-img-1.png"
         ],
 
         features: [
@@ -191,8 +189,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "45 – 60 phút / buổi",
         durationEn: "45 – 60 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Linh hoạt theo nhu cầu",
         packageInfoEn: "Flexible according to needs",
         scheduling: "Đặt lịch trước",
@@ -205,9 +203,7 @@ export const serviceGroups = {
           "Relaxing back massage helps postpartum mothers relieve stress, reduce back and shoulder pain caused by breastfeeding and carrying the baby, and improve sleep quality.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+Lưng",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Thư+giãn",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Chăm+sóc+mẹ",
+          "/service-img-2.png"
         ],
 
         features: [
@@ -356,8 +352,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "45 – 60 phút / buổi",
         durationEn: "45 – 60 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Linh hoạt theo nhu cầu",
         packageInfoEn: "Flexible according to needs",
         scheduling: "Đặt lịch trước",
@@ -370,9 +366,7 @@ export const serviceGroups = {
           "Breast massage for milk duct relief helps mothers manage breast fullness, blocked milk ducts, and breast inflammation while supporting breastfeeding.",
 
         images: [
-          "https://placehold.co/800x600/F7F1E8/c89b8c?text=Tia+Sữa",
-          "https://placehold.co/800x600/E2CFC2/8eaa8e?text=Chăm+sóc",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Sữa+mẹ",
+          "/service-img-3.png"
         ],
 
         features: [
@@ -519,8 +513,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "30 – 45 phút / buổi",
         durationEn: "30 – 45 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Linh hoạt theo nhu cầu",
         packageInfoEn: "Flexible according to needs",
         scheduling: "Đặt lịch trước",
@@ -532,9 +526,7 @@ export const serviceGroups = {
           "Maia Care's postpartum stitch and C-section incision care helps support wound healing, reduce infection risk, and promote a smoother recovery.",
 
         images: [
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Chăm+sóc+vết+thương",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Phục+hồi",
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=An+toàn",
+          "/service-img-4.png"
         ],
 
         features: [
@@ -689,8 +681,8 @@ export const serviceGroups = {
         duration: "60 – 90 phút / buổi",
         durationEn: "60 – 90 minutes / session",
 
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
 
         packageInfo: "5 buổi chăm sóc tổng hợp",
         packageInfoEn: "5 comprehensive care sessions",
@@ -705,10 +697,8 @@ export const serviceGroups = {
           "The Basic Postpartum Care Package includes 5 comprehensive care sessions combining abdominal and back massage to help mothers relax, support postpartum recovery, and promote overall well-being.",
 
         images: [
-          "[https://placehold.co/800x600/F7F1E8/8eaa8e?text=Massage+bung](https://placehold.co/800x600/F7F1E8/8eaa8e?text=Massage+bung)",
-          "[https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+lung](https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+lung)",
-          "[https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+me](https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+me)",
-        ],
+          "/service-img-1.png"
+             ],
 
         features: [
           {
@@ -861,7 +851,7 @@ export const serviceGroups = {
           {
             question: "Tôi có thể sử dụng dịch vụ tại nhà không?",
             answer:
-              "Có. Maia Care cung cấp dịch vụ tại nhà hoặc tại Maia Care tùy theo nhu cầu và khu vực phục vụ.",
+              "Có. Maia Care cung cấp dịch vụ tại nhà tùy theo nhu cầu và khu vực phục vụ.",
           },
           {
             question: "Gói 5 buổi có thể điều chỉnh nội dung chăm sóc không?",
@@ -885,7 +875,7 @@ export const serviceGroups = {
           {
             question: "Can I receive the service at home?",
             answer:
-              "Yes. Maia Care provides services either at home or at Maia Care, depending on the customer's needs and service area.",
+              "Yes. Maia Care provides services at home, depending on the customer's needs and service area.",
           },
           {
             question:
@@ -920,8 +910,8 @@ export const serviceGroups = {
         duration: "60 – 90 phút / buổi",
         durationEn: "60 – 90 minutes / session",
 
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
 
         packageInfo: "10 buổi chăm sóc tổng hợp",
         packageInfoEn: "10 comprehensive care sessions",
@@ -936,9 +926,7 @@ export const serviceGroups = {
           "The Comprehensive Postpartum Care Package includes 10 comprehensive care sessions with abdominal and back massage, plus 2 lactation support sessions and 1 wound-care session based on the mother's needs and condition.",
 
         images: [
-          "[https://placehold.co/800x600/F7F1E8/8eaa8e?text=Massage+bung](https://placehold.co/800x600/F7F1E8/8eaa8e?text=Massage+bung)",
-          "[https://placehold.co/800x600/E2CFC2/7a6b5a?text=Thong+tac+tia+sua](https://placehold.co/800x600/E2CFC2/7a6b5a?text=Thong+tac+tia+sua)",
-          "[https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+me](https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+me)",
+          "/service-img-1.png"
         ],
 
         features: [
@@ -1130,7 +1118,7 @@ export const serviceGroups = {
           {
             question: "Gói có thể sử dụng tại nhà không?",
             answer:
-              "Có. Dịch vụ có thể được thực hiện tại nhà hoặc tại Maia Care tùy theo nhu cầu và khu vực phục vụ.",
+              "Có. Dịch vụ có thể được thực hiện tại nhà tùy theo nhu cầu và khu vực phục vụ.",
           },
         ],
 
@@ -1192,8 +1180,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "60 phút / buổi",
         durationEn: "60 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Tư vấn trực tiếp",
         packageInfoEn: "One-on-one consultation",
         scheduling: "Đặt lịch trước",
@@ -1206,9 +1194,7 @@ export const serviceGroups = {
           "Newborn health check-ups and consultations help parents monitor their baby's development, identify possible concerns early, and receive appropriate care guidance.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Kiểm+tra+bé",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tư+vấn",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Sức+khỏe+bé",
+          "/service-img-5.png"
         ],
 
         features: [
@@ -1369,9 +1355,7 @@ export const serviceGroups = {
           "Baby hydrotherapy is a warm-water bathing experience in a specialized hydrotherapy tub that helps babies relax and supports natural motor development.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Tắm+Thủy+Liệu",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Bé+thư+giãn",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Phát+triển+bé",
+          "/service-img-6.png"
         ],
 
         features: [
@@ -1517,8 +1501,8 @@ export const serviceGroups = {
         price10dUnitEn: "10 sessions",
         duration: "30 – 45 phút / buổi",
         durationEn: "30 – 45 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Linh hoạt theo nhu cầu",
         packageInfoEn: "Flexible according to needs",
         scheduling: "Đặt lịch trước",
@@ -1531,9 +1515,7 @@ export const serviceGroups = {
           "Baby massage supports relaxation and development, and may help babies sleep better, reduce gas discomfort, and strengthen emotional bonding with parents.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+Bé",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Kết+nối+yêu+thương",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Phát+triển+bé",
+          "/service-img-7.png"
         ],
 
         features: [
@@ -1693,9 +1675,7 @@ export const serviceGroups = {
           "Maia Care's hourly in-home baby care provides an experienced professional to support parents with baby care whenever help is needed.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Chăm+sóc+bé",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tại+nhà",
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Chuyên+viên",
+          "/service-img-8.png"
         ],
 
         features: [
@@ -1855,9 +1835,7 @@ export const serviceGroups = {
           "Maia Care's hourly in-home baby care provides an experienced professional to support parents with baby care whenever help is needed.",
 
         images: [
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Chăm+sóc+bé",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tại+nhà",
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Chuyên+viên",
+          "/service-img-8.png"
         ],
 
         features: [
@@ -2010,8 +1988,8 @@ export const serviceGroups = {
         duration: "45 – 60 phút / buổi",
         durationEn: "45 – 60 minutes / session",
 
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
 
         packageInfo: "5 buổi chăm sóc bé",
         packageInfoEn: "5 baby care sessions",
@@ -2026,9 +2004,7 @@ export const serviceGroups = {
           "The Basic Baby Care Package includes 5 hydrotherapy bathing and baby massage sessions, plus 1 health check and consultation to support the baby's relaxation and regular health monitoring.",
 
         images: [
-          "[https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tam+thuy+lieu](https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tam+thuy+lieu)",
-          "[https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+cho+be](https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+cho+be)",
-          "[https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+be](https://placehold.co/800x600/c4b5a5/ffffff?text=Cham+soc+be)",
+          "/service-img-9.png"
         ],
 
         features: [
@@ -2177,7 +2153,7 @@ export const serviceGroups = {
           {
             question: "Có thể chăm sóc bé tại nhà không?",
             answer:
-              "Có. Dịch vụ có thể được thực hiện tại nhà hoặc tại Maia Care tùy theo nhu cầu và khu vực phục vụ.",
+              "Có. Dịch vụ có thể được thực hiện tại nhà tùy theo nhu cầu và khu vực phục vụ.",
           },
         ],
 
@@ -2202,7 +2178,7 @@ export const serviceGroups = {
           {
             question: "Can the baby care service be provided at home?",
             answer:
-              "Yes. The service can be provided either at home or at Maia Care, depending on the customer's needs and service area.",
+              "Yes. The service can be provided at home, depending on the customer's needs and service area.",
           },
         ],
       },
@@ -2231,8 +2207,8 @@ export const serviceGroups = {
         duration: "45 – 60 phút / buổi",
         durationEn: "45 – 60 minutes / session",
 
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
 
         packageInfo: "10 buổi chăm sóc bé",
         packageInfoEn: "10 baby care sessions",
@@ -2247,9 +2223,7 @@ export const serviceGroups = {
           "The Comprehensive Baby Care Package includes 10 hydrotherapy bathing and baby massage sessions, plus 2 health checks and consultations to provide regular care and monitoring throughout the program.",
 
         images: [
-          "[https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tam+thuy+lieu](https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tam+thuy+lieu)",
-          "[https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+cho+be](https://placehold.co/800x600/E2CFC2/7a6b5a?text=Massage+cho+be)",
-          "[https://placehold.co/800x600/c4b5a5/ffffff?text=Theo+doi+suc+khoe](https://placehold.co/800x600/c4b5a5/ffffff?text=Theo+doi+suc+khoe)",
+          "/service-img-9.png"
         ],
 
         features: [
@@ -2397,7 +2371,7 @@ export const serviceGroups = {
           {
             question: "Gói chăm sóc bé có thể thực hiện tại nhà không?",
             answer:
-              "Có. Dịch vụ có thể được thực hiện tại nhà hoặc tại Maia Care tùy theo nhu cầu và khu vực phục vụ.",
+              "Có. Dịch vụ có thể được thực hiện tại nhà tùy theo nhu cầu và khu vực phục vụ.",
           },
         ],
 
@@ -2456,7 +2430,7 @@ export const serviceGroups = {
         price7dUnitEn: "7 sessions",
         duration: "90 – 120 phút / buổi",
         durationEn: "90 – 120 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
+        location: "Tại nhà",
         locationEn: "At home or at Maia Care",
         packageInfo: "Combo 5 buổi tiết kiệm 10%",
         packageInfoEn: "5-session package with 10% savings",
@@ -2470,9 +2444,7 @@ export const serviceGroups = {
           "The Healthy Mom – Happy Baby Package combines comprehensive care for both mother and baby in one session, saving time and cost.",
 
         images: [
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Combo+Mẹ+Khỏe",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Mẹ+và+Bé",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Hạnh+phúc",
+          "/service-img-10.png"
         ],
 
         features: [
@@ -2616,8 +2588,8 @@ export const serviceGroups = {
         price7dUnitEn: "7 sessions",
         duration: "90 – 120 phút / buổi",
         durationEn: "90 – 120 minutes / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Combo 5 buổi tiết kiệm 10%",
         packageInfoEn: "5-session package with 10% savings",
         scheduling: "Đặt lịch trước",
@@ -2630,9 +2602,7 @@ export const serviceGroups = {
           "This package focuses on postpartum recovery for the mother while providing comprehensive baby care, making it especially suitable for the first 4–8 weeks after childbirth.",
 
         images: [
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Phục+Hồi+Mẹ",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Bé+Khỏe",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Yêu+thương",
+          "/service-img-11.png"
         ],
 
         features: [
@@ -2778,8 +2748,8 @@ export const serviceGroups = {
         price7dUnitEn: "7 sessions",
         duration: "2 giờ / buổi",
         durationEn: "2 hours / session",
-        location: "Tại nhà hoặc tại Maia Care",
-        locationEn: "At home or at Maia Care",
+        location: "Tại nhà",
+        locationEn: "At home",
         packageInfo: "Combo 10 buổi tiết kiệm 15%",
         packageInfoEn: "10-session package with 15% savings",
         scheduling: "Đặt lịch trước",
@@ -2792,9 +2762,7 @@ export const serviceGroups = {
           "Maia Care's most comprehensive package combines essential services for both mother and baby and supports the family throughout the first month after childbirth.",
 
         images: [
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Toàn+Diện",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Mẹ+và+Bé",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Gia+đình",
+          "/service-img-12.png"
         ],
 
         features: [
@@ -2949,9 +2917,7 @@ export const serviceGroups = {
           "The Postpartum Care Companion Package provides a dedicated professional who visits the home during the first month to support mother and baby care and teach parents essential skills.",
 
         images: [
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Đồng+Hành",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tháng+Đầu",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Hỗ+trợ",
+          "/service-img-13.png"
         ],
 
         features: [
@@ -3123,9 +3089,7 @@ export const serviceGroups = {
           "Personalized postpartum nutrition consultation helps mothers understand their nutritional needs, build a suitable meal plan, and support recovery.",
 
         images: [
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Dinh+dưỡng",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Tư+vấn",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Sức+khỏe+mẹ",
+          "/service-img-14.png"
         ],
 
         features: [
@@ -3279,9 +3243,7 @@ export const serviceGroups = {
           "A detailed four-week postpartum nutrition meal plan with weekly menus, a shopping list, and practical preparation guidance.",
 
         images: [
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Thực+đơn",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Dinh+dưỡng+mẹ",
-          "https://placehold.co/800x600/A8BFA8/ffffff?text=Sức+khỏe",
+          "/service-img-15.png"
         ],
 
         features: [
@@ -3434,9 +3396,7 @@ export const serviceGroups = {
           "Nutrition consultation and weaning meal planning for babies supports a safe, practical, and age-appropriate start to complementary feeding.",
 
         images: [
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Ăn+Dặm",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Bé+Yêu",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Dinh+dưỡng+bé",
+          "/service-img-16.png"
         ],
 
         features: [
@@ -3593,9 +3553,7 @@ export const serviceGroups = {
           "A coordinated nutrition package for breastfeeding mothers and babies starting complementary feeding, supporting both through an important developmental period.",
 
         images: [
-          "https://placehold.co/800x600/c4b5a5/ffffff?text=Mẹ+Khỏe+Bé+Ngon",
-          "https://placehold.co/800x600/F7F1E8/8eaa8e?text=Dinh+dưỡng",
-          "https://placehold.co/800x600/E2CFC2/7a6b5a?text=Gia+đình+khỏe",
+          "/service-img-17.png"
         ],
 
         features: [

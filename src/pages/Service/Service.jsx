@@ -11,7 +11,7 @@ const Service = () => {
   const groups = [
     {
       key: "postpartum",
-      img: "https://placehold.co/400x350/F7F1E8/8eaa8e?text=Mother+Care",
+      img: "/service-img-1.png",
     },
     {
       key: "baby",
@@ -73,7 +73,7 @@ const Service = () => {
                       >
                         <div className="sp-card__img-wrap">
                           <img
-                            src={group.img}
+                            src={item.img}
                             alt={item.name || item}
                             className="sp-card__img"
                             loading="lazy"

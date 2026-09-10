@@ -128,7 +128,7 @@ const About = () => {
             </div>
             <div className="ap-about__image-wrap">
               <img
-                src="https://placehold.co/520x400/A8BFA8/ffffff?text=About+Maia+Care"
+                src="about-maia-img.png"
                 alt="Đội ngũ Maia Care chăm sóc mẹ và bé"
                 className="ap-about__image"
               />

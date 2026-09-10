@@ -69,7 +69,7 @@ const Home = () => {
         />
 
         <div className="banner-overlay">
-           <Link to="/about" className="about-cta">
+          <Link to="/about" className="about-cta">
                 {t("home.discoverServices")}
               </Link>
         </div>
