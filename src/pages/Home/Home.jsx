@@ -63,7 +63,6 @@ const Home = () => {
       <section className="banner">
         <div
           className="banner-img"
-          style={{ backgroundImage: "url('/mevabe.png')" }}
           role="img"
           aria-label="Banner mẹ và bé"
         />
