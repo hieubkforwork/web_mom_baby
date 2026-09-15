@@ -34,6 +34,7 @@ const Booking = () => {
   const [form, setForm] = useState({
     name: "",
     phone: "",
+    address: "",
     note: "",
     date: "",
     time: "",
@@ -65,7 +66,7 @@ const Booking = () => {
     e.preventDefault();
     
     // Validate required fields
-    if (!selectedService || !form.name || !form.phone || !form.date || !form.time) {
+    if (!selectedService || !form.name || !form.phone || !form.address || !form.date || !form.time) {
       setStatus('required');
       return;
     }
@@ -76,6 +77,7 @@ const Booking = () => {
       service: selectedService.name,
       customer_name: form.name,
       phone: form.phone,
+      address: form.address,
       booking_date: form.date,
       booking_time: form.time,
       note: form.note || "Không có ghi chú",
@@ -95,6 +97,7 @@ const Booking = () => {
           setForm({
             name: "",
             phone: "",
+            address: "",
             note: "",
             date: "",
             time: "",
@@ -227,6 +230,21 @@ const Booking = () => {
                 required
               />
             </div>
+
+            <div className="bk-field">
+              <label className="bk-label">
+                {t("booking.addressLabel")} <span className="bk-required">*</span>
+              </label>
+              <input
+                type="text"
+                className="bk-input"
+                placeholder={t("booking.addressPlaceholder")}
+                value={form.address}
+                onChange={update("address")}
+                required
+              />
+            </div>
+
             <div className="bk-field">
               <label className="bk-label">{t("booking.noteLabel")}</label>
               <textarea
