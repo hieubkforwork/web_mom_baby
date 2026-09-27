@@ -57,16 +57,30 @@ const translations = {
             { name: "Baby Massage", price: "200,000đ" },
             { name: "4-Hour In-Home Baby Care", price: "450,000đ" },
             { name: "8-Hour In-Home Baby Care", price: "850,000đ" },
-            { name: "Basic Baby Care Package", price: "2,790,000đ", unit: "/5 sessions" },
-            { name: "Comprehensive Baby Care Package", price: "5,490,000đ", unit: "/10 sessions" },
+            {
+              name: "Basic Baby Care Package",
+              price: "2,790,000đ",
+              unit: "/5 sessions",
+            },
+            {
+              name: "Comprehensive Baby Care Package",
+              price: "5,490,000đ",
+              unit: "/10 sessions",
+            },
           ],
         },
         pregnant: {
           title: "Mother & Baby Care\nPackages",
           items: [
             { name: "“Healthy Mom - Happy Baby” Package", price: "790,000đ" },
-            { name: "“Mom’s Recovery - Healthy Baby” Package", price: "990,000đ" },
-            { name: "“Complete Mother & Baby Care” Package", price: "1,190,000đ" },
+            {
+              name: "“Mom’s Recovery - Healthy Baby” Package",
+              price: "990,000đ",
+            },
+            {
+              name: "“Complete Mother & Baby Care” Package",
+              price: "1,190,000đ",
+            },
             { name: "“Postpartum Companion” Package", price: "1,390,000đ" },
           ],
         },
@@ -77,17 +91,40 @@ const translations = {
             { name: "Relaxing Back Massage", price: "300,000đ" },
             { name: "Breast Massage for Milk Duct Relief", price: "550,000đ" },
             { name: "Postpartum Stitch & Incision Care", price: "350,000đ" },
-            { name: "Basic Mother Care Package", price: "2,990,000đ", unit: "/5 sessions" },
-            { name: "Comprehensive Mother Care Package", price: "6,890,000đ", unit: "/10 sessions" },
+            {
+              name: "Basic Mother Care Package",
+              price: "2,990,000đ",
+              unit: "/5 sessions",
+            },
+            {
+              name: "Comprehensive Mother Care Package",
+              price: "6,890,000đ",
+              unit: "/10 sessions",
+            },
           ],
         },
         complex: {
           title: "Complimentary “Nutrition\nConsultation” Packages",
           items: [
-            { name: "Postpartum Nutrition Consultation for Mothers", price: "299,000đ" },
-            { name: "Postpartum Nutrition Meal Plan", price: "799,000đ" , unit: "/month"},
-            { name: "Baby Nutrition Consultation & Weaning Meal Plan", price: "599,000đ", unit: "/month" },
-            { name: "“Healthy Mom - Happy Eater” Nutrition Package", price: "1,099,000đ", unit: "/month" },
+            {
+              name: "Postpartum Nutrition Consultation for Mothers",
+              price: "299,000đ",
+            },
+            {
+              name: "Postpartum Nutrition Meal Plan",
+              price: "799,000đ",
+              unit: "/month",
+            },
+            {
+              name: "Baby Nutrition Consultation & Weaning Meal Plan",
+              price: "599,000đ",
+              unit: "/month",
+            },
+            {
+              name: "“Healthy Mom - Happy Eater” Nutrition Package",
+              price: "1,099,000đ",
+              unit: "/month",
+            },
           ],
         },
       },
@@ -144,16 +181,21 @@ const translations = {
         "Transparency in services",
         "Always listening and adapting",
       ],
-      teamTitle: "PROFESSIONAL TEAM",
+      teamTitle: "OUR PROFESSIONAL TEAM",
       teamIntro:
-        "Our team is professionally trained and knowledgeable in maternal and baby care, always working with dedication and care.",
-      quote:
-        "Your peace of mind and health are our greatest happiness.",
+        "Our Maia Care team is built with a specialized focus on maternal and baby care. Our staff are professionally trained and assigned according to their expertise and experience, providing safe, attentive, and consistent care for every family.",
+      teamDetailButton: "View Details",
+      quote: "Your peace of mind and health are our greatest happiness.",
       ctaTitle: "READY TO EXPERIENCE?",
       ctaDesc:
         "Let Maia Care accompany you on this wonderful journey of motherhood.",
       btnConsult: "Get Consultation",
       btnViewService: "View Services",
+    },
+    team: {
+      pageTitle: "OUR PROFESSIONAL TEAM",
+      pageIntro:
+        "Our Maia Care team is built with a combination of nursing expertise, maternal & baby care staff, and customer service, all working towards the goal of providing safe, dedicated, and consistent home care services.",
     },
     service: {
       badge: "SERVICES",
@@ -201,8 +243,7 @@ const translations = {
         },
         address: {
           title: "ADDRESS",
-          value:
-            "574 Nguyễn Đình Chiểu Street, Bàn Cờ Ward, Ho Chi Minh City",
+          value: "574 Nguyễn Đình Chiểu Street, Bàn Cờ Ward, Ho Chi Minh City",
         },
         zalo: {
           title: "ZALO",
@@ -242,8 +283,6 @@ const translations = {
       fullNamePlaceholder: "Enter your full name",
       phoneLabel: "Phone Number",
       phonePlaceholder: "Enter your phone number",
-      addressLabel: "Address",
-      addressPlaceholder: "Enter your address",
       noteLabel: "Notes (if any)",
       notePlaceholder: "Enter your notes...",
       timeSelectionTitle: "2. Select Time",
@@ -273,7 +312,8 @@ const translations = {
     },
     serviceDetail: {
       notFoundTitle: "Service not found",
-      notFoundDesc: "The service you are looking for does not exist or has been discontinued.",
+      notFoundDesc:
+        "The service you are looking for does not exist or has been discontinued.",
       backToService: "Back to Services",
       time: "Duration:",
       location: "Location:",
@@ -285,7 +325,7 @@ const translations = {
       tabFaq: "FAQ",
       aboutService: "About this service",
       benefits: "Key Benefits",
-      viewAll: "View all services"
+      viewAll: "View all services",
     },
     comments: {
       title: "Comments",
@@ -297,8 +337,8 @@ const translations = {
       emptyState: "No comments yet. Be the first to share your experience!",
       loadError: "Failed to load comments. Please try again.",
       retry: "Retry",
-      noEntity: "Cannot load comment information."
-    }
+      noEntity: "Cannot load comment information.",
+    },
   },
   vi: {
     nav: {
@@ -350,44 +390,133 @@ const translations = {
         baby: {
           title: "Dịch vụ chăm sóc\nem bé",
           items: [
-            { name: "Kiểm tra và tư vấn sức khỏe", price: "300,000đ", img: "/service-img-5.png" },
-            { name: "Tắm thủy liệu", price: "350,000đ", img: "/service-img-6.png" },
-            { name: "Massage cho bé", price: "200,000đ", img: "/service-img-7.png" },
-            { name: "Chăm sóc bé tại nhà 4 giờ", price: "450,000đ", img: "/service-img-8.png" },
-            { name: "Chăm sóc bé tại nhà 8 giờ", price: "850,000đ", img: "/service-img-8.png" },
-            { name: "Gói chăm sóc bé cơ bản", price: "2,790,000đ", unit:"/5 buổi", img: "/service-img-9.png" },
-            { name: "Gói chăm sóc bé toàn diện", price: "5,490,000đ", unit:"/10 buổi", img: "/service-img-9.png" },
-
+            {
+              name: "Kiểm tra và tư vấn sức khỏe",
+              price: "300,000đ",
+              img: "/service-img-5.png",
+            },
+            {
+              name: "Tắm thủy liệu",
+              price: "350,000đ",
+              img: "/service-img-6.png",
+            },
+            {
+              name: "Massage cho bé",
+              price: "200,000đ",
+              img: "/service-img-7.png",
+            },
+            {
+              name: "Chăm sóc bé tại nhà 4 giờ",
+              price: "450,000đ",
+              img: "/service-img-8.png",
+            },
+            {
+              name: "Chăm sóc bé tại nhà 8 giờ",
+              price: "850,000đ",
+              img: "/service-img-8.png",
+            },
+            {
+              name: "Gói chăm sóc bé cơ bản",
+              price: "2,790,000đ",
+              unit: "/5 buổi",
+              img: "/service-img-9.png",
+            },
+            {
+              name: "Gói chăm sóc bé toàn diện",
+              price: "5,490,000đ",
+              unit: "/10 buổi",
+              img: "/service-img-9.png",
+            },
           ],
         },
         pregnant: {
           title: "Combo chăm sóc\nmẹ và bé",
           items: [
-            { name: "Combo “Mẹ khỏe - Bé yêu”", price: "790,000đ", img: "/service-img-10.png" },
-            { name: "Combo “Mẹ phục hồi - Bé khỏe”", price: "990,000đ", img: "/service-img-11.png" },
-            { name: "Combo “Mẹ và bé toàn diện”", price: "1,190,000đ", img: "/service-img-12.png" },
-            { name: "Combo “Đồng hành sau sinh”", price: "1,390,000đ", img: "/service-img-13.png" },
+            {
+              name: "Combo “Mẹ khỏe - Bé yêu”",
+              price: "790,000đ",
+              img: "/service-img-10.png",
+            },
+            {
+              name: "Combo “Mẹ phục hồi - Bé khỏe”",
+              price: "990,000đ",
+              img: "/service-img-11.png",
+            },
+            {
+              name: "Combo “Mẹ và bé toàn diện”",
+              price: "1,190,000đ",
+              img: "/service-img-12.png",
+            },
+            {
+              name: "Combo “Đồng hành sau sinh”",
+              price: "1,390,000đ",
+              img: "/service-img-13.png",
+            },
           ],
         },
         postpartum: {
           title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
-            { name: "Massage bụng y khoa", price: "350,000đ", img: "/service-img-1.png" },
-            { name: "Massage lưng thư giãn", price: "300,000đ", img: "/service-img-2.png" },
-            { name: "Massage hỗ trợ thông tắc tia sữa", price: "550,000đ", img: "/service-img-3.png" },
-            { name: "Chăm sóc vết khâu, vết mổ sau sinh", price: "350,000đ", img: "/service-img-4.png" },
-            { name: "Gói chăm sóc mẹ cơ bản", price: "2,990,000đ", unit:"/5 buổi",img: "/service-img-1.png" },
-            { name: "Gói chăm sóc mẹ toàn diện", price: "6,890,000đ", unit:"/10 buổi",img: "/service-img-1.png" },
-
+            {
+              name: "Massage bụng y khoa",
+              price: "350,000đ",
+              img: "/service-img-1.png",
+            },
+            {
+              name: "Massage lưng thư giãn",
+              price: "300,000đ",
+              img: "/service-img-2.png",
+            },
+            {
+              name: "Massage hỗ trợ thông tắc tia sữa",
+              price: "550,000đ",
+              img: "/service-img-3.png",
+            },
+            {
+              name: "Chăm sóc vết khâu, vết mổ sau sinh",
+              price: "350,000đ",
+              img: "/service-img-4.png",
+            },
+            {
+              name: "Gói chăm sóc mẹ cơ bản",
+              price: "2,990,000đ",
+              unit: "/5 buổi",
+              img: "/service-img-1.png",
+            },
+            {
+              name: "Gói chăm sóc mẹ toàn diện",
+              price: "6,890,000đ",
+              unit: "/10 buổi",
+              img: "/service-img-1.png",
+            },
           ],
         },
         complex: {
           title: "Gói tặng kèm “tư vấn\ndinh dưỡng”",
           items: [
-            { name: "Tư vấn dinh dưỡng cho mẹ sau sinh", price: "299,000đ", img: "/service-img-14.png" },
-            { name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh", price: "799,000đ", unit: "/tháng", img: "/service-img-15.png" },
-            { name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé", price: "599,000đ", unit: "/tháng", img: "/service-img-16.png" },
-            { name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”", price: "1,099,000đ", unit: "/tháng", img: "/service-img-17.png" },
+            {
+              name: "Tư vấn dinh dưỡng cho mẹ sau sinh",
+              price: "299,000đ",
+              img: "/service-img-14.png",
+            },
+            {
+              name: "Gói thực đơn dinh dưỡng cho mẹ sau sinh",
+              price: "799,000đ",
+              unit: "/tháng",
+              img: "/service-img-15.png",
+            },
+            {
+              name: "Tư vấn dinh dưỡng và thực đơn ăn dặm cho bé",
+              price: "599,000đ",
+              unit: "/tháng",
+              img: "/service-img-16.png",
+            },
+            {
+              name: "Gói dinh dưỡng “Mẹ khỏe - Bé ăn ngon”",
+              price: "1,099,000đ",
+              unit: "/tháng",
+              img: "/service-img-17.png",
+            },
           ],
         },
       },
@@ -423,13 +552,16 @@ const translations = {
     about: {
       title: "VỀ MAIA CARE",
       heroHeading: "Chăm sóc trọn vẹn, Khởi đầu vững chắc",
-      heroDesc: "Maia Care tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình. Chúng tôi thấu hiểu những vất vả và cả niềm hạnh phúc vô bờ trong hành trình làm mẹ, từ đó mang đến những dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
+      heroDesc:
+        "Maia Care tự hào là người bạn đồng hành tin cậy của hàng ngàn gia đình. Chúng tôi thấu hiểu những vất vả và cả niềm hạnh phúc vô bờ trong hành trình làm mẹ, từ đó mang đến những dịch vụ chăm sóc sức khỏe toàn diện, an toàn và tận tâm nhất.",
       highlights: ["Chuẩn Y Khoa", "Chuyên Nghiệp", "Tận Tâm"],
       visionMissionTitle: "TẦM NHÌN & SỨ MỆNH",
       visionTitle: "Tầm nhìn",
-      visionDesc: "Trở thành hệ thống chăm sóc sức khỏe mẹ và bé hàng đầu, mang lại sự an tâm và sức khỏe cho các gia đình.",
+      visionDesc:
+        "Trở thành hệ thống chăm sóc sức khỏe mẹ và bé hàng đầu, mang lại sự an tâm và sức khỏe cho các gia đình.",
       missionTitle: "Sứ mệnh",
-      missionDesc: "Mang đến sự chăm sóc toàn diện, an toàn và cá nhân hóa, phù hợp với nhu cầu riêng của từng mẹ và bé.",
+      missionDesc:
+        "Mang đến sự chăm sóc toàn diện, an toàn và cá nhân hóa, phù hợp với nhu cầu riêng của từng mẹ và bé.",
       coreValuesTitle: "GIÁ TRỊ CỐT LÕI",
       policyTitle: "CHÍNH SÁCH & CAM KẾT",
       policySubheading: "An tâm trong từng trải nghiệm chăm sóc",
@@ -439,20 +571,30 @@ const translations = {
         "Nhân viên được đào tạo",
         "Tôn trọng nhu cầu riêng của từng gia đình",
         "Minh bạch trong dịch vụ",
-        "Luôn lắng nghe và điều chỉnh"
+        "Luôn lắng nghe và điều chỉnh",
       ],
       teamTitle: "ĐỘI NGŨ CHUYÊN MÔN",
-      teamIntro: "Đội ngũ chuyên viên được đào tạo bài bản, có kiến thức chuyên sâu về chăm sóc mẹ và bé, luôn làm việc bằng cả trái tim và sự tận tâm.",
-      quote: "Sự an tâm và sức khỏe của bạn là niềm hạnh phúc lớn nhất của chúng tôi.",
+      teamIntro:
+        "Đội ngũ Maia Care được xây dựng với định hướng chuyên môn hóa trong chăm sóc mẹ và bé. Các nhân viên được đào tạo bài bản và phân công theo chuyên môn, kinh nghiệm phù hợp, nhằm mang đến quy trình chăm sóc an toàn, tận tâm và nhất quán cho từng gia đình.",
+      teamDetailButton: "Chi tiết",
+      quote:
+        "Sự an tâm và sức khỏe của bạn là niềm hạnh phúc lớn nhất của chúng tôi.",
       ctaTitle: "BẠN ĐÃ SẴN SÀNG TRẢI NGHIỆM?",
-      ctaDesc: "Hãy để Maia Care đồng hành cùng bạn trong hành trình làm mẹ tuyệt vời này.",
+      ctaDesc:
+        "Hãy để Maia Care đồng hành cùng bạn trong hành trình làm mẹ tuyệt vời này.",
       btnConsult: "Nhận tư vấn ngay",
-      btnViewService: "Xem chi tiết dịch vụ"
+      btnViewService: "Xem chi tiết dịch vụ",
+    },
+    team: {
+      pageTitle: "ĐỘI NGŨ CHUYÊN MÔN",
+      pageIntro:
+        "Đội ngũ Maia Care được xây dựng với sự kết hợp giữa chuyên môn điều dưỡng, đội ngũ chăm sóc mẹ & bé và chăm sóc khách hàng, cùng hướng đến mục tiêu mang đến dịch vụ chăm sóc tại nhà an toàn, tận tâm và nhất quán.",
     },
     service: {
       badge: "DỊCH VỤ",
       title: "Dịch vụ chăm sóc mẹ & bé",
-      subtitle: "Những dịch vụ được thiết kế riêng, giúp mẹ và bé được chăm sóc toàn diện, an toàn và phù hợp trong từng giai đoạn.",
+      subtitle:
+        "Những dịch vụ được thiết kế riêng, giúp mẹ và bé được chăm sóc toàn diện, an toàn và phù hợp trong từng giai đoạn.",
       pricePrefix: "Giá: ",
       priceSuffix: "/buổi",
       items: [
@@ -480,7 +622,7 @@ const translations = {
           price: "200,000đ",
           img: "https://placehold.co/400x350/c4b5a5/ffffff?text=Dinh+dưỡng",
         },
-      ]
+      ],
     },
     contact: {
       title: "LIÊN HỆ VỚI MAIA CARE",
@@ -494,8 +636,7 @@ const translations = {
         },
         address: {
           title: "ĐỊA CHỈ",
-          value:
-            "574 Nguyễn Đình Chiểu, phường Bàn Cờ, TP.HCM",
+          value: "574 Nguyễn Đình Chiểu, phường Bàn Cờ, TP.HCM",
         },
         zalo: {
           title: "ZALO",
@@ -535,8 +676,6 @@ const translations = {
       fullNamePlaceholder: "Nhập họ và tên",
       phoneLabel: "Số điện thoại",
       phonePlaceholder: "Nhập số điện thoại",
-      addressLabel: "Địa chỉ của bạn",
-      addressPlaceholder: "Nhập địa chỉ của bạn",
       noteLabel: "Ghi chú (nếu có)",
       notePlaceholder: "Nhập ghi chú của bạn...",
       timeSelectionTitle: "2. Chọn thời gian",
@@ -558,14 +697,16 @@ const translations = {
         "Thời gian làm việc: 08:00 - 20:00 (Tất cả các ngày trong tuần)",
       submitButton: "Xác nhận đặt lịch",
       statusLoading: "Đang gửi...",
-      statusSuccess: "Đặt lịch thành công! MAIA CARE sẽ liên hệ với bạn để xác nhận lịch.",
+      statusSuccess:
+        "Đặt lịch thành công! MAIA CARE sẽ liên hệ với bạn để xác nhận lịch.",
       statusError: "Không thể gửi thông tin đặt lịch. Vui lòng thử lại sau.",
       statusRequired: "Vui lòng điền đầy đủ các thông tin bắt buộc (*).",
       privacyText: "Thông tin của bạn được bảo mật tuyệt đối",
     },
     serviceDetail: {
       notFoundTitle: "Không tìm thấy dịch vụ",
-      notFoundDesc: "Dịch vụ bạn đang tìm không tồn tại hoặc đã ngừng cung cấp.",
+      notFoundDesc:
+        "Dịch vụ bạn đang tìm không tồn tại hoặc đã ngừng cung cấp.",
       backToService: "Quay lại trang Dịch vụ",
       time: "Thời gian:",
       location: "Địa điểm:",
@@ -577,7 +718,7 @@ const translations = {
       tabFaq: "Câu hỏi thường gặp",
       aboutService: "Về dịch vụ",
       benefits: "Lợi ích nổi bật",
-      viewAll: "Xem tất cả dịch vụ"
+      viewAll: "Xem tất cả dịch vụ",
     },
     comments: {
       title: "Bình luận",
@@ -586,13 +727,325 @@ const translations = {
       submit: "Gửi bình luận",
       reply: "Trả lời",
       submitting: "Đang gửi...",
-      emptyState: "Chưa có bình luận nào. Hãy là người đầu tiên chia sẻ trải nghiệm!",
+      emptyState:
+        "Chưa có bình luận nào. Hãy là người đầu tiên chia sẻ trải nghiệm!",
       loadError: "Không thể tải bình luận. Vui lòng thử lại.",
       retry: "Thử lại",
-      noEntity: "Không thể tải thông tin bình luận."
-    }
+      noEntity: "Không thể tải thông tin bình luận.",
+    },
   },
 };
+
+const teamMembers = [
+  {
+    id: "nguyen-thuy-linh",
+    image: "/1.jpg",
+    name: "Nguyễn Thùy Linh",
+    position: {
+      vi: "PGS. TS. - Trưởng phòng Chuyên môn",
+      en: "Head of Professional Department",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: { vi: "PGS. TS. Sản phụ khoa", en: "Bachelor of Nursing" },
+    experience: {
+      vi: "10 năm trong lĩnh vực chăm sóc sức khỏe mẹ và bé",
+      en: "8 years in maternal and child healthcare",
+    },
+    certificates: {
+      vi: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Đào tạo chuyên sâu về Chăm sóc sức khỏe Mẹ & Bé",
+        "Đào tạo Tư vấn nuôi con bằng sữa mẹ",
+        "Đào tạo Kiểm soát nhiễm khuẩn trong chăm sóc y tế"
+      ],
+      en: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Advanced Training in Maternal & Child Healthcare",
+        "Breastfeeding Consultation Training",
+        "Infection Control in Healthcare Training"
+      ],
+    },
+    role: {
+      vi: "Xây dựng, triển khai và kiểm soát quy trình chuyên môn; đào tạo đội ngũ Điều dưỡng và nhân viên chăm sóc; giám sát chất lượng dịch vụ và hỗ trợ xử lý các vấn đề chuyên môn.",
+      en: "Developing, implementing, and controlling professional processes; training nursing and care staff; monitoring service quality and assisting in resolving professional issues.",
+    },
+  },
+  {
+    id: "tran-ngoc-han",
+    image: "/2.jpg",
+    name: "Trần Ngọc Hân",
+    position: {
+      vi: "Điều dưỡng – Đào tạo & Tư vấn chăm sóc mẹ",
+      en: "Nurse - Maternal Care Training & Consultation",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: { vi: "Cử nhân Điều dưỡng", en: "Bachelor of Nursing" },
+    experience: {
+      vi: "7 năm trong lĩnh vực chăm sóc mẹ sau sinh",
+      en: "7 years in postpartum maternal care",
+    },
+    certificates: {
+      vi: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Đào tạo Chăm sóc mẹ sau sinh",
+        "Đào tạo Tư vấn nuôi con bằng sữa mẹ",
+        "Đào tạo Dinh dưỡng cho mẹ và trẻ nhỏ"
+      ],
+      en: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Advanced Training in Maternal & Child Healthcare",
+        "Breastfeeding Consultation Training",
+        "Infection Control in Healthcare Training"
+      ],
+    },
+    expertise: {
+      vi: ["Chăm sóc mẹ sau sinh", "Dinh dưỡng mẹ", "Hỗ trợ phục hồi sau sinh"],
+      en: [
+        "Postpartum maternal care",
+        "Maternal nutrition",
+        "Postpartum recovery support",
+      ],
+    },
+    role: {
+      vi: "Đào tạo nghiệp vụ chăm sóc mẹ sau sinh cho đội ngũ nhân viên; tư vấn dinh dưỡng và hướng dẫn khách hàng về chăm sóc mẹ trong giai đoạn hậu sản.",
+      en: "Providing professional postpartum care training for staff; offering nutrition consultation and guiding clients on maternal care during the postpartum period.",
+    },
+  },
+  {
+    id: "le-minh-anh",
+    image: "/3.jpg",
+    name: "Lê Minh Anh",
+    position: {
+      vi: "Điều dưỡng – Đào tạo & Tư vấn chăm sóc trẻ",
+      en: "Nurse - Child Care Training & Consultation",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: { vi: "Cử nhân Điều dưỡng", en: "Bachelor of Nursing" },
+    experience: {
+      vi: "6 năm trong lĩnh vực chăm sóc trẻ sơ sinh và trẻ nhỏ",
+      en: "6 years in infant and toddler care",
+    },
+    certificates: {
+      vi: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Đào tạo Chăm sóc trẻ sơ sinh",
+        "Đào tạo Tư vấn nuôi con bằng sữa mẹ",
+        "Đào tạo Dinh dưỡng trẻ nhỏ"
+      ],
+      en: [
+        "Basic Life Support (BLS) – American Heart Association",
+        "Advanced Training in Maternal & Child Healthcare",
+        "Breastfeeding Consultation Training",
+        "Infection Control in Healthcare Training"
+      ],
+    },
+    expertise: {
+      vi: [
+        "Chăm sóc trẻ sơ sinh",
+        "Vệ sinh trẻ",
+        "Dinh dưỡng và chăm sóc trẻ nhỏ",
+      ],
+      en: [
+        "Newborn care",
+        "Child hygiene",
+        "Infant and toddler nutrition and care",
+      ],
+    },
+    role: {
+      vi: "Đào tạo đội ngũ chăm sóc về quy trình chăm sóc trẻ; tư vấn dinh dưỡng và hướng dẫn phụ huynh các nguyên tắc chăm sóc trẻ an toàn tại nhà.",
+      en: "Training the care team on child care processes; providing nutrition consultation and guiding parents on safe home child care principles.",
+    },
+  },
+  {
+    id: "truong-minh-thu",
+    image: "/8.png",
+    name: "Trương Minh Thư",
+    position: {
+      vi: "Chuyên viên Chăm sóc Khách hàng",
+      en: "Customer Care Specialist",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: {
+      vi: "Cử nhân Quản trị Kinh doanh",
+      en: "Bachelor of Business Administration",
+    },
+    experience: {
+      vi: "4 năm trong lĩnh vực dịch vụ và chăm sóc khách hàng",
+      en: "4 years in customer service and care",
+    },
+    skills: {
+      vi: [
+        "Nghiệp vụ Chăm sóc khách hàng",
+        "Tư vấn dịch vụ",
+        "Quy trình tiếp nhận và xử lý phản hồi",
+        "Kiến thức cơ bản về Chăm sóc Mẹ & Bé"
+      ],
+      en: [
+        "Customer Care Operations",
+        "Service Consultation",
+        "Feedback Handling and Problem-Solving",
+        "Basic Maternal & Baby Care Knowledge"
+      ],
+    },
+    expertise: {
+      vi: ["Tư vấn dịch vụ", "Quản lý lịch hẹn", "Chăm sóc khách hàng"],
+      en: ["Service consultation", "Appointment management", "Customer care"],
+    },
+    role: {
+      vi: "Tiếp nhận nhu cầu, tư vấn dịch vụ, hỗ trợ đặt lịch, theo dõi quá trình sử dụng dịch vụ, tiếp nhận phản hồi và duy trì mối quan hệ với khách hàng.",
+      en: "Receiving requests, consulting services, assisting with booking, tracking service usage, handling feedback, and maintaining customer relationships.",
+    },
+  },
+  {
+    id: "pham-khanh-vy",
+    image: "/4.jpg",
+    name: "Phạm Khánh Vy",
+    position: {
+      vi: "Chuyên viên Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Specialist",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: {
+      vi: "Chứng chỉ đào tạo Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Training Certificate",
+    },
+    experience: { vi: "5 năm", en: "5 years" },
+    skills: {
+      vi: [
+        "Chương trình đào tạo Chăm sóc Mẹ & Bé",
+        "Đào tạo Chăm sóc mẹ sau sinh",
+        "Đào tạo Chăm sóc trẻ sơ sinh",
+        "CPR & First Aid"
+      ],
+      en: [
+        "Maternal & Baby Care Training Program",
+        "Postpartum Maternal Care Training",
+        "Newborn Care Training",
+        "CPR & First Aid"
+      ],
+    },
+    expertise: {
+      vi: ["Chăm sóc mẹ sau sinh và trẻ sơ sinh"],
+      en: ["Postpartum maternal and newborn care"],
+    },
+    role: {
+      vi: "Trực tiếp thực hiện các liệu trình chăm sóc mẹ và bé tại nhà theo quy trình chuyên môn của Maia Care.",
+      en: "Directly performing home maternal and baby care therapies according to Maia Care's professional procedures.",
+    },
+  },
+  {
+    id: "vo-hoang-yen",
+    image: "/5.jpg",
+    name: "Võ Hoàng Yến",
+    position: {
+      vi: "Chuyên viên Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Specialist",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: {
+      vi: "Chứng chỉ đào tạo Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Training Certificate",
+    },
+    experience: { vi: "6 năm", en: "6 years" },
+    skills: {
+      vi: [
+        "Chương trình đào tạo Chăm sóc Mẹ & Bé",
+        "Chăm sóc trẻ sơ sinh",
+        "Vệ sinh & tắm trẻ",
+        "CPR & First Aid"
+      ],
+      en: [
+        "Maternal & Baby Care Training Program",
+        "Newborn Care Training",
+        "Child Hygiene",
+        "CPR & First Aid"
+      ],
+    },
+    expertise: {
+      vi: ["Chăm sóc mẹ sau sinh", "Chăm sóc trẻ sơ sinh"],
+      en: ["Postpartum maternal care", "Newborn care"],
+    },
+    role: {
+      vi: "Thực hiện dịch vụ chăm sóc tại nhà và đảm bảo tuân thủ các tiêu chuẩn an toàn, vệ sinh trong từng buổi chăm sóc.",
+      en: "Providing home care services and ensuring adherence to safety and hygiene standards in every care session.",
+    },
+  },
+  {
+    id: "dang-thu-ha",
+    image: "/6.jpg",
+    name: "Đặng Thu Hà",
+    position: {
+      vi: "Chuyên viên Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Specialist",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: {
+      vi: "Chứng chỉ đào tạo Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Training Certificate",
+    },
+    experience: { vi: "4 năm", en: "4 years" },
+    skills: {
+      vi: [
+        "Chương trình đào tạo Chăm sóc Mẹ & Bé",
+        "Chăm sóc mẹ sau sinh",
+        "Chăm sóc trẻ sơ sinh",
+        "CPR & First Aid"
+      ],
+      en: [
+        "Maternal & Baby Care Training Program",
+        "Postpartum Maternal Care Training",
+        "Newborn Care Training",
+        "CPR & First Aid"
+      ],
+    },
+    expertise: {
+      vi: ["Chăm sóc trẻ sơ sinh và mẹ sau sinh"],
+      en: ["Newborn and postpartum maternal care"],
+    },
+    role: {
+      vi: "Trực tiếp cung cấp dịch vụ tại nhà, hỗ trợ gia đình chăm sóc mẹ và bé theo hướng dẫn chuyên môn.",
+      en: "Directly providing home services, supporting families in caring for mothers and babies according to professional guidelines.",
+    },
+  },
+  {
+    id: "nguyen-ngoc-mai",
+    image: "/7.jpg",
+    name: "Nguyễn Ngọc Mai",
+    position: {
+      vi: "Chuyên viên Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Specialist",
+    },
+    employmentType: { vi: "Toàn thời gian", en: "Full-time" },
+    degree: {
+      vi: "Chứng chỉ đào tạo Chăm sóc Mẹ & Bé",
+      en: "Maternal & Baby Care Training Certificate",
+    },
+    experience: { vi: "5 năm", en: "5 years" },
+    skills: {
+      vi: [
+        "Chương trình đào tạo Chăm sóc Mẹ & Bé",
+        "Chăm sóc mẹ sau sinh",
+        "Chăm sóc trẻ sơ sinh",
+        "CPR & First Aid"
+      ],
+      en: [
+        "Maternal & Baby Care Training Program",
+        "Postpartum Maternal Care Training",
+        "Newborn Care Training",
+        "CPR & First Aid"
+      ],
+    },
+    expertise: {
+      vi: ["Chăm sóc hậu sản và trẻ sơ sinh"],
+      en: ["Postpartum and newborn care"],
+    },
+    role: {
+      vi: "Thực hiện các gói chăm sóc tại nhà, phối hợp với Điều dưỡng khi cần hỗ trợ chuyên môn và ghi nhận tình trạng của khách hàng sau mỗi buổi chăm sóc.",
+      en: "Performing home care packages, coordinating with nurses when professional support is needed, and recording the client's condition after each care session.",
+    },
+  },
+  
+];
 
 const LanguageContext = createContext();
 
@@ -613,7 +1066,16 @@ export const LanguageProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, toggleLang, t }}>
+    <LanguageContext.Provider
+      value={{
+        lang,
+        toggleLang,
+        t,
+        language: lang,
+        setLanguage: setLang,
+        teamMembers,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );

@@ -9,6 +9,7 @@ import Service from './pages/Service/Service';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
 import Booking from './pages/Booking/Booking';
 import Contact from './pages/Contact/Contact';
+import Team from './pages/Team/Team';
 import ScrollToTop from './ScrollToTop';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
               <Route path="about" element={<About />} />
 
+              <Route path="about/team" element={<Team />} />
               <Route path="service" element={<Service />} />
 
               <Route

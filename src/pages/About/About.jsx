@@ -242,6 +242,15 @@ const About = () => {
               </div>
             ))}
           </div>
+          <div className="ap-team__action">
+            <Link
+              to="/about/team"
+              className="ap-team__detail-button"
+            >
+              {t("about.teamDetailButton")}
+              <span>→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
