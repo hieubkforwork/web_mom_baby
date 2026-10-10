@@ -52,54 +52,104 @@ const translations = {
         baby: {
           title: "Baby Care\nServices",
           items: [
-            { name: "Health Check-up & Consultation", price: "300,000đ" },
-            { name: "Hydrotherapy Bath", price: "350,000đ" },
-            { name: "Baby Massage", price: "200,000đ" },
-            { name: "4-Hour In-Home Baby Care", price: "450,000đ" },
-            { name: "8-Hour In-Home Baby Care", price: "850,000đ" },
+            {
+              name: "Health Check-up & Consultation",
+              price: "300,000đ",
+              img: "/service-img-5.png",
+            },
+            {
+              name: "Hydrotherapy Bath",
+              price: "350,000đ",
+              img: "/service-img-6.png",
+            },
+            {
+              name: "Baby Massage",
+              price: "200,000đ",
+              img: "/service-img-7.png",
+            },
+            {
+              name: "4-Hour In-Home Baby Care",
+              price: "450,000đ",
+              img: "/service-img-8.png",
+            },
+            {
+              name: "8-Hour In-Home Baby Care",
+              price: "850,000đ",
+              img: "/service-img-8.png",
+            },
             {
               name: "Basic Baby Care Package",
               price: "2,790,000đ",
               unit: "/5 sessions",
+              img: "/service-img-9.png",
             },
             {
               name: "Comprehensive Baby Care Package",
               price: "5,490,000đ",
               unit: "/10 sessions",
+              img: "/service-img-9.png",
             },
           ],
         },
         pregnant: {
           title: "Mother & Baby Care\nPackages",
           items: [
-            { name: "“Healthy Mom - Happy Baby” Package", price: "790,000đ" },
+            {
+              name: "“Healthy Mom - Happy Baby” Package",
+              price: "790,000đ",
+              img: "/service-img-10.png",
+            },
             {
               name: "“Mom’s Recovery - Healthy Baby” Package",
               price: "990,000đ",
+              img: "/service-img-11.png",
             },
             {
               name: "“Complete Mother & Baby Care” Package",
               price: "1,190,000đ",
+              img: "/service-img-12.png",
             },
-            { name: "“Postpartum Companion” Package", price: "1,390,000đ" },
+            {
+              name: "“Postpartum Companion” Package",
+              price: "1,390,000đ",
+              img: "/service-img-13.png",
+            },
           ],
         },
         postpartum: {
           title: "Postpartum Mother Care\nServices",
           items: [
-            { name: "Medical Abdominal Massage", price: "350,000đ" },
-            { name: "Relaxing Back Massage", price: "300,000đ" },
-            { name: "Breast Massage for Milk Duct Relief", price: "550,000đ" },
-            { name: "Postpartum Stitch & Incision Care", price: "350,000đ" },
+            {
+              name: "Medical Abdominal Massage",
+              price: "350,000đ",
+              img: "/service-img-1.png",
+            },
+            {
+              name: "Relaxing Back Massage",
+              price: "300,000đ",
+              img: "/service-img-2.png",
+            },
+            {
+              name: "Breast Massage for Milk Duct Relief",
+              price: "550,000đ",
+              img: "/service-img-3.png",
+            },
+            {
+              name: "Postpartum Stitch & Incision Care",
+              price: "350,000đ",
+              img: "/service-img-4.png",
+            },
             {
               name: "Basic Mother Care Package",
               price: "2,990,000đ",
               unit: "/5 sessions",
+              img: "/service-img-1.png",
             },
             {
               name: "Comprehensive Mother Care Package",
               price: "6,890,000đ",
               unit: "/10 sessions",
+              img: "/service-img-1.png",
             },
           ],
         },
@@ -109,21 +159,25 @@ const translations = {
             {
               name: "Postpartum Nutrition Consultation for Mothers",
               price: "299,000đ",
+              img: "/service-img-14.png",
             },
             {
               name: "Postpartum Nutrition Meal Plan",
               price: "799,000đ",
               unit: "/month",
+              img: "/service-img-15.png",
             },
             {
               name: "Baby Nutrition Consultation & Weaning Meal Plan",
               price: "599,000đ",
               unit: "/month",
+              img: "/service-img-16.png",
             },
             {
               name: "“Healthy Mom - Happy Eater” Nutrition Package",
               price: "1,099,000đ",
               unit: "/month",
+              img: "/service-img-17.png",
             },
           ],
         },
@@ -283,6 +337,8 @@ const translations = {
       fullNamePlaceholder: "Enter your full name",
       phoneLabel: "Phone Number",
       phonePlaceholder: "Enter your phone number",
+      addressLabel: "Address",
+      addressPlaceholder: "Enter your address",
       noteLabel: "Notes (if any)",
       notePlaceholder: "Enter your notes...",
       timeSelectionTitle: "2. Select Time",
@@ -458,7 +514,7 @@ const translations = {
           title: "Dịch vụ chăm sóc mẹ\nsau sinh",
           items: [
             {
-              name: "Massage bụng y khoa",
+              name: "Massage bụng sau sinh",
               price: "350,000đ",
               img: "/service-img-1.png",
             },
@@ -676,6 +732,8 @@ const translations = {
       fullNamePlaceholder: "Nhập họ và tên",
       phoneLabel: "Số điện thoại",
       phonePlaceholder: "Nhập số điện thoại",
+      addressLabel: "Địa chỉ",
+      addressPlaceholder: "Nhập địa chỉ",
       noteLabel: "Ghi chú (nếu có)",
       notePlaceholder: "Nhập ghi chú của bạn...",
       timeSelectionTitle: "2. Chọn thời gian",
