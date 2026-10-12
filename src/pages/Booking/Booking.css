@@ -522,3 +522,147 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+/* ═══════════════════════════════════════════
+   SUCCESS POPUP MODAL (Auto dismiss 3s)
+   ═══════════════════════════════════════════ */
+.bk-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(45, 38, 30, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: bkFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.bk-popup-content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  padding: 36px 30px 28px;
+  text-align: center;
+  box-shadow:
+    0 20px 40px rgba(70, 55, 45, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  animation: bkPopupScale 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.bk-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(160, 140, 120, 0.1);
+  color: #7a6b5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bk-popup-close:hover {
+  background: rgba(160, 140, 120, 0.2);
+  color: #332d27;
+  transform: rotate(90deg);
+}
+
+.bk-popup-icon-wrap {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: rgba(142, 170, 142, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bkIconPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.bk-popup-icon {
+  color: var(--clr-primary-dark, #6e8e6e);
+}
+
+.bk-popup-title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--clr-text-dark, #5c4e40);
+  margin: 0 0 10px;
+}
+
+.bk-popup-desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--clr-text, #8c7b6c);
+  margin: 0 0 24px;
+}
+
+.bk-popup-progress {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(142, 170, 142, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bk-popup-progress-bar {
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-primary-dark, #8EAA8E);
+  border-radius: 4px;
+  animation: bkProgressCountdown 3s linear forwards;
+}
+
+@keyframes bkFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bkPopupScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bkIconPop {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bkProgressCountdown {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
