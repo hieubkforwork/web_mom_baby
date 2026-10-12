@@ -361,6 +361,9 @@ const translations = {
       statusLoading: "Sending...",
       statusSuccess:
         "Booking successful! MAIA CARE will contact you to confirm your appointment.",
+      popupTitle: "Booking Successful!",
+      popupDesc:
+        "Thank you for choosing Maia Care. We will contact you soon to confirm your appointment.",
       statusError:
         "Unable to send booking information. Please try again later.",
       statusRequired: "Please fill in all required fields (*).",
@@ -757,6 +760,9 @@ const translations = {
       statusLoading: "Đang gửi...",
       statusSuccess:
         "Đặt lịch thành công! MAIA CARE sẽ liên hệ với bạn để xác nhận lịch.",
+      popupTitle: "Đặt Lịch Thành Công!",
+      popupDesc:
+        "Cảm ơn bạn đã tin tưởng Maia Care. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất để xác nhận lịch hẹn.",
       statusError: "Không thể gửi thông tin đặt lịch. Vui lòng thử lại sau.",
       statusRequired: "Vui lòng điền đầy đủ các thông tin bắt buộc (*).",
       privacyText: "Thông tin của bạn được bảo mật tuyệt đối",

@@ -10,6 +10,8 @@ import {
   LuChevronDown,
   LuClipboardList,
   LuArrowLeft,
+  LuCircleCheck,
+  LuX,
 } from "react-icons/lu";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Booking.css";
@@ -41,6 +43,17 @@ const Booking = () => {
   });
   
   const [status, setStatus] = useState(null); // 'loading', 'success', 'error', 'required'
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+
+  // Tự động đóng popup sau 3s
+  useEffect(() => {
+    if (showSuccessPopup) {
+      const timer = setTimeout(() => {
+        setShowSuccessPopup(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showSuccessPopup]);
 
   const update = (field) => (e) =>
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
@@ -71,8 +84,6 @@ const Booking = () => {
       return;
     }
 
-    setStatus('loading');
-
     const templateParams = {
       service: selectedService.name,
       customer_name: form.name,
@@ -83,32 +94,43 @@ const Booking = () => {
       note: form.note || "Không có ghi chú",
     };
 
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setStatus("success");
-          setForm({
-            name: "",
-            phone: "",
-            address: "",
-            note: "",
-            date: "",
-            time: "",
-          });
-          setSelectedService(null);
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          setStatus("error");
-        }
-      );
+    // Luôn hiện popup thành công (không phụ thuộc vào việc gửi email) và tự tắt sau 3s
+    setShowSuccessPopup(true);
+    setStatus(null);
+
+    // Reset form và dịch vụ đã chọn
+    setForm({
+      name: "",
+      phone: "",
+      address: "",
+      note: "",
+      date: "",
+      time: "",
+    });
+    setSelectedService(null);
+
+    // Gửi email ở chế độ nền
+    if (
+      import.meta.env.VITE_EMAILJS_SERVICE_ID &&
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID &&
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    ) {
+      emailjs
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          templateParams,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (response) => {
+            console.log("EmailJS SUCCESS!", response.status, response.text);
+          },
+          (err) => {
+            console.warn("EmailJS FAILED (ignored):", err);
+          }
+        );
+    }
   };
 
   const days = t("booking.days") || [];
@@ -337,11 +359,6 @@ const Booking = () => {
         </div>
 
         {/* ── Status Messages ── */}
-        {status === 'success' && (
-          <div className="bk-status bk-status--success">
-            {t("booking.statusSuccess")}
-          </div>
-        )}
         {status === 'error' && (
           <div className="bk-status bk-status--error">
             {t("booking.statusError")}
@@ -356,11 +373,10 @@ const Booking = () => {
         {/* ── CTA Button ── */}
         <button 
           type="submit" 
-          className={`bk-submit ${status === 'loading' ? 'bk-submit--loading' : ''}`}
-          disabled={status === 'loading'}
+          className="bk-submit"
         >
           <LuCalendar size={18} />
-          {status === 'loading' ? t("booking.statusLoading") : t("booking.submitButton")}
+          {t("booking.submitButton")}
         </button>
 
         {/* ── Privacy ── */}
@@ -369,6 +385,42 @@ const Booking = () => {
           {t("booking.privacyText")}
         </p>
       </form>
+
+      {/* ── Success Popup Modal (Tự tắt sau 3s) ── */}
+      {showSuccessPopup && (
+        <div 
+          className="bk-popup-overlay" 
+          onClick={() => setShowSuccessPopup(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div 
+            className="bk-popup-content" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="bk-popup-close"
+              onClick={() => setShowSuccessPopup(false)}
+              aria-label="Đóng"
+            >
+              <LuX size={18} />
+            </button>
+            <div className="bk-popup-icon-wrap">
+              <LuCircleCheck size={44} className="bk-popup-icon" />
+            </div>
+            <h3 className="bk-popup-title">
+              {t("booking.popupTitle") || "Đặt Lịch Thành Công!"}
+            </h3>
+            <p className="bk-popup-desc">
+              {t("booking.popupDesc") || t("booking.statusSuccess")}
+            </p>
+            <div className="bk-popup-progress">
+              <div className="bk-popup-progress-bar" />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
